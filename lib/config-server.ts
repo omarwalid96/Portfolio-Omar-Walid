@@ -115,6 +115,27 @@ export interface ResearchInfo {
   competitions: Competitions[]
 }
 
+export interface VideoItem {
+  title: string
+  description: string
+  duration: string
+  thumbnail: MediaItem
+  video: MediaItem
+  technologies: string[]
+  date: string
+}
+
+export interface VideoCategory {
+  name: string
+  description: string
+  color: string
+  videos: VideoItem[]
+}
+
+export interface VideosInfo {
+  categories: VideoCategory[]
+}
+
 export interface FooterInfo {
   copyright: string
   builtWith?: string
@@ -129,6 +150,7 @@ export interface PortfolioConfig {
   currentWork: CurrentWorkInfo
   eventsWork: EventsInfo
   research: ResearchInfo
+  videos: VideosInfo
   footer: FooterInfo
 }
 
@@ -139,15 +161,35 @@ export interface MediaItem {
   type?: 'image' | 'video' | 'iframe'
 }
 
-// Server-side only function to load config
+let cachedConfig: PortfolioConfig | null = null
+
 export function loadPortfolioConfig(): PortfolioConfig {
+  if (cachedConfig) {
+    return cachedConfig
+  }
+
   try {
     const configPath = path.join(process.cwd(), 'config', 'portfolio.yaml')
-    const fileContents = fs.readFileSync(configPath, 'utf8')
-    const config = yaml.load(fileContents) as PortfolioConfig
-    return config || getDefaultConfig()
+
+    try {
+      if (process.env.NODE_ENV === 'development') {
+        const y = fs.readFileSync(configPath, 'utf8')
+        return (yaml.load(y) as PortfolioConfig) ?? getDefaultConfig()
+      }
+
+      // prod: cache
+      if (!cachedConfig) {
+        const y = fs.readFileSync(configPath, 'utf8')
+        cachedConfig = (yaml.load(y) as PortfolioConfig) ?? getDefaultConfig()
+      }
+      return cachedConfig
+    } catch (e) {
+      console.error('Error loading portfolio config:', e)
+      return getDefaultConfig()
+    }
   } catch (error) {
     console.error('Error loading portfolio config:', error)
+    // Return default config if file doesn't exist
     return getDefaultConfig()
   }
 }
@@ -218,6 +260,9 @@ function getDefaultConfig(): PortfolioConfig {
     },
     eventsWork: {
       featured: []
+    },
+    videos: {
+      categories: []
     },
     footer: {
       copyright: "All rights reserved.",

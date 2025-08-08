@@ -2,10 +2,11 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
-import { Github, Linkedin, Mail, ExternalLink, Calendar, MapPin, Award, Briefcase, Code, Lightbulb } from 'lucide-react'
+import { Github, Linkedin, Mail, ExternalLink, Calendar, MapPin, Award, Briefcase, Code, Lightbulb, Video } from 'lucide-react'
 import Image from "next/image"
 import Link from "next/link"
 import { MediaDisplay } from "@/components/ui/media-display"
+import { VideoGallery } from "@/components/ui/video-gallery"
 import { loadPortfolioConfig } from "@/lib/config-server"
 import { getImageSrc } from "@/lib/config"
 
@@ -68,6 +69,7 @@ export default function Portfolio() {
               <a href="#current" className="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white transition-colors">Current Work</a>
               <a href="#research" className="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white transition-colors">R&D</a>
               <a href="#events" className="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white transition-colors">Events</a>
+              <a href="#videos" className="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white transition-colors">Videos</a>
             </div>
           </div>
         </div>
@@ -80,20 +82,27 @@ export default function Portfolio() {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
+                  <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-teal-600 bg-clip-text text-transparent">
+                  {config.personal.name}                  
+                  </span>
+                </h1>
+                <h2 className="text-4xl lg:text-6xl font-bold leading-tight">
                   <span className="block text-slate-900 dark:text-white">
                     {config.personal.title}
                   </span>
+                  </h2>
+                <h3 className="text-3xl lg:text-5xl font-bold leading-tight">
                   <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-teal-600 bg-clip-text text-transparent">
                     {config.personal.tagline}
                   </span>
-                </h1>
+                  </h3>
                 <p className="text-xl text-slate-600 dark:text-slate-300 max-w-lg">
                   {config.personal.passion}
                 </p>
               </div>
               
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+                {/* <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
                   <Mail className="mr-2 h-4 w-4" />
                   Get In Touch
                 </Button>
@@ -102,7 +111,7 @@ export default function Portfolio() {
                     <Github className="mr-2 h-4 w-4" />
                     View GitHub
                   </Link>
-                </Button>
+                </Button> */}
               </div>
 
               <div className="flex space-x-6">
@@ -327,12 +336,12 @@ export default function Portfolio() {
           </div>
 
           <div className="text-center mt-12">
-            <Button variant="outline" size="lg" asChild>
+            {/* <Button variant="outline" size="lg" asChild>
               <Link href={config.social.github.url} target="_blank">
                 <Github className="mr-2 h-4 w-4" />
                 View All Projects on GitHub
               </Link>
-            </Button>
+            </Button> */}
           </div>
         </div>
       </section>
@@ -397,8 +406,10 @@ export default function Portfolio() {
         </div>
       </section>
 
+      
+
       {/* R&D Section */}
-      <section id="research" className="py-20 px-4 bg-white dark:bg-slate-800">
+      <section id="research" className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4 text-slate-900 dark:text-white">Research & Development</h2>
@@ -460,6 +471,7 @@ export default function Portfolio() {
           )}
         </div>
       </section>
+
        {/* Events Section */}
       <section id="events" className="py-20 px-4 bg-white dark:bg-slate-800">
         <div className="container mx-auto">
@@ -518,13 +530,29 @@ export default function Portfolio() {
           </div>
 
           <div className="text-center mt-12">
-            <Button variant="outline" size="lg" asChild>
+            {/* <Button variant="outline" size="lg" asChild>
               <Link href={config.social.github.url} target="_blank">
                 <Github className="mr-2 h-4 w-4" />
                 View All Projects on GitHub
               </Link>
-            </Button>
+            </Button> */}
           </div>
+        </div>
+      </section>
+    {/* Videos Section */}
+      <section id="videos" className="py-20 px-4 bg-white dark:bg-slate-800">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4 text-slate-900 dark:text-white flex items-center justify-center gap-3">
+              <Video className="h-10 w-10 text-blue-600" />
+              Video Gallery
+            </h2>
+            <p className="text-xl text-slate-600 dark:text-slate-300">
+              Watch my robotics projects in action - from live demonstrations to technical deep-dives
+            </p>
+          </div>
+
+          <VideoGallery categories={config.videos.categories} />
         </div>
       </section>
       {/* Footer */}

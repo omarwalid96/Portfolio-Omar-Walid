@@ -92,7 +92,7 @@ about:
 
   workspace:
     image:
-      url: ""
+      url: "https://lh3.googleusercontent.com/pw/AP1GczPR1xGToVJuZBoA750YWg0isavLEp5cn6h_MQBFB1ImtAuEH7l_o5JoKyvEQSjjxZPRVlTHMozSIxqzxAksQhwyDvhnzAhvrPcKkRGI8YO5A9Lk4HuIM9xc8pJGjS7ZP-PJNcwV7qO07oxn-px9rMEiKQ=w1024-h982-s-no-gm?authuser=0"
       fallback: "/developer-workspace.png"
       alt: "Robotics Development Workspace"
 
@@ -306,7 +306,7 @@ currentWork:
       description: "End-to-end robotics architecture for multi-machine coffee preparation."
       longDescription: "Designed RS485+CAN communication, ROS2 behavior trees, cloud-based facial recognition, inventory and stock management, and WebSocket-based communication for a fully automated barista system."
       image:
-        url: ""
+        url: "https://lh3.googleusercontent.com/pw/AP1GczP8owC_BHkVJ19mDOyw_iKYBS5xc_c3t4_RGpyjf5QjeL88PIS3msuk1PDuJWXfyHQxgLDUObSviRKBPCkzx4B_e05YT9xKPast5ssZ73JXJB-BwFYUQy0TsNY3zJCvzPQ8ygkRd0pw_IA94hJaxclD-w=w902-h1353-s-no-gm?authuser=0"
         fallback: "/mb90a-robot.png"
         alt: "MB90a Logistics Robot"
       technologies:
@@ -546,7 +546,7 @@ eventsWork:
         description: "Event industry robotic activation for interactive gameplay using real-time trajectory estimation and robotic control."
         longDescription: "Developed a real-time interactive installation where a UR10 Universal Robot engages in a hockey-style game by detecting and reacting to a moving puck. Implemented trajectory estimation using ArUco markers, camera calibration, and high-speed vision processing to calculate puck speed, position, and future path. Designed decision-making logic to classify actions as defensive or offensive, and generated precise 2D plane position commands for the UR10 to execute responsive movements. The system was optimized for accuracy, speed, and audience engagement in a live event environment."
         image:
-          url: ""
+          url: "https://lh3.googleusercontent.com/pw/AP1GczN58ST0A0Dp7hatnZHiFAu637laBEWhYFcke39f2Jy0ylv4D9PXTokGUoXtgUTDbeYnCaeyAHC3RUT2mxz_3DvgqnEtKgtG9T2tDCzpLbOIQwObUr_mS6BHWbZTvelO-aS2zpBPzhpsgRXAK2rS373BbQ=w1080-h1080-s-no-gm?authuser=0"
           fallback: "/AIRHOCKEY.jpg"
           alt: "Fleet Management System"
         technologies:
@@ -569,7 +569,7 @@ eventsWork:
         description: "Event industry robotic activation integrating music synchronization with robotic motion."
         longDescription: "Developed and integrated a control system for a Yumi ABB collaborative robot to synchronize its movements with live music beats in real time. The robot was programmed to operate a DJ mixer, perform smooth transitions. Creating an engaging and visually synchronized experience for event audiences."
         image:
-          url: ""
+          url: "https://lh3.googleusercontent.com/pw/AP1GczMnlNkNfpxTT_FmJoxQSpm89IOaLlrN6yTO1DekbdDzh1K6Inf6o2jyYEHIn1F0UHAlN-FnieXWCN7nkgLioHWlNBmtGX3WQ-9kWO0i5kkufDarKPHLwlBTveeJgh0ewkxZGcIjsuXmHcZNt8lErV2aKg=w315-h315-s-no-gm?authuser=0"
           fallback: "/YUMMI.jpg"
           alt: "Fleet Management System"
         technologies:
@@ -581,5 +581,247 @@ eventsWork:
         color: "purple"
         links:
           github: ""
+
+# ...existing code...
+videos:
+  categories:
+    - name: "Project Demonstrations"
+      description: "Projects"
+      color: "blue"
+      videos:
+        
+        - title: "Fleet Management System for Robots"
+          description: "Custom multi-robot management software"
+          duration: ""
+          thumbnail:
+            url: "https://drive.google.com/file/d/1Qa0U5fJYZCd1GMgBqDqG3xEU6fKH47xq/preview"
+            fallback: "/fleet-management.png"
+            alt: "Fleet Management System"
+          video:
+            url: "https://drive.google.com/file/d/1Qa0U5fJYZCd1GMgBqDqG3xEU6fKH47xq/preview"
+            fallback: "/fleet-management.png"
+            alt: "Fleet Management System Demo"
+            type: "iframe"
+          technologies:
+            - "C++"
+            - "ROS"
+            - "Azure"
+            - "BMS"
+          date: ""
+        - title: "MDR-C"
+          duration: ""
+          thumbnail:
+            url: "https://www.youtube.com/embed/0FTgiZ7sgVs"
+            fallback: "/fleet-management.png"
+            alt: "Disinfection Robot"
+          video:
+            url: "https://www.youtube.com/embed/0FTgiZ7sgVs"
+            fallback: "/fleet-management.png"
+            alt: "Disinfection Robot Demo"
+            type: "iframe"
+          technologies:
+            - ""
+          date: ""
+        - title: "Duet"
+          duration: ""
+          thumbnail:
+            url: "https://www.youtube.com/embed/TqDUiLxACKw"
+            fallback: "/fleet-management.png"
+            alt: "Disinfection Robot"
+          video:
+            url: "https://www.youtube.com/embed/TqDUiLxACKw"
+            fallback: "/fleet-management.png"
+            alt: "Disinfection Robot Demo"
+            type: "iframe"
+          technologies:
+            - ""
+          date: ""
+        - title: "MDRA"
+          duration: ""
+          thumbnail:
+            url: "https://drive.google.com/file/d/15oZfdDNWfqoCETdmOd08PDGLFi9WLJmq/preview"
+            fallback: "/fleet-management.png"
+            alt: "Disinfection Robot"
+          video:
+            url: "https://drive.google.com/file/d/15oZfdDNWfqoCETdmOd08PDGLFi9WLJmq/preview"
+            fallback: "/fleet-management.png"
+            alt: "Disinfection Robot Demo"
+            type: "iframe"
+          technologies:
+            - ""
+          date: ""
+        - title: "Mozo"
+          duration: ""
+          thumbnail:
+            url: "https://www.youtube.com/embed/Kj-Qx2KMocE"
+            fallback: "/fleet-management.png"
+            alt: "Disinfection Robot"
+          video:
+            url: "https://www.youtube.com/embed/Kj-Qx2KMocE"
+            fallback: "/fleet-management.png"
+            alt: "Disinfection Robot Demo"
+            type: "iframe"
+          technologies:
+            - ""
+          date: ""
+        - title: "MB90A"
+          duration: "Obstacle Avoidance"
+          thumbnail:
+            url: "https://drive.google.com/file/d/1yzBOFeOZb4ERv1iLqUk4tzQVJeKKcM79/preview"
+            fallback: "/fleet-management.png"
+            alt: "Disinfection Robot"
+          video:
+            url: "https://drive.google.com/file/d/1yzBOFeOZb4ERv1iLqUk4tzQVJeKKcM79/preview"
+            fallback: "/fleet-management.png"
+            alt: "Disinfection Robot Demo"
+            type: "iframe"
+          technologies:
+            - ""
+          date: ""
+        - title: "MB90A Payload"
+          duration: "Payload"
+          thumbnail:
+            url: "https://drive.google.com/file/d/1Nph184Eu5CMui2gBM06OBKyGWuXyI8qi/preview"
+            fallback: "/fleet-management.png"
+            alt: "Disinfection Robot"
+          video:
+            url: "https://drive.google.com/file/d/1Nph184Eu5CMui2gBM06OBKyGWuXyI8qi/preview"
+            fallback: "/fleet-management.png"
+            alt: "Disinfection Robot Demo"
+            type: "iframe"
+          technologies:
+            - ""
+          date: ""
+        - title: "Mozo Demo"
+          duration: ""
+          thumbnail:
+            url: "https://drive.google.com/file/d/13bx9MjfHvKdFEgVIVW3YaS44m5u49l1W/preview"
+            fallback: "/fleet-management.png"
+            alt: "Disinfection Robot"
+          video:
+            url: "https://drive.google.com/file/d/13bx9MjfHvKdFEgVIVW3YaS44m5u49l1W/preview"
+            fallback: "/fleet-management.png"
+            alt: "Disinfection Robot Demo"
+            type: "iframe"
+          technologies:
+            - ""
+          date: ""
+        - title: "Kitchen Gantry System"
+          description: "Automated gantry for food delivery."
+          duration: ""
+          thumbnail:
+            url: "https://drive.google.com/file/d/1PL0iW_M5k5q9EpQWOPtAFqGTVz-UkLt5/preview"
+            fallback: "/semi-humanoid-robots.png"
+            alt: "AI-Enhanced Semi-Humanoid Robots"
+          video:
+            url: "https://drive.google.com/file/d/1PL0iW_M5k5q9EpQWOPtAFqGTVz-UkLt5/preview"
+            fallback: "/semi-humanoid-robots.png"
+            alt: "Kitchen Gantry System Demo"
+            type: "iframe"
+          technologies:
+            - "ROS2"
+            - "MoveIt2"
+            - "OMPL"
+            - "CHOMP"
+            - "Octomap"
+          date: ""
+        - title: "Fails "
+          duration: ""
+          thumbnail:
+            url: "   https://drive.google.com/file/d/1layUwca9kdMYDzkhR0jXC4akGDCW4NNM/preview"
+            fallback: "/fleet-management.png"
+            alt: "Disinfection Robot"
+          video:
+            url: "   https://drive.google.com/file/d/1layUwca9kdMYDzkhR0jXC4akGDCW4NNM/preview"
+            fallback: "/fleet-management.png"
+            alt: "Disinfection Robot Demo"
+            type: "iframe"
+          technologies:
+            - ""
+          date: ""
+    - name: "Event Showcases"
+      description: "Robotics demonstrations at major technology events"
+      color: "purple"
+      videos:
+        - title: "Pocket Tank Shooter - Gitex 2023"
+          description: "Interactive VR combat robots with autonomous and manual control modes"
+          duration: "4:20"
+          thumbnail:
+            url: "https://drive.google.com/file/d/1xBgy57WerQhsVEMCKGv2hFn5_w8VjML7/preview"
+            fallback: "/pocket-tank.png"
+            alt: "Pocket Tank Shooter"
+          video:
+            url: "https://drive.google.com/file/d/1xBgy57WerQhsVEMCKGv2hFn5_w8VjML7/preview"
+            fallback: "/pocket-tank.png"
+            alt: "Pocket Tank Shooter Demo"
+            type: "iframe"
+          technologies:
+            - "VR Integration"
+            - "Omni-Wheel Drive"
+            - "Computer Vision"
+            - "Real-time Control"
+          date: "2023"
+        
+
+        
+
+    - name: "Research & Development"
+      description: "Cutting-edge research projects and experimental systems"
+      color: "green"
+      videos:
+        - title: "3D Indoors navigation for drones using PX4 Simulation"
+          description: "Using PX4 autopilot to integrate with 3D obstacle avoidance and trajectory planning based on BSpline"
+          duration: ""
+          thumbnail:
+            url: "https://drive.google.com/file/d/1WObcFWFxRXIBrCmWSTyZlbRphmPJTxaP/preview"
+            fallback: "/nvidia-isaac-sim.png"
+            alt: "NVIDIA Isaac Sim Research"
+          video:
+            url: "https://drive.google.com/file/d/1WObcFWFxRXIBrCmWSTyZlbRphmPJTxaP/preview"
+            fallback: "/nvidia-isaac-sim.png"
+            alt: "3D Indoors navigation for drones using PX4 Simulation Demo"
+            type: "iframe"
+          technologies:
+            - "NVIDIA Isaac"
+            - "NVIDIA Isaac Sim"
+            - "ROS2 Integration"
+            - "Reinforcement Learning"
+            - "Python"
+            - "C++"
+          date:
+        - title: "AI-Enhanced Semi-Humanoid Robot"
+          duration: ""
+          thumbnail:
+            url: "https://drive.google.com/file/d/1JCOGtnFKpWHcRsSsJg_t2rB1unxZqEjA/preview"
+            fallback: "/semi-humanoid-robots.png"
+            alt: "AI-Enhanced Semi-Humanoid Robots"
+          video:
+            url: "https://drive.google.com/file/d/1JCOGtnFKpWHcRsSsJg_t2rB1unxZqEjA/preview"
+            fallback: "/semi-humanoid-robots.png"
+            alt: "AI-Enhanced Semi-Humanoid Robots Demo"
+            type: "iframe"
+          technologies:
+            - "ROS2"
+            - "C++"
+            - "Python"
+            - "Perception"
+            - "CAN"
+            - "Brushless Motors Control (Velocity,Position,Effort)"
+          date: ""
+        - title: "MB90A Universal Integration UR10"
+          duration: "Payload"
+          thumbnail:
+            url: "https://drive.google.com/file/d/1uck-UBMWeCSkjEXHXPkAy6QG1X_pHFJb/preview"
+            fallback: "/fleet-management.png"
+            alt: "Disinfection Robot"
+          video:
+            url: "https://drive.google.com/file/d/1uck-UBMWeCSkjEXHXPkAy6QG1X_pHFJb/preview"
+            fallback: "/fleet-management.png"
+            alt: "Disinfection Robot Demo"
+            type: "iframe"
+          technologies:
+            - ""
+          date: ""
+     
 footer:
   copyright: "All rights reserved."

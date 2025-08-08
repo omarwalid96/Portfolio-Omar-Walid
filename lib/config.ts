@@ -1,4 +1,3 @@
-
 export interface PersonalInfo {
   name: string
   title: string
@@ -112,6 +111,27 @@ export interface ResearchInfo {
   competitions: Competitions[]
 }
 
+export interface VideoItem {
+  title: string
+  description: string
+  duration: string
+  thumbnail: MediaItem
+  video: MediaItem
+  technologies: string[]
+  date: string
+}
+
+export interface VideoCategory {
+  name: string
+  description: string
+  color: string
+  videos: VideoItem[]
+}
+
+export interface VideosInfo {
+  categories: VideoCategory[]
+}
+
 export interface FooterInfo {
   copyright: string
   builtWith?: string
@@ -126,6 +146,7 @@ export interface PortfolioConfig {
   currentWork: CurrentWorkInfo
   eventsWork: EventsInfo
   research: ResearchInfo
+  videos: VideosInfo
   footer: FooterInfo
 }
 
@@ -133,136 +154,8 @@ export interface MediaItem {
   url: string
   fallback: string
   alt: string
-  type?: 'image' | 'video' | 'iframe' // Add iframe type
+  type?: 'image' | 'video' | 'iframe'
 }
-
-let cachedConfig: PortfolioConfig | null = null
-
-export function getPortfolioConfig(): PortfolioConfig {
-  if (cachedConfig) {
-    return cachedConfig
-  }
-
-  try {
-    const configPath = path.join(process.cwd(), 'config', 'portfolio.yaml')
-
-    try {
-      if (process.env.NODE_ENV === 'development') {
-        const y = fs.readFileSync(configPath, 'utf8')
-        return (yaml.load(y) as PortfolioConfig) ?? getDefaultConfig()
-      }
-
-      // prod: cache
-      if (!cachedConfig) {
-        const y = fs.readFileSync(configPath, 'utf8')
-        cachedConfig = (yaml.load(y) as PortfolioConfig) ?? getDefaultConfig()
-      }
-      return cachedConfig
-    } catch (e) {
-      console.error('Error loading portfolio config:', e)
-      return getDefaultConfig()
-    }
-  } catch (error) {
-    console.error('Error loading portfolio config:', error)
-    // Return default config if file doesn't exist
-    return getDefaultConfig()
-  }
-}
-
-function getDefaultConfig(): PortfolioConfig {
-  return {
-    personal: {
-      name: "Your Name",
-      title: "Full Stack Developer",
-      tagline: "Creative Developer",
-      passion: "Passionate about creating innovative solutions and bringing ideas to life through code and design.",
-      location: "San Francisco, CA",
-      email: "your.email@example.com",
-      profileImage: {
-        url: "",
-        fallback: "/professional-headshot.png",
-        alt: "Profile Picture",
-        type: "image"
-      }
-    },
-    social: {
-      github: {
-        url: "https://github.com/yourusername",
-        username: "yourusername"
-      },
-      linkedin: {
-        url: "https://linkedin.com/in/yourusername",
-        username: "yourusername"
-      },
-      email: "your.email@example.com",
-      website: "https://yourwebsite.com"
-    },
-    about: {
-      description: "A passionate developer with expertise in modern technologies and a track record of delivering innovative solutions.",
-      achievements: [
-        {
-          title: "Led Development Team",
-          description: "Successfully managed a team of 5 developers on a major project",
-          color: "blue"
-        }
-      ],
-      skills: ["React", "Next.js", "TypeScript", "Node.js"],
-      workspace: {
-        image: {
-          url: "",
-          fallback: "/developer-workspace.png",
-          alt: "Workspace",
-          type: "image"
-        }
-      },
-      quote: {
-        text: "Code is like humor. When you have to explain it, it's bad.",
-        author: "Cory House"
-      }
-    },
-    experience: {
-      jobs: []
-    },
-    projects: {
-      featured: []
-    },
-    currentWork: {
-      projects: []
-    },
-    research: {
-      areas: [],
-      competitions: []
-    },
-    eventsWork: {
-      featured: []
-    },
-    footer: {
-      copyright: "All rights reserved.",
-      builtWith: "Built with Next.js, Tailwind CSS, and deployed on GitHub Pages"
-    }
-  }
-}
-
-// Client-side helper functions and types
-export type { 
-  MediaItem, 
-  PortfolioConfig, 
-  PersonalInfo, 
-  SocialLinks, 
-  AboutInfo, 
-  ExperienceInfo, 
-  ProjectsInfo, 
-  CurrentWorkInfo, 
-  ResearchInfo, 
-  EventsInfo, 
-  FooterInfo,
-  Achievement,
-  Job,
-  Project,
-  CurrentProject,
-  ResearchArea,
-  Competitions
-} from './config-server'
 
 // Helper function to determine if media is iframe
 export function isIframe(media: { url: string; fallback: string; type?: string }): boolean {
