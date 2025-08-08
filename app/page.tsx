@@ -55,7 +55,7 @@ export default function Portfolio() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-md z-50 border-b">
+      {/* <nav className="fixed top-0 w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-md z-50 border-b">
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
@@ -73,7 +73,52 @@ export default function Portfolio() {
             </div>
           </div>
         </div>
-      </nav>
+      </nav> */}
+      <nav className="fixed top-0 w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-md z-50 border-b">
+  <div className="container mx-auto px-4 py-4">
+    <div className="flex justify-between items-center">
+      <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+        {config.personal.name}
+      </h1>
+
+      {/* Desktop links (unchanged) */}
+      <div className="hidden md:flex space-x-8">
+        <a href="#home" className="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white transition-colors">Home</a>
+        <a href="#about" className="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white transition-colors">About</a>
+        <a href="#experience" className="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white transition-colors">Experience</a>
+        <a href="#projects" className="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white transition-colors">Projects</a>
+        <a href="#current" className="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white transition-colors">Current Work</a>
+        <a href="#research" className="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white transition-colors">R&D</a>
+        <a href="#events" className="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white transition-colors">Events</a>
+        <a href="#videos" className="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white transition-colors">Videos</a>
+      </div>
+
+      {/* Mobile menu: pure HTML, no handlers */}
+      <details className="md:hidden relative group [&>summary::-webkit-details-marker]:hidden">
+        <summary
+          aria-label="Toggle menu"
+          className="flex items-center gap-2 cursor-pointer rounded-md px-3 py-2 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 transition-transform group-open:rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </summary>
+
+        <div className="absolute right-0 mt-2 w-56 rounded-lg border border-slate-200/60 bg-white/95 dark:bg-slate-900/95 shadow-lg backdrop-blur p-2">
+          <a href="#home" className="block px-3 py-2 rounded-md text-slate-700 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white dark:hover:bg-slate-800 transition-colors">Home</a>
+          <a href="#about" className="block px-3 py-2 rounded-md text-slate-700 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white dark:hover:bg-slate-800 transition-colors">About</a>
+          <a href="#experience" className="block px-3 py-2 rounded-md text-slate-700 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white dark:hover:bg-slate-800 transition-colors">Experience</a>
+          <a href="#projects" className="block px-3 py-2 rounded-md text-slate-700 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white dark:hover:bg-slate-800 transition-colors">Projects</a>
+          <a href="#current" className="block px-3 py-2 rounded-md text-slate-700 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white dark:hover:bg-slate-800 transition-colors">Current Work</a>
+          <a href="#research" className="block px-3 py-2 rounded-md text-slate-700 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white dark:hover:bg-slate-800 transition-colors">R&D</a>
+          <a href="#events" className="block px-3 py-2 rounded-md text-slate-700 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white dark:hover:bg-slate-800 transition-colors">Events</a>
+          <a href="#videos" className="block px-3 py-2 rounded-md text-slate-700 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white dark:hover:bg-slate-800 transition-colors">Videos</a>
+        </div>
+      </details>
+    </div>
+  </div>
+</nav>
+
 
       {/* Hero Section */}
       <section id="home" className="pt-20 pb-16 px-4">
