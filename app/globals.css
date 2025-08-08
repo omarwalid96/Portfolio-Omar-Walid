@@ -58,6 +58,85 @@
   }
 }
 
+/* Video and iframe controls styling */
+video, iframe {
+  border-radius: inherit;
+}
+
+video::-webkit-media-controls-panel {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Iframe loading states */
+iframe {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+iframe[src] {
+  background: none;
+  animation: none;
+}
+
+.dark iframe {
+  background: linear-gradient(90deg, #2a2a2a 25%, #3a3a3a 50%, #2a2a2a 75%);
+  background-size: 200% 100%;
+}
+
+.dark iframe[src] {
+  background: none;
+  animation: none;
+}
+
+/* Ensure consistent aspect ratios */
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
+
+.aspect-portrait {
+  aspect-ratio: 3 / 4;
+}
+
+/* Smooth transitions for media */
+.media-transition {
+  transition: transform 0.3s ease-in-out;
+}
+
+.media-transition:hover {
+  transform: scale(1.02);
+}
+
+/* Loading states for media */
+.media-loading {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.dark .media-loading {
+  background: linear-gradient(90deg, #2a2a2a 25%, #3a3a3a 50%, #2a2a2a 75%);
+  background-size: 200% 100%;
+}
+
+/* Rounded inherit utility */
+.rounded-inherit {
+  border-radius: inherit;
+}
+
 html {
   scroll-behavior: smooth;
 }

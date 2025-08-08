@@ -288,7 +288,7 @@ projects:
       description: "Custom multi-robot management software"
       longDescription: "Developing a centralized platform for monitoring, controlling, and optimizing multi-robot operations in warehouses and public spaces."
       image:
-        url: "https://photos.google.com/share/AF1QipPMMsPwJQsEQIXf03A7x0dslHZQlNQfFNSGtqpgT06iMc02yrovubcLii-RQUSctg/photo/AF1QipO28L8ucIRtmELqZjIpmr-QB9xMje3EbujeTthF?key=OVliUVRhRm5ESEI1WF81RmUyV0taTm1aQ252WW5R"
+        url: "https://drive.google.com/file/d/1WObcFWFxRXIBrCmWSTyZlbRphmPJTxaP/preview"
         fallback: "/fleet-management.png"
         alt: "Fleet Management System"
       technologies:

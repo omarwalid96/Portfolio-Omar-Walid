@@ -23,31 +23,87 @@ All portfolio content is managed through the `config/portfolio.yaml` file. Simpl
 - Work experience and job roles
 - Featured projects with images and links
 - Current work and research areas
-- Competiotions and papers
+- Competitions and papers
 
 ### 📝 How to Update Your Portfolio
 
 1. **Edit the configuration file**: Open `config/portfolio.yaml`
 2. **Update your information**: Replace placeholder content with your real data
-3. **Add image URLs**: For each image, you can either:
-   - Add a URL to the `url` field for external images
-   - Leave `url` empty to use the static fallback image
+3. **Add media URLs**: For each media item, you can use:
+   - External image URLs
+   - Direct video URLs (.mp4, .webm, etc.)
+   - Iframe embed URLs (Google Drive, YouTube, Vimeo)
+   - Static fallback images
 4. **Commit and push**: Your changes will automatically deploy
 
-### 🖼️ Image Management
+### 🖼️ Media Management (Images, Videos & Embeds)
 
-The portfolio supports both external URLs and static images:
+The portfolio supports three types of media content:
 
+#### **1. Images**
 \`\`\`yaml
 profileImage:
-  url: "https://your-image-url.com/photo.jpg"  # External URL
-  fallback: "/professional-headshot.png"        # Static fallback
+  url: "https://your-image-url.com/photo.jpg"
+  fallback: "/professional-headshot.png"
   alt: "Your Name Profile Picture"
+  type: "image"  # Optional
 \`\`\`
 
-- If `url` is provided and valid, it will be used
-- If `url` is empty or fails to load, the `fallback` static image is used
-- This ensures your portfolio always displays properly
+#### **2. Direct Videos**
+\`\`\`yaml
+projectVideo:
+  url: "https://your-cdn.com/demo.mp4"
+  fallback: "/project-screenshot.png"  # Used as poster
+  alt: "Project Demo Video"
+  type: "video"  # Optional, auto-detected
+\`\`\`
+
+#### **3. Iframe Embeds (NEW!)**
+\`\`\`yaml
+# Google Drive Video
+driveVideo:
+  url: "https://drive.google.com/file/d/1WObcFWFxRXIBrCmWSTyZlbRphmPJTxaP/preview"
+  fallback: "/video-thumbnail.png"
+  alt: "Project Demo from Google Drive"
+  type: "iframe"  # Optional, auto-detected
+
+# YouTube Video
+youtubeVideo:
+  url: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  fallback: "/youtube-thumbnail.png"
+  alt: "YouTube Demo Video"
+  type: "iframe"
+
+# Vimeo Video
+vimeoVideo:
+  url: "https://player.vimeo.com/video/123456789"
+  fallback: "/vimeo-thumbnail.png"
+  alt: "Vimeo Demo Video"
+  type: "iframe"
+\`\`\`
+
+**Supported Iframe Platforms:**
+- ✅ Google Drive (`drive.google.com`)
+- ✅ YouTube (`youtube.com/embed`, `youtu.be`)
+- ✅ Vimeo (`vimeo.com`, `player.vimeo.com`)
+- ✅ Dailymotion
+- ✅ Facebook Videos
+- ✅ Instagram Posts
+- ✅ TikTok
+- ✅ Any platform that provides iframe embed codes
+
+**Auto-Detection Features:**
+- Automatically detects media type based on URL patterns
+- Converts Google Drive share links to embed links
+- Graceful fallback to images if video/iframe fails
+- Responsive aspect ratios maintained across all media types
+
+**Media Features:**
+- Consistent aspect ratios (16:9, 1:1, 3:4, custom)
+- Proper object-fit handling (cover, contain, fill)
+- Loading states and error handling
+- Smooth hover transitions
+- Mobile-optimized playback
 
 ## 🚀 Deployment
 
@@ -96,8 +152,9 @@ npm run build
 - 🚀 Automatic deployment to GitHub Pages
 - 🎯 SEO optimized
 - 📝 Easy content management via YAML
-- 🖼️ Flexible image handling (URLs + fallbacks)
+- 🖼️ Flexible media handling (Images, Videos, Iframes)
 - 🔧 Type-safe configuration
+- 📺 Iframe embed support for all major platforms
 
 ## 🎨 Customization
 
@@ -130,6 +187,7 @@ Continue building your app on: **[https://v0.dev/chat/projects/3eTIDoF7kB7](http
 ## How It Works
 
 1. Edit `config/portfolio.yaml` with your information
-2. Push changes to trigger automatic deployment
-3. Your portfolio updates automatically on GitHub Pages
-4. Images load from URLs with static fallbacks for reliability
+2. Add images, videos, or iframe embeds using the flexible media system
+3. Push changes to trigger automatic deployment
+4. Your portfolio updates automatically on GitHub Pages
+5. All media loads with proper fallbacks for maximum reliability

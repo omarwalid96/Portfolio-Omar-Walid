@@ -9,11 +9,7 @@ export interface PersonalInfo {
   passion: string
   location: string
   email: string
-  profileImage: {
-    url: string
-    fallback: string
-    alt: string
-  }
+  profileImage: MediaItem
 }
 
 export interface SocialLinks {
@@ -40,11 +36,7 @@ export interface AboutInfo {
   achievements: Achievement[]
   skills: string[]
   workspace: {
-    image: {
-      url: string
-      fallback: string
-      alt: string
-    }
+    image: MediaItem
   }
   quote: {
     text: string
@@ -71,11 +63,7 @@ export interface Project {
   title: string
   description: string
   longDescription: string
-  image: {
-    url: string
-    fallback: string
-    alt: string
-  }
+  image: MediaItem
   technologies: string[]
   links: {
     github?: string
@@ -109,13 +97,10 @@ export interface CurrentWorkInfo {
 export interface ResearchArea {
   title: string
   description: string
-  image: {
-    url: string
-    fallback: string
-    alt: string
-  }
+  image: MediaItem
   technologies: string[]
   color: string
+  longDescription?: string
 }
 
 export interface Competitions {
@@ -132,7 +117,7 @@ export interface ResearchInfo {
 
 export interface FooterInfo {
   copyright: string
-  builtWith: string
+  builtWith?: string
 }
 
 export interface PortfolioConfig {
@@ -147,6 +132,13 @@ export interface PortfolioConfig {
   footer: FooterInfo
 }
 
+export interface MediaItem {
+  url: string
+  fallback: string
+  alt: string
+  type?: 'image' | 'video' | 'iframe' // Add iframe type
+}
+
 let cachedConfig: PortfolioConfig | null = null
 
 export function getPortfolioConfig(): PortfolioConfig {
@@ -157,22 +149,22 @@ export function getPortfolioConfig(): PortfolioConfig {
   try {
     const configPath = path.join(process.cwd(), 'config', 'portfolio.yaml')
 
-  try {
-    if (process.env.NODE_ENV === 'development') {
-      const y = fs.readFileSync(configPath, 'utf8')
-      return (yaml.load(y) as PortfolioConfig) ?? getDefaultConfig()
-    }
+    try {
+      if (process.env.NODE_ENV === 'development') {
+        const y = fs.readFileSync(configPath, 'utf8')
+        return (yaml.load(y) as PortfolioConfig) ?? getDefaultConfig()
+      }
 
-    // prod: cache
-    if (!cachedConfig) {
-      const y = fs.readFileSync(configPath, 'utf8')
-      cachedConfig = (yaml.load(y) as PortfolioConfig) ?? getDefaultConfig()
+      // prod: cache
+      if (!cachedConfig) {
+        const y = fs.readFileSync(configPath, 'utf8')
+        cachedConfig = (yaml.load(y) as PortfolioConfig) ?? getDefaultConfig()
+      }
+      return cachedConfig
+    } catch (e) {
+      console.error('Error loading portfolio config:', e)
+      return getDefaultConfig()
     }
-    return cachedConfig
-  } catch (e) {
-    console.error('Error loading portfolio config:', e)
-    return getDefaultConfig()
-  }
   } catch (error) {
     console.error('Error loading portfolio config:', error)
     // Return default config if file doesn't exist
@@ -192,7 +184,8 @@ function getDefaultConfig(): PortfolioConfig {
       profileImage: {
         url: "",
         fallback: "/professional-headshot.png",
-        alt: "Profile Picture"
+        alt: "Profile Picture",
+        type: "image"
       }
     },
     social: {
@@ -221,7 +214,8 @@ function getDefaultConfig(): PortfolioConfig {
         image: {
           url: "",
           fallback: "/developer-workspace.png",
-          alt: "Workspace"
+          alt: "Workspace",
+          type: "image"
         }
       },
       quote: {
@@ -252,7 +246,70 @@ function getDefaultConfig(): PortfolioConfig {
   }
 }
 
-// Helper function to get image source (URL or fallback)
+// Helper function to determine if media is iframe
+export function isIframe(media: MediaItem): boolean {
+  if (media.type === 'iframe') return true
+  if (media.type === 'image' || media.type === 'video') return false
+  
+  // Auto-detect based on URL patterns
+  const url = media.url || media.fallback
+  const iframePatterns = [
+    'drive.google.com',
+    'youtube.com/embed',
+    'youtu.be',
+    'vimeo.com',
+    'player.vimeo.com',
+    'dailymotion.com',
+    'facebook.com/plugins/video',
+    'instagram.com/p/',
+    'tiktok.com'
+  ]
+  return iframePatterns.some(pattern => url.toLowerCase().includes(pattern))
+}
+
+// Helper function to determine if media is video
+export function isVideo(media: MediaItem): boolean {
+  if (media.type === 'video') return true
+  if (media.type === 'image' || media.type === 'iframe') return false
+  
+  // Auto-detect based on URL extension
+  const url = media.url || media.fallback
+  const videoExtensions = ['.mp4', '.webm', '.ogg', '.mov', '.avi', '.mkv', '.flv']
+  return videoExtensions.some(ext => url.toLowerCase().includes(ext))
+}
+
+// Helper function to get media source (URL or fallback)
+export function getMediaSrc(media: MediaItem): string {
+  return media.url && media.url.trim() !== '' ? media.url : media.fallback
+}
+
+// Keep the old getImageSrc function for backward compatibility
 export function getImageSrc(image: { url: string; fallback: string }): string {
   return image.url && image.url.trim() !== '' ? image.url : image.fallback
+}
+
+// Helper function to convert Google Drive share links to embed links
+export function convertGoogleDriveUrl(url: string): string {
+  // Convert Google Drive share URLs to embed URLs
+  const driveSharePattern = /https:\/\/drive\.google\.com\/file\/d\/([a-zA-Z0-9_-]+)\/view/
+  const match = url.match(driveSharePattern)
+  
+  if (match) {
+    const fileId = match[1]
+    return `https://drive.google.com/file/d/${fileId}/preview`
+  }
+  
+  return url
+}
+
+// Helper function to get proper iframe src
+export function getIframeSrc(media: MediaItem): string {
+  const url = getMediaSrc(media)
+  
+  // Convert Google Drive URLs if needed
+  if (url.includes('drive.google.com')) {
+    return convertGoogleDriveUrl(url)
+  }
+  
+  return url
 }

@@ -5,7 +5,8 @@ import { Separator } from "@/components/ui/separator"
 import { Github, Linkedin, Mail, ExternalLink, Calendar, MapPin, Award, Briefcase, Code, Lightbulb } from 'lucide-react'
 import Image from "next/image"
 import Link from "next/link"
-import { getPortfolioConfig, getImageSrc } from "@/lib/config"
+import { MediaDisplay } from "@/components/ui/media-display"
+import { getPortfolioConfig, getImageSrc, isVideo, getMediaSrc } from "@/lib/config"
 
 export default function Portfolio() {
   const config = getPortfolioConfig()
@@ -121,12 +122,11 @@ export default function Portfolio() {
             <div className="relative">
               <div className="relative w-full max-w-md mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full blur-3xl opacity-30 animate-pulse"></div>
-                <Image
-                  src={getImageSrc(config.personal.profileImage) || "/placeholder.svg"}
-                  alt={config.personal.profileImage.alt}
-                  width={400}
-                  height={400}
+                <MediaDisplay
+                  media={config.personal.profileImage}
                   className="relative z-10 rounded-full border-4 border-white dark:border-slate-800 shadow-2xl"
+                  aspectRatio="1/1"
+                  objectFit="cover"
                 />
               </div>
             </div>
@@ -202,11 +202,11 @@ export default function Portfolio() {
               </Card>
 
               <div className="relative h-64 rounded-lg overflow-hidden">
-                <Image
-                  src={getImageSrc(config.about.workspace.image) || "/placeholder.svg"}
-                  alt={config.about.workspace.image.alt}
-                  fill
-                  className="object-cover"
+                <MediaDisplay
+                  media={config.about.workspace.image}
+                  className="rounded-lg"
+                  aspectRatio="16/9"
+                  objectFit="cover"
                 />
               </div>
 
@@ -280,14 +280,12 @@ export default function Portfolio() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {config.projects.featured.map((project, index) => (
               <Card key={index} className="group hover:shadow-xl transition-all duration-300">
-                <div className="relative h-48 overflow-hidden rounded-t-lg">
-                  <Image
-                    src={getImageSrc(project.image) || "/placeholder.svg"}
-                    alt={project.image.alt}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
+                <MediaDisplay
+                  media={project.image}
+                  className="rounded-t-lg group-hover:scale-105 transition-transform duration-300"
+                  aspectRatio="16/9"
+                  objectFit="cover"
+                />
                 <CardHeader>
                   <CardTitle className="flex items-center justify-between">
                     {project.title}
@@ -358,14 +356,12 @@ export default function Portfolio() {
                   <CardDescription>{project.description}</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <div className="relative h-40 rounded-lg overflow-hidden">
-                    <Image
-                      src={getImageSrc(project.image) || "/placeholder.svg"}
-                      alt={project.image.alt}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
+                  <MediaDisplay
+                    media={project.image}
+                    className="rounded-lg"
+                    aspectRatio="16/9"
+                    objectFit="cover"
+                  />
                   <p className="text-slate-600 dark:text-slate-300">
                     {project.longDescription}
                   </p>
@@ -419,14 +415,12 @@ export default function Portfolio() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <div className="relative h-32 rounded-lg overflow-hidden">
-                    <Image
-                      src={getImageSrc(area.image) || "/placeholder.svg"}
-                      alt={area.image.alt}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
+                  <MediaDisplay
+                    media={area.image}
+                    className="rounded-lg"
+                    aspectRatio="16/9"
+                    objectFit="cover"
+                  />
                   <p className="text-slate-600 dark:text-slate-300">
                     {area.description}
                   </p>
@@ -475,14 +469,12 @@ export default function Portfolio() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {config.eventsWork.featured.map((project, index) => (
               <Card key={index} className="group hover:shadow-xl transition-all duration-300">
-                <div className="relative h-48 overflow-hidden rounded-t-lg">
-                  <Image
-                    src={getImageSrc(project.image) || "/placeholder.svg"}
-                    alt={project.image.alt}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
+                <MediaDisplay
+                  media={project.image}
+                  className="rounded-t-lg group-hover:scale-105 transition-transform duration-300"
+                  aspectRatio="16/9"
+                  objectFit="cover"
+                />
                 <CardHeader>
                   <CardTitle className="flex items-center justify-between">
                     {project.title}
