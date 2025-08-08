@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: "Modern portfolio showcasing my work as a Robotics Engineer",
   generator: 'v0.dev',
   icons: {
-    icon: '/chatbot.png', // path relative to public/
+    icon: 'https://cdn.iconscout.com/icon/free/png-512/free-robot-104-450712.png?f=webp&w=256', // path relative to public/
   },
   
 }
