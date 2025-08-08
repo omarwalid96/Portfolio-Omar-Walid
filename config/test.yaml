@@ -1,0 +1,196 @@
+# Portfolio Configuration
+# Updated to reflect Omar Walid's real professional profile
+
+personal:
+  name: "Omar Walid"
+  title: "Robotics Software Engineer"
+  tagline: "Architecting Intelligent Robotic Systems"
+  passion: "Passionate about designing end-to-end robotics solutions that merge AI, perception, and control to create intelligent, real-world automation."
+  location: "Cairo, Egypt"
+  email: "omar.walid0796@gmail.com"
+  
+  profileImage:
+    url: "" # Add your profile image URL if available
+    fallback: "/professional-headshot.png"
+    alt: "Omar Walid Profile Picture"
+
+social:
+  github:
+    url: "https://github.com/omarwalid96"
+    username: "omarwalid96"
+  linkedin:
+    url: "https://linkedin.com/in/omar-walid96"
+    username: "omar-walid96"
+  email: "omar.walid0796@gmail.com"
+  website: "" # Can be updated if you have a portfolio domain
+
+about:
+  description: "Robotics engineer with 7+ years of experience building service, industrial, and AI-enhanced robotics systems. Skilled in ROS1 & ROS2, C++, Python, embedded systems, perception, navigation, and AI model integration. Experienced in leading cross-functional teams to deliver impactful automation solutions."
+  
+  achievements:
+    - title: "Barista Project Lead Architect"
+      description: "Designed and implemented the full system architecture for a multi-machine automated barista solution, integrating ROS2 behavior trees, RS485+CAN communication, and cloud-based facial recognition."
+      color: "blue"
+    - title: "SMART Customer Support Agent"
+      description: "Developed an AI-driven assistant deployed on the Duet service robot with advanced navigation, perception, and multi-modal interaction."
+      color: "purple"
+    - title: "Warehouse Automation"
+      description: "Architected and implemented the MB90a logistics robot software from scratch using ROS2, CAN protocols, and holonomic motion control."
+      color: "teal"
+
+  skills:
+    - "C++"
+    - "Python"
+    - "ROS1 & ROS2"
+    - "Behavior Trees"
+    - "Embedded C"
+    - "Linux"
+    - "Docker"
+    - "CI/CD"
+    - "CAN Communication"
+    - "RS485"
+    - "Sensor Fusion"
+    - "AI Integration (LLMs, STT, TTS)"
+    - "WebSockets"
+    - "MATLAB"
+    - "Navigation (MPC, Cartographer)"
+    - "Open3D"
+    - "3D Perception"
+    - "Microcontrollers"
+
+  workspace:
+    image:
+      url: "" 
+      fallback: "/developer-workspace.png"
+      alt: "Robotics Engineer Workspace"
+
+  quote:
+    text: "Robotics is where code meets reality — and every solution has a tangible impact."
+    author: "Omar Walid"
+
+experience:
+  jobs:
+    - title: "Robotics Software Senior Developer (Part-time)"
+      company: "Nodogoro"
+      location: "California, USA"
+      startDate: "2024"
+      endDate: "Present"
+      current: true
+      color: "blue"
+      responsibilities:
+        - "Designed advanced system architectures for fully automated robotic kitchen workflows."
+        - "Integrated robotic solutions with kitchen operations to reduce manual labor."
+        - "Led ROS2-based communication and orchestration design."
+
+    - title: "Robotics Software Lead"
+      company: "MARSES Robotics"
+      location: "Dubai, UAE"
+      startDate: "2020"
+      endDate: "2024"
+      current: false
+      color: "purple"
+      responsibilities:
+        - "Led a cross-functional team of robotics engineers, developers, and installation specialists."
+        - "Designed and implemented ROS2 behavior trees, communication protocols, and system architectures."
+        - "Integrated AI models (LLaMA3, ChatGPT4, Qwen3) with STT/TTS and data synthesis for improved interactivity."
+        - "Developed multi-robot fleet management and advanced perception systems with sensor fusion."
+        - "Oversaw Android app development, inventory systems, and notification workflows."
+
+    - title: "Robotics System Specialist"
+      company: "MARSES Robotics"
+      location: "Cairo, Egypt"
+      startDate: "2017"
+      endDate: "2020"
+      current: false
+      color: "teal"
+      responsibilities:
+        - "Developed the first proof-of-concept delivery robot for restaurants."
+        - "Programmed robots using C++, Python, JavaScript, and Embedded C (ROS)."
+        - "Conducted R&D for new product lines and created electrical safety guidelines."
+        - "Managed on-site installation, testing, and simulation."
+        - "Established the company's software team architecture."
+
+projects:
+  featured:
+    - title: "Automated Barista Solution"
+      description: "End-to-end robotics architecture for multi-machine coffee preparation."
+      longDescription: "Designed RS485+CAN communication, ROS2 behavior trees, cloud-based facial recognition, inventory and stock management, and WebSocket-based communication for a fully automated barista system."
+      technologies:
+        - "ROS2"
+        - "Behavior Trees"
+        - "RS485"
+        - "CAN"
+        - "WebRTC"
+        - "C++"
+        - "Python"
+        - "Android"
+        - "WebSockets"
+
+    - title: "SMART Customer Support Agent (Duet Robot)"
+      description: "AI-driven banking assistant on a mobile service robot."
+      longDescription: "Designed and implemented an AI-driven virtual assistant for banks using LLMs, STT/TTS, Cartographer navigation, MPC planning, Open3D-based 3D perception, IMU-odometry fusion, and WebSocket APIs to create a multilingual, interactive bank assistant."
+      technologies:
+        - "ROS"
+        - "C++"
+        - "Python"
+        - "LLaMA3"
+        - "Qwen3"
+        - "Open3D"
+        - "Cartographer"
+        - "MPC"
+        - "LLMs"
+        - "Speech-to-Text"
+        - "Text-to-Speech"
+
+    - title: "MB90a Logistics Robot"
+      description: "Autonomous warehouse logistics solution."
+      longDescription: "Implemented ROS2-based software architecture, CAN protocols, and MATLAB models for holonomic motion control with mecanum wheels, improving logistics efficiency and reducing downtime."
+      technologies:
+        - "ROS2"
+        - "C++"
+        - "Python"
+        - "CAN"
+        - "MATLAB"
+
+currentWork:
+  projects:
+    - title: "Semi-Humanoid Interactive Robot (R&D)"
+      description: "12-DOF robot with advanced interaction and mobility."
+      longDescription: "Developed control software, navigation systems, and perception pipelines for a semi-humanoid platform with differential navigation."
+      technologies:
+        - "ROS2"
+        - "C++"
+        - "Python"
+        - "Perception"
+        - "Navigation"
+
+    - title: "Kitchen Gantry System (R&D)"
+      description: "Automated gantry for food preparation."
+      longDescription: "Used MoveIt2 with OMPL and CHOMP planners for path planning and obstacle avoidance, plus Octomap for 3D object detection."
+      technologies:
+        - "ROS2"
+        - "MoveIt2"
+        - "OMPL"
+        - "CHOMP"
+        - "Octomap"
+
+research:
+  areas:
+    - title: "AI-Enhanced Robotics"
+      description: "Integrating LLMs, STT, TTS, and multi-modal AI models into service robotics."
+      technologies:
+        - "LLaMA3"
+        - "Qwen3"
+        - "RAG"
+        - "Transformers"
+    - title: "Advanced Navigation & Perception"
+      description: "Sensor fusion, MPC navigation, and 3D environment mapping for autonomous robots."
+      technologies:
+        - "MPC"
+        - "Cartographer"
+        - "Open3D"
+        - "Sensor Fusion"
+
+footer:
+  copyright: "All rights reserved."
+  builtWith: "Built with Next.js, Tailwind CSS, and deployed on GitHub Pages"
