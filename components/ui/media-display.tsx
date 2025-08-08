@@ -1,7 +1,7 @@
 'use client'
 
 import Image from "next/image"
-import { MediaItem, isVideo, isIframe, getMediaSrc, getIframeSrc } from "@/lib/config"
+import { isVideo, isIframe, getMediaSrc, getIframeSrc, type MediaItem } from "@/lib/config"
 import { useState } from "react"
 
 interface MediaDisplayProps {

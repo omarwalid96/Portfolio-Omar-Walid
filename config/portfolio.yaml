@@ -288,7 +288,7 @@ projects:
       description: "Custom multi-robot management software"
       longDescription: "Developing a centralized platform for monitoring, controlling, and optimizing multi-robot operations in warehouses and public spaces."
       image:
-        url: "https://drive.google.com/file/d/1WObcFWFxRXIBrCmWSTyZlbRphmPJTxaP/preview"
+        url: "https://drive.google.com/file/d/1Qa0U5fJYZCd1GMgBqDqG3xEU6fKH47xq/preview"
         fallback: "/fleet-management.png"
         alt: "Fleet Management System"
       technologies:
@@ -326,7 +326,7 @@ currentWork:
       description: "Adding advanced AI interactivity to humanoid platforms."
       longDescription: "Developed control, navigation, and perception for a semi-humanoid robot platform."
       image:
-        url: "https://photos.google.com/share/AF1QipMZMzcoWhsrGCi7uVPAxm8FQPGOhYZrnXIgfSn05GSlbuMNMOzSuU3UPaq5z_62Sg/photo/AF1QipMo4Z5lyoRBGSQUSsoFmHbL28-1iDnL5p0v1oiu?key=ZUdzdjRObk5nUXFFREFMQzgzSjltUW9LZnN2RWF3"
+        url: "https://drive.google.com/file/d/1JCOGtnFKpWHcRsSsJg_t2rB1unxZqEjA/preview"
         fallback: "/semi-humanoid-robots.png"
         alt: "AI-Enhanced Semi-Humanoid Robots"
       technologies:
@@ -336,7 +336,7 @@ currentWork:
         - "Perception"
         - "CAN"
         - "Brushless Motors Control (Velocity,Position,Effort)"
-      progress: 70
+      progress: 60
       color: "blue"
       links:
         github: ""
@@ -345,7 +345,7 @@ currentWork:
       description: "Automated gantry for food delivery."
       longDescription: "Used MoveIt2, OMPL, CHOMP planners, and Octomap for 3D detection."
       image:
-        url: "https://photos.google.com/share/AF1QipMpDMaxck_fBhkM6rwfRgvHoVVmFI9h3lQLFKqDBUbYuewhJRy_R6fyvjp6myDGlA/photo/AF1QipN5tgkFyZATnR2wqFhmK7_tMXhEqtvx5yynAsDj?key=UDhVU1RvdGJmanVWbGZoUUNSR2RYZWxGX3lrN1Vn"
+        url: "https://drive.google.com/file/d/1PL0iW_M5k5q9EpQWOPtAFqGTVz-UkLt5/preview"
         fallback: "/semi-humanoid-robots.png"
         alt: "AI-Enhanced Semi-Humanoid Robots"
       technologies:
@@ -375,6 +375,8 @@ currentWork:
         - "C++"
         - "Cartographer"
       color: "blue"
+      progress: 50
+
     
 
 
@@ -431,6 +433,21 @@ research:
       description: "Using NVIDIA Isaac and Isaac Sim for high-fidelity simulation, robot testing, and reinforcement learning policy training in virtual environments before deployment."
       image:
         url: "https://storage.googleapis.com/zenn-user-upload/036df16c0010-20220402.png"
+        fallback: "/nvidia-isaac-sim.png"
+        alt: "NVIDIA Isaac Sim Research"
+      technologies:
+        - "NVIDIA Isaac"
+        - "NVIDIA Isaac Sim"
+        - "ROS2 Integration"
+        - "Reinforcement Learning"
+        - "Python"
+        - "C++"
+      color: "yellow"
+
+    - title: "(Personal Research) 3D Indoors navigation for drones using PX4 Simulation"
+      description: "Using PX4 autopilot to integrate with 3D obstacle avoidance and trajectory planning based on BSpline"
+      image:
+        url: "https://drive.google.com/file/d/1WObcFWFxRXIBrCmWSTyZlbRphmPJTxaP/preview"
         fallback: "/nvidia-isaac-sim.png"
         alt: "NVIDIA Isaac Sim Research"
       technologies:
@@ -506,9 +523,9 @@ eventsWork:
         description: "Omni-wheel combat robots featuring both autonomous and VR-controlled gameplay modes."
         longDescription: "Engineered control, perception, and targeting systems for two omni-wheel drive robots showcased in an interactive VR shooting game at Gitex 2023. One robot operated autonomously, using fused odometry from wheel encoders, IMU, and camera-based ArUco marker pose estimation for navigation and aiming. It autonomously detected and engaged targets by calibrating its pitch and yaw mechanisms and dynamically controlling the motorized shooting angle. The second robot was manually operated by a human opponent via a VR headset and joystick, receiving a real-time video feed through WebRTC streaming. The combination of precise omni-wheel kinematics, multi-sensor fusion, and integrated targeting systems created an immersive competitive experience between human and autonomous players."
         image:
-          url: "https://www.instagram.com/reel/CyleCY2SK0B/?igsh=OW5tNm4wNjZjMWN2"
+          url: "https://drive.google.com/file/d/1xBgy57WerQhsVEMCKGv2hFn5_w8VjML7/preview"
           fallback: "/fleet-management.png"
-          alt: "Fleet Management System"
+          alt: "Pocket Tank Shooter"
         technologies:
           - "ROS"
           - "Omni-Wheel Drive Kinematics"

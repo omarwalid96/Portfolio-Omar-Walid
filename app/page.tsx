@@ -6,10 +6,11 @@ import { Github, Linkedin, Mail, ExternalLink, Calendar, MapPin, Award, Briefcas
 import Image from "next/image"
 import Link from "next/link"
 import { MediaDisplay } from "@/components/ui/media-display"
-import { getPortfolioConfig, getImageSrc, isVideo, getMediaSrc } from "@/lib/config"
+import { loadPortfolioConfig } from "@/lib/config-server"
+import { getImageSrc } from "@/lib/config"
 
 export default function Portfolio() {
-  const config = getPortfolioConfig()
+  const config = loadPortfolioConfig()
 
   const getColorClasses = (color: string) => {
     const colorMap: Record<string, string> = {
@@ -18,7 +19,8 @@ export default function Portfolio() {
       teal: "bg-teal-600",
       green: "bg-green-600",
       yellow: "bg-yellow-600",
-      red: "bg-red-600"
+      red: "bg-red-600",
+      orange: "bg-orange-600"
     }
     return colorMap[color] || "bg-blue-600"
   }
@@ -30,7 +32,8 @@ export default function Portfolio() {
       teal: "border-l-teal-600",
       green: "border-l-green-600",
       yellow: "border-l-yellow-600",
-      red: "border-l-red-600"
+      red: "border-l-red-600",
+      orange: "border-l-orange-600"
     }
     return colorMap[color] || "border-l-blue-600"
   }
@@ -42,7 +45,8 @@ export default function Portfolio() {
       teal: "text-teal-600",
       green: "text-green-600",
       yellow: "text-yellow-600",
-      red: "text-red-600"
+      red: "text-red-600",
+      orange: "text-orange-600"
     }
     return colorMap[color] || "text-blue-600"
   }
@@ -76,17 +80,12 @@ export default function Portfolio() {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-                  {/* <span className="text-slate-900 dark:text-white">{config.personal.title}</span>
-                  <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-teal-600 bg-clip-text text-transparent">
-                    {config.personal.tagline}
-                  </span> */}
                   <span className="block text-slate-900 dark:text-white">
                     {config.personal.title}
                   </span>
                   <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-teal-600 bg-clip-text text-transparent">
                     {config.personal.tagline}
                   </span>
-
                 </h1>
                 <p className="text-xl text-slate-600 dark:text-slate-300 max-w-lg">
                   {config.personal.passion}
@@ -122,11 +121,14 @@ export default function Portfolio() {
             <div className="relative">
               <div className="relative w-full max-w-md mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full blur-3xl opacity-30 animate-pulse"></div>
-                <MediaDisplay
-                  media={config.personal.profileImage}
+                
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full blur-3xl opacity-30 animate-pulse"></div>
+                <Image
+                  src={getImageSrc(config.personal.profileImage) || "/placeholder.svg"}
+                  alt={config.personal.profileImage.alt}
+                  width={400}
+                  height={400}
                   className="relative z-10 rounded-full border-4 border-white dark:border-slate-800 shadow-2xl"
-                  aspectRatio="1/1"
-                  objectFit="cover"
                 />
               </div>
             </div>
@@ -429,9 +431,11 @@ export default function Portfolio() {
                       <Badge key={techIndex} variant="outline">{tech}</Badge>
                     ))}
                   </div>
-                  <p className="text-sm text-slate-600 dark:text-slate-300">
-                    {area.longDescription}
-                  </p>
+                  {area.longDescription && (
+                    <p className="text-sm text-slate-600 dark:text-slate-300">
+                      {area.longDescription}
+                    </p>
+                  )}
                 </CardContent>
               </Card>
             ))}
@@ -551,7 +555,7 @@ export default function Portfolio() {
           
           <div className="text-center text-slate-600 dark:text-slate-300">
             <p>&copy; {new Date().getFullYear()} {config.personal.name}. {config.footer.copyright}</p>
-            <p className="mt-2">{config.footer.builtWith}</p>
+            {config.footer.builtWith && <p className="mt-2">{config.footer.builtWith}</p>}
           </div>
         </div>
       </footer>
