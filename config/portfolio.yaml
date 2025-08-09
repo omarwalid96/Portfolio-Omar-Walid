@@ -32,7 +32,7 @@ about:
     - title: "Barista Project Lead Architect"
       description: "Designed and implemented the full system architecture for a multi-machine automated barista solution, integrating ROS2 behavior trees, RS485+CAN communication, and cloud-based facial recognition."
       color: "blue"
-    - title: "AI-Powered Robotics Integration (SMART Customer Support Agent)"
+    - title: "AI-Powered Robotics Integration (SMART Customer Support Bank Agent)"
       description: "Developed an AI-driven assistant deployed on Duet the service robot with advanced navigation, perception, and multi-modal interaction."
       color: "yellow"
     - title: "Warehouse Automation Success"
@@ -41,6 +41,9 @@ about:
     - title: "Advanced Navigation Solutions"
       description: "Implemented hybrid 2D/3D mapping and navigation combining Cartographer, MPC, and Open3D for dynamic obstacle handling."
       color: "red"
+    - title: "System Architecture and Design"
+      description: "Designed and implemented complex robotics systems for various projects with complex algorithms, multi-sensor fusion, behavior trees, and real-time communication protocols."
+      color: "purple"
     - title: "Leadership in Robotics Innovation"
       description: "Built and led multi-disciplinary teams delivering 30+ robotics projects and 8 distinct robot models across industries."
       color: "green"
@@ -304,7 +307,7 @@ currentWork:
   projects:
     - title: "Automated Barista Solution"
       description: "End-to-end robotics architecture for multi-machine coffee preparation."
-      longDescription: "Designed RS485+CAN communication, ROS2 behavior trees, cloud-based facial recognition, inventory and stock management, and WebSocket-based communication for a fully automated barista system."
+      longDescription: "Designed RS485+CAN communication to communicate between over 24 microcontrollers, Implemented ROS2 behavior trees to orchestrate beverage creation to achieve more that 60+ beverage types, Used Lifecycle nodes and actions to maintain system stability while handling failures and edge cases, Designed & Implemented Cloud-based facial recognition to have an interactive approach to the customer, Oversaw the development and contributed in handling a queuing system capable of forcasting stock levels and machines Idle time, Designed Inventory and stock management system, Integrated POS system, Achiving for a fully automated barista system Capable of delivering more than 600 beverages per day."
       image:
         url: "https://lh3.googleusercontent.com/pw/AP1GczP8owC_BHkVJ19mDOyw_iKYBS5xc_c3t4_RGpyjf5QjeL88PIS3msuk1PDuJWXfyHQxgLDUObSviRKBPCkzx4B_e05YT9xKPast5ssZ73JXJB-BwFYUQy0TsNY3zJCvzPQ8ygkRd0pw_IA94hJaxclD-w=w902-h1353-s-no-gm?authuser=0"
         fallback: "/mb90a-robot.png"
@@ -324,7 +327,7 @@ currentWork:
 
     - title: "AI-Enhanced Semi-Humanoid Robots"
       description: "Adding advanced AI interactivity to humanoid platforms."
-      longDescription: "Developed control, navigation, and perception for a semi-humanoid robot platform."
+      longDescription: "Developed control, navigation, and perception for a semi-humanoid robot platform. Controlling a 10 DOF system and fingers, Using Stereo cameras for 3D perception and 3D pose estimation, Built a strong desing batter for asyncronously controlling the motors for easy integration with moveit"
       image:
         url: "https://drive.google.com/file/d/1JCOGtnFKpWHcRsSsJg_t2rB1unxZqEjA/preview"
         fallback: "/semi-humanoid-robots.png"
@@ -343,7 +346,7 @@ currentWork:
 
     - title: "Kitchen Gantry System"
       description: "Automated gantry for food delivery."
-      longDescription: "Used MoveIt2, OMPL, CHOMP planners, and Octomap for 3D detection."
+      longDescription: "Used MoveIt2, OMPL, CHOMP planners, and Octomap for 3D detection, Working with 4 DOF system in a tight space to deliver from display area to delivery area, Interacting with a stock database to ensure the system is always ready to deliver while fetching nearest item and tracking expiry dates."
       image:
         url: "https://drive.google.com/file/d/1PL0iW_M5k5q9EpQWOPtAFqGTVz-UkLt5/preview"
         fallback: "/semi-humanoid-robots.png"

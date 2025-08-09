@@ -1,12 +1,13 @@
-'use client'
+"use client"
 
-import { useState } from 'react'
-import { Play, Clock, Calendar } from 'lucide-react'
-import { Card, CardContent } from './card'
-import { Badge } from './badge'
-import { MediaDisplay } from './media-display'
-import { VideoModal } from './video-modal'
-import { type VideoItem, type VideoCategory } from '@/lib/config'
+import { useState } from "react"
+import { Play, Clock, Calendar } from "lucide-react"
+import { Card, CardContent } from "./card"
+import { Badge } from "./badge"
+import { MediaDisplay } from "./media-display"
+import { VideoModal } from "./video-modal"
+import type { VideoItem, VideoCategory } from "@/lib/config"
+import { cn } from "@/lib/utils"
 
 interface VideoGalleryProps {
   categories: VideoCategory[]
@@ -34,7 +35,7 @@ export function VideoGallery({ categories }: VideoGalleryProps) {
       green: "bg-green-600 text-white",
       yellow: "bg-yellow-600 text-white",
       red: "bg-red-600 text-white",
-      teal: "bg-teal-600 text-white"
+      teal: "bg-teal-600 text-white",
     }
     return colorMap[color] || "bg-blue-600 text-white"
   }
@@ -46,7 +47,7 @@ export function VideoGallery({ categories }: VideoGalleryProps) {
       green: "border-green-200 dark:border-green-800",
       yellow: "border-yellow-200 dark:border-yellow-800",
       red: "border-red-200 dark:border-red-800",
-      teal: "border-teal-200 dark:border-teal-800"
+      teal: "border-teal-200 dark:border-teal-800",
     }
     return colorMap[color] || "border-blue-200 dark:border-blue-800"
   }
@@ -59,11 +60,12 @@ export function VideoGallery({ categories }: VideoGalleryProps) {
           <button
             key={index}
             onClick={() => setActiveCategory(index)}
-            className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+            className={cn(
+              "px-4 py-2 rounded-full text-sm font-medium transition-all duration-200",
               activeCategory === index
                 ? getColorClasses(category.color)
-                : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
-            }`}
+                : "bg-muted text-muted-foreground hover:bg-accent",
+            )}
           >
             {category.name}
           </button>
@@ -72,20 +74,19 @@ export function VideoGallery({ categories }: VideoGalleryProps) {
 
       {/* Active Category Info */}
       <div className="text-center">
-        <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">
-          {categories[activeCategory].name}
-        </h3>
-        <p className="text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-          {categories[activeCategory].description}
-        </p>
+        <h3 className="text-2xl font-bold text-foreground mb-2">{categories[activeCategory].name}</h3>
+        <p className="text-muted-foreground max-w-2xl mx-auto">{categories[activeCategory].description}</p>
       </div>
 
       {/* Video Grid */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {categories[activeCategory].videos.map((video, index) => (
-          <Card 
-            key={index} 
-            className={`group cursor-pointer hover:shadow-xl transition-all duration-300 border-2 ${getBorderColorClasses(categories[activeCategory].color)}`}
+          <Card
+            key={index}
+            className={cn(
+              "group cursor-pointer hover:shadow-xl transition-all duration-300 border-2",
+              getBorderColorClasses(categories[activeCategory].color),
+            )}
             onClick={() => handleVideoClick(video)}
           >
             <div className="relative overflow-hidden rounded-t-lg">
@@ -95,7 +96,7 @@ export function VideoGallery({ categories }: VideoGalleryProps) {
                 aspectRatio="16/9"
                 objectFit="cover"
               />
-              
+
               {/* Play Button Overlay */}
               <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="bg-white/90 dark:bg-slate-900/90 rounded-full p-4">
@@ -110,15 +111,13 @@ export function VideoGallery({ categories }: VideoGalleryProps) {
             </div>
 
             <CardContent className="p-4 space-y-3">
-              <h4 className="font-semibold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+              <h4 className="font-semibold text-foreground group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                 {video.title}
               </h4>
-              
-              <p className="text-sm text-slate-600 dark:text-slate-300 line-clamp-2">
-                {video.description}
-              </p>
 
-              <div className="flex items-center gap-3 text-xs text-slate-500 dark:text-slate-400">
+              <p className="text-sm text-muted-foreground line-clamp-2">{video.description}</p>
+
+              <div className="flex items-center gap-3 text-xs text-muted-foreground">
                 <div className="flex items-center gap-1">
                   <Clock className="h-3 w-3" />
                   <span>{video.duration}</span>
@@ -147,11 +146,7 @@ export function VideoGallery({ categories }: VideoGalleryProps) {
       </div>
 
       {/* Video Modal */}
-      <VideoModal
-        video={selectedVideo}
-        isOpen={isModalOpen}
-        onClose={closeModal}
-      />
+      <VideoModal video={selectedVideo} isOpen={isModalOpen} onClose={closeModal} />
     </div>
   )
 }
