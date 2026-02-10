@@ -4,6 +4,24 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
     darkMode: ["class"],
+    safelist: [
+      // Dynamic color classes from lib/colors.ts
+      ...['blue', 'purple', 'teal', 'green', 'yellow', 'red', 'orange'].flatMap(color => [
+        `bg-${color}-600`,
+        `bg-${color}-500`,
+        `dark:bg-${color}-500`,
+        `dark:bg-${color}-400`,
+        `text-${color}-600`,
+        `text-${color}-400`,
+        `dark:text-${color}-400`,
+        `border-l-${color}-600`,
+        `border-${color}-200`,
+        `dark:border-${color}-800`,
+        `hover:bg-${color}-600`,
+        `hover:shadow-${color}-200`,
+        `dark:hover:shadow-${color}-900/40`,
+      ])
+    ],
     content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",

@@ -5,6 +5,7 @@ import { MediaDisplay } from "./media-display"
 import { Badge } from "./badge"
 import { Button } from "./button"
 import type { VideoItem } from "@/lib/config"
+import { getOverlayBgClasses } from "@/lib/colors"
 
 interface VideoModalProps {
   video: VideoItem | null
@@ -18,14 +19,14 @@ export function VideoModal({ video, isOpen, onClose }: VideoModalProps) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
       {/* Backdrop */}
-      <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" onClick={onClose} />
+      <div className={`absolute inset-0 ${getOverlayBgClasses()} backdrop-blur-sm`} onClick={onClose} />
 
       {/* Modal Content */}
       <div className="relative z-10 w-full max-w-6xl mx-4 bg-background rounded-lg shadow-2xl overflow-hidden">
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b border-border">
           <div className="flex items-center gap-3">
-            <Play className="h-5 w-5 text-blue-600" />
+            <Play className="h-5 w-5 text-blue-600 dark:text-blue-400" />
             <h2 className="text-xl font-semibold text-foreground">{video.title}</h2>
           </div>
           <Button variant="ghost" size="sm" onClick={onClose} className="text-foreground/70 hover:text-foreground">
@@ -35,7 +36,12 @@ export function VideoModal({ video, isOpen, onClose }: VideoModalProps) {
 
         {/* Video Player */}
         <div className="relative">
-          <MediaDisplay media={video.video} className="w-full" aspectRatio="16/9" objectFit="contain" />
+          <MediaDisplay
+            media={video.video}
+            className="w-full"
+            aspectRatio={video.video.aspectRatio || "16/9"}
+            objectFit="contain"
+          />
         </div>
 
         {/* Video Info */}

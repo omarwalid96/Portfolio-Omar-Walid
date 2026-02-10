@@ -27,10 +27,14 @@ export interface Achievement {
   color: string
 }
 
+export interface SkillCategory {
+  [category: string]: string[]
+}
+
 export interface AboutInfo {
   description: string
   achievements: Achievement[]
-  skills: string[]
+  skills: string[] | SkillCategory  // Support both old (array) and new (categorized) format
   workspace: {
     image: MediaItem
   }
@@ -59,7 +63,8 @@ export interface Project {
   title: string
   description: string
   longDescription: string
-  image: MediaItem
+  image?: MediaItem  // Single image (deprecated, use images array)
+  images?: MediaItem[]  // Multiple images/videos
   technologies: string[]
   links: {
     github?: string
@@ -69,6 +74,8 @@ export interface Project {
 }
 
 export interface CurrentProject extends Project {
+  image?: MediaItem  // Single image (backward compatible)
+  images?: MediaItem[]  // Multiple images/videos
   progress?: number
   color: string
   stats?: {
@@ -155,6 +162,7 @@ export interface MediaItem {
   fallback: string
   alt: string
   type?: 'image' | 'video' | 'iframe'
+  aspectRatio?: string  // e.g., "9/16" for portrait, "16/9" for landscape
 }
 
 // Helper function to determine if media is iframe
@@ -166,6 +174,7 @@ export function isIframe(media: { url: string; fallback: string; type?: string }
   const url = media.url || media.fallback
   const iframePatterns = [
     'drive.google.com',
+    'player.cloudinary.com',
     'youtube.com/embed',
     'youtu.be',
     'vimeo.com',

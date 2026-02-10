@@ -26,14 +26,16 @@ social:
   website: "https://omarwalid96.github.io/Portfolio-Omar-Walid/"
 
 about:
-  description: "Robotics engineer with 8+ years of experience building service, industrial, and AI-enhanced robotics systems. Skilled in ROS1 & ROS2, C++, Python, embedded systems, perception, navigation, and AI model integration. Experienced in leading cross-functional teams to deliver impactful automation solutions."
+  # description: "Robotics engineer with 8+ years of experience building service, industrial, and AI-enhanced robotics systems. Skilled in ROS1 & ROS2, C++, Python, embedded systems, perception, navigation, and AI model integration. Experienced in leading cross-functional teams to deliver impactful automation solutions."
+  description: "Robotics Team Lead and Systems Architect with 8+ years building production-grade service robots. Specialized in ROS2-based autonomy stacks, perception, navigation, embedded systems, and AI integration. Proven experience owning full robotics architectures — from low-level firmware and real-time communication to high-level autonomy and cloud connectivity — while leading multi-disciplinary teams to deliver commercial robotic products."
+
 
   achievements:
     - title: "Barista Project Lead Architect"
       description: "Designed and implemented the full system architecture for a multi-machine automated barista solution, integrating ROS2 behavior trees, RS485+CAN communication, and cloud-based facial recognition."
       color: "blue"
     - title: "AI-Powered Robotics Integration (SMART Customer Support Bank Agent)"
-      description: "Developed an AI-driven assistant deployed on Duet the service robot with advanced navigation, perception, and multi-modal interaction."
+      description: "Developed an AI-driven assistant deployed on Duet service robot with advanced navigation, perception, and multi-modal interaction."
       color: "yellow"
     - title: "Warehouse Automation Success"
       description: "Architected and implemented the MB90a logistics robot software from scratch using ROS2, CAN protocols, and holonomic motion control."
@@ -53,54 +55,80 @@ about:
 
 
   skills:
-    - "C++"
-    - "Python"
-    - "ROS1"
-    - "ROS2"
-    - "Embedded C"
-    - "Linux"
-    - "Docker"
-    - "CI/CD"
-    - "Bash"
-    - "CMake"
-    - "Git"
-    - "Jira"
-    - "Sensor Fusion"
-    - "3D Perception"
-    - "Machine Learning"
-    - "LLMs"
-    - "Speech-to-Text"
-    - "Text-to-Speech"
-    - "WebSockets"
-    - "ProtoBuf"
-    - "Matlab"
-    - "Microcontrollers"
-    - "ARM Cortex-M"
-    - "AVR Controllers"
-    - "CAN Communication"
-    - "MySQL"
-    - "MongoDB"
-    - "PostgreSQL"
-    - "AWS"
-    - "Azure"
-    - "Navigation Algorithms (A*, Dijkstra, MPC, DWB)"
-    - "SLAM (RTAB, ORB, Cartographer, AMCL)"
-    - "Open3D"
-    - "3D Object Recognition"
-    - "Octomap"
-    - "AI Model Fine-Tuning"
-    - "RAG Optimization"
-    - "Behavior Trees"
-    - "RS485"
+    programming:
+      color: "blue"
+      items:
+        - "C++"
+        - "Python"
+        - "Embedded C"
+        - "Bash"
+        - "Matlab"
+        - "NodeJS"
+    robotics:
+      color: "purple"
+      items:
+        - "ROS1"
+        - "ROS2"
+        - "CMake"
+        - "Git"
+        - "Jira"
+        - "Microcontrollers"
+        - "ARM Cortex-M"
+        - "AVR Controllers"
+        - "CAN Communication"
+        - "RS485"
+        - "Behavior Trees"
+        - "Nvidia Isaac"
+        - "Autosar"
+    devops:
+      color: "teal"
+      items:
+        - "Linux"
+        - "Docker"
+        - "CI/CD"
+        - "GitLab CI"
+        - "WSL"
+        - "AWS"
+        - "Azure"
+    perception_navigation:
+      color: "red"
+      items:
+        - "Sensor Fusion"
+        - "3D Perception"
+        - "Navigation Algorithms (A*, Dijkstra, MPC, DWB)"
+        - "SLAM (RTAB, ORB, Cartographer, AMCL)"
+        - "Open3D"
+        - "3D Object Recognition"
+        - "Octomap"
+        - "EKF (LiDAR, IMU, Camera, Depth)"
+    ai_ml:
+      color: "yellow"
+      items:
+        - "Machine Learning"
+        - "LLMs"
+        - "Speech-to-Text"
+        - "Text-to-Speech"
+        - "WebSockets"
+        - "ProtoBuf"
+        - "AI Model Fine-Tuning"
+        - "RAG Optimization"
+    databases:
+      color: "green"
+      items:
+        - "MySQL"
+        - "MongoDB"
+        - "PostgreSQL"
 
   workspace:
     image:
-      url: "https://lh3.googleusercontent.com/pw/AP1GczPR1xGToVJuZBoA750YWg0isavLEp5cn6h_MQBFB1ImtAuEH7l_o5JoKyvEQSjjxZPRVlTHMozSIxqzxAksQhwyDvhnzAhvrPcKkRGI8YO5A9Lk4HuIM9xc8pJGjS7ZP-PJNcwV7qO07oxn-px9rMEiKQ=w1024-h982-s-no-gm?authuser=0"
+      # url: "https://lh3.googleusercontent.com/pw/AP1GczPR1xGToVJuZBoA750YWg0isavLEp5cn6h_MQBFB1ImtAuEH7l_o5JoKyvEQSjjxZPRVlTHMozSIxqzxAksQhwyDvhnzAhvrPcKkRGI8YO5A9Lk4HuIM9xc8pJGjS7ZP-PJNcwV7qO07oxn-px9rMEiKQ=w1024-h982-s-no-gm?authuser=0"
+      # url: "https://res.cloudinary.com/dhfctvvwf/image/upload/v1770737233/file_00000000840071f48d6adf061bb322bd_vgn1vq.png"
+      url: "https://res.cloudinary.com/dhfctvvwf/image/upload/v1770758916/ChatGPT_Image_Feb_10_2026_11_28_20_PM_thoxmd.png"
       fallback: "/developer-workspace.png"
       alt: "Robotics Development Workspace"
 
   quote:
-    text: "The future is autonomous — I'm just helping it get there faster."
+    text: "The future is autonomous — I'm just helping get there faster."
     author: "Omar Walid"
 
 experience:
@@ -110,27 +138,22 @@ experience:
       location: "Dubai, UAE"
       startDate: "2020"
       endDate: "Present"
-      current: false
+      current: true
       color: "purple"
       responsibilities:
-        - "Led a cross-functional team of robotics engineers, developers, and installation specialists."
-        - "Designed AI-powered customer support agents using LLMs (LLaMA3, ChatGPT4, Qwen3) with STT/TTS and data synthesis for improved interactivity."
-        - "Developed mapping, localization, and perception systems."
-        - "Developed multi-robot fleet management and advanced perception systems with sensor fusion."
-        - "Implemented Agile processes reducing delivery time by 30%."
-        - "Architected mapping, localization, and 3D perception pipelines."
-        - "Implemented fleet management solutions for multiple autonomous robots."
-        - "Integrated WebSockets, ProtoBuf, and APIs for real-time communication."
-        - "Oversaw Android app & Web app development for customer-facing robotics interfaces."
-        - "Implemented RS485+CAN communication for multi-controller machine orchestration."
-        - "Managed Agile processes, reducing delivery time by 30%."
-        - "Established robotics technology adoption strategy through market analysis."
-        - "Designed and coded ROS-based navigation and behavior tree logic."
-        - "Integrated multi-sensor fusion pipelines (LiDAR, IMU, Cameras)."
-        - "Coordinated hardware-software integration with mechanical teams."
-        - "Delivered over 30 robotics projects and 8 unique product lines."
-        - "Used Docker for containerized deployments and implemented CI/CD pipelines for automated testing and delivery."
-        - "Managed Git-based version control and branching strategies for multi-team collaboration."
+        - "Led a **cross-functional team** of robotics engineers, developers, and installation specialists."
+        - "Designed **AI-powered customer support agents** using **LLMs (LLaMA3, ChatGPT4, Qwen3)** with **STT/TTS** and **data synthesis** for improved interactivity."
+        - "Architected **end-to-end mapping, localization, and 3D perception pipelines** with **multi-sensor fusion (LiDAR, IMU, Cameras)** and **SLAM integration**."
+        - "Developed **multi-robot fleet management systems** with **advanced perception** and **autonomous navigation** using **ROS behavior trees**."
+        - "Implemented **Agile processes**, streamlining workflows and **reducing delivery time by 30%**."
+        - "Integrated **real-time communication systems** using **WebSockets, ProtoBuf, and APIs**."
+        - "Oversaw **Android app & Web app** development for **customer-facing robotics interfaces**."
+        - "Implemented **RS485+CAN communication** for **multi-controller machine orchestration**."
+        - "Established **robotics technology adoption strategy** through market analysis."
+        - "Coordinated **hardware-software integration** with mechanical teams."
+        - "Delivered **over 30 robotics projects** and **8 unique product lines**."
+        - "Used **Docker** for **containerized deployments** and implemented **CI/CD pipelines** for automated testing and delivery."
+        - "Managed **Git-based version control** and **branching strategies** for multi-team collaboration."
         
 
     - title: "Robotics Software Senior Developer (Part-time)"
@@ -141,12 +164,13 @@ experience:
       current: true
       color: "blue"
       responsibilities:
-        - "Designed and developed complete software architecture for a robotic kitchen automation system."
-        - "Integrated microcontroller solutions (ARM Cortex-M, STM32) with CAN & RS485 protocols."
-        - "Simulating solution on Gazebo before mechaincal integration"
-        - "Led ROS2-based communication and orchestration design."
-        - "Developed motion planning pipelines using MoveIt2, OMPL, and CHOMP planners."
-        - "Implemented 3D Octomap-based perception for object detection and avoidance."
+        - "Designed and developed **complete software architecture** for a **robotic kitchen automation system**."
+        - "Integrated **microcontroller solutions (ARM Cortex-M, STM32)** with **CAN & RS485 protocols**."
+        - "Simulating solution on **Gazebo** before mechanical integration"
+        - "Led **ROS2-based communication** and **orchestration design**."
+        - "Developed **motion planning pipelines** using **MoveIt2, OMPL, and CHOMP planners**."
+        - "Implemented **3D Octomap-based perception** for **object detection and avoidance**."
+        - "Architected **OpenArm haptic teleoperation system** enabling **bilateral control** over networks with **1000Hz feedback loops**, **synchronized data pipelines** for **imitation learning** using **GStreamer/NVENC**, and **automated quality validation** for **AI training datasets**."
 
     - title: "Robotics System Specialist"
       company: "MARSES Robotics"
@@ -156,20 +180,18 @@ experience:
       current: false
       color: "teal"
       responsibilities:
-        - "Developed first proof-of-concept delivery robot for restaurants."
-        - "Developed autonomous mapping and localization using ROS."
-        - "Conducted R&D resulting in 4 new product lines."
-        - "Programmed robots using ROS, C++, Python, and Embedded C."
-        - "Established the company's software team architecture."
-        - "Optimized installation processes reducing time by 30%."
-        - "Modeled motion control in MATLAB and Simulink."
-        - "Reduced installation time by 30% through process optimization."
-        - "Desingned Custom Linux based Image for faster and reliable instillation process."
+        - "Developed **first proof-of-concept delivery robot** for restaurants."
+        - "Developed **autonomous mapping and localization** using **ROS**."
+        - "Conducted **R&D** resulting in **4 new product lines**."
+        - "Programmed robots using **ROS, C++, Python, and Embedded C**."
+        - "Established the company's **software team architecture**."
+        - "Optimized **installation processes** and designed **custom Linux-based image**, **reducing installation time by 30%**."
+        - "Modeled **motion control** in **MATLAB and Simulink**."
 projects:
   featured:
     - title: "Bank SMART Customer Support Agent (Duet Robot)"
-      description: "AI-driven banking assistant on a mobile service robot."
-      longDescription: "Designed and implemented an AI-driven virtual assistant for banks using LLMs, STT/TTS, Cartographer navigation, MPC planning, Open3D-based 3D perception, IMU-odometry fusion, and WebSocket APIs to create a multilingual, interactive bank assistant."
+      description: "**AI-driven banking assistant** on a **mobile service robot**."
+      longDescription: "Designed and implemented an **AI-driven virtual assistant** for banks using **LLMs, STT/TTS**, **Cartographer navigation**, **MPC planning**, **Open3D-based 3D perception**, **IMU-odometry fusion**, and **WebSocket APIs** to create a **multilingual, interactive bank assistant**."
       image:
         url: "https://www.marses-robotics.com/wp-content/uploads/2022/09/all-robotics-01.png"
         fallback: "/e-commerce-web-application.png"
@@ -191,8 +213,8 @@ projects:
         live: ""
 
     - title: "MDR-C Disinfection Robot"
-      description: "Autonomous hospital sanitation robot"
-      longDescription: "Built from scratch with autonomous mapping, localization, and perception to achieve 99.9% sanitation accuracy in COVID-19-infected environments."
+      description: "**Autonomous hospital sanitation robot**"
+      longDescription: "Built from scratch with **autonomous mapping, localization, and perception** to achieve **99.9% sanitation accuracy** in **COVID-19-infected environments**."
       image:
         url: "https://www.marses-robotics.com/wp-content/uploads/2022/09/all-robotics-05.png"
         fallback: "/disinfection-robot.png"
@@ -207,8 +229,8 @@ projects:
         live: ""
 
     - title: "MB90a Logistics Robot"
-      description: "Autonomous warehouse logistics solution."
-      longDescription: "Increased logistics efficiency by 35% through automated navigation and holonomic motion control."
+      description: "**Autonomous warehouse logistics solution**."
+      longDescription: "Increased **logistics efficiency by 35%** through **automated navigation** and **holonomic motion control**."
       image:
         url: "https://lh3.googleusercontent.com/pw/AP1GczPjLs6APPMvlofePFB-j63UDLZm6Ivn3y86dWhb-dfR9vCl1SD0-AgjPpQPlLfQLXrpsfChRcKamhAA8qOsesgmyX73R3_7hUtvQ7M11bZVUhu40HAraZNzP44HtXUWTf3FFHUfKFfZe43lj9BSlrkLGg=w1224-h1353-s-no-gm?authuser=0"
         fallback: "/mb90a-robot.png"
@@ -223,8 +245,8 @@ projects:
         github: ""
         live: ""
     - title: "Duet Interactive Robot"
-      description: "Interactive Robot"
-      longDescription: "Duet is a friendly interactive expressive mobile robot designed to work as a standalone promoter who can welcome the guests, guide them, conduct conversations, check in/out, print & scan documents, and provides information in an attractive way using its changeable facial expressions."
+      description: "**Interactive Robot**"
+      longDescription: "Duet is a **friendly interactive expressive mobile robot** designed to work as a **standalone promoter** who can **welcome guests, guide them, conduct conversations, check in/out, print & scan documents**, and provides information in an attractive way using **changeable facial expressions**."
       image:
         url: "https://www.marses-robotics.com/wp-content/uploads/2022/09/all-robotics-01.png"
         fallback: "/mb90a-robot.png"
@@ -238,8 +260,8 @@ projects:
         live: ""
 
     - title: "MDR-A Dry Fog Disinfection Robot"
-      description: "Secured Delivery Robot."
-      longDescription: "Developed the autonomous navigation, perception, and control software for a dry fog disinfection robot capable of atomizing various disinfectants into a super dry mist for high-speed airflow sanitization. Integrated mapping, localization, and obstacle avoidance algorithms to enable the robot to autonomously reach target areas and achieve full 360° disinfection coverage. Designed the control logic for dry fog spraying nozzles to ensure precise and efficient air purification. Implemented ROS-based task planning to coordinate navigation and spraying cycles, optimizing both coverage and operating time."
+      description: "**Autonomous Disinfection Robot**."
+      longDescription: "Developed the **autonomous navigation, perception, and control software** for a **dry fog disinfection robot** capable of **atomizing various disinfectants** into a **super dry mist** for **high-speed airflow sanitization**. Integrated **mapping, localization, and obstacle avoidance algorithms** to enable the robot to **autonomously reach target areas** and achieve **full 360° disinfection coverage**. Designed the **control logic for dry fog spraying nozzles** to ensure **precise and efficient air purification**. Implemented **ROS-based task planning** to **coordinate navigation and spraying cycles**, optimizing both **coverage and operating time**."
       image:
         url: "https://www.marses-robotics.com/wp-content/uploads/2022/09/all-robotics-04.png"
         fallback: "/mb90a-robot.png"
@@ -256,8 +278,8 @@ projects:
         live: ""
 
     - title: "Rolly Delivery Robot"
-      description: "Secured Delivery Robot."
-      longDescription: "Developed the complete robotics software stack for Rolly, an Autonomous Mobile Robot designed for secure, non-contact deliveries in multi-environment setups. Implemented fleet management capabilities, enabling multiple robots to operate seamlessly in the same environment without collisions or interference. Integrated navigation for complex indoor routes, including BMS integration to automatically close and open doors. Designed human-robot interaction systems with a custom touchscreen interface and application layer tailored to each client’s needs. Implemented ROS-based autonomous navigation, obstacle avoidance, and task orchestration to ensure reliability, safety, and scalability."
+      description: "**Autonomous Delivery Robot**."
+      longDescription: "Developed the **complete robotics software stack** for Rolly, an **Autonomous Mobile Robot** designed for **secure, non-contact deliveries** in **multi-environment setups**. Implemented **fleet management capabilities**, enabling **multiple robots** to operate **seamlessly without collisions or interference**. Integrated **navigation for complex indoor routes**, including **BMS integration** to **automatically close and open doors**. Designed **human-robot interaction systems** with **custom touchscreen interface** and **application layer** tailored to each client's needs. Implemented **ROS-based autonomous navigation, obstacle avoidance, and task orchestration** to ensure **reliability, safety, and scalability**."
       image:
         url: "https://www.marses-robotics.com/wp-content/uploads/2022/09/all-robotics-03.png"
         fallback: "/mb90a-robot.png"
@@ -274,8 +296,8 @@ projects:
         live: ""
 
     - title: "Mozo Delivery Robot"
-      description: "First commercial delivery robot in Egypt."
-      longDescription: "Developed as part of MARSES’ POC robotics solutions for restaurants, With smart waiter capblities payment gateway redirecting, Customer satisfaction feedback survey, menu ordering and delivery"
+      description: "**First commercial delivery robot** in Egypt."
+      longDescription: "Developed as part of **MARSES' POC robotics solutions** for **restaurants**, with **smart waiter capabilities**, **payment gateway redirecting**, **customer satisfaction feedback survey**, **menu ordering and delivery**"
       image:
         url: "https://www.marses-robotics.com/wp-content/uploads/2022/09/all-robotics-02.png"
         fallback: "/mb90a-robot.png"
@@ -288,10 +310,10 @@ projects:
         github: ""
         live: ""
     - title: "Fleet Management System for Robots"
-      description: "Custom multi-robot management software"
-      longDescription: "Developing a centralized platform for monitoring, controlling, and optimizing multi-robot operations in warehouses and public spaces."
+      description: "**Custom multi-robot management software**"
+      longDescription: "Developing a **centralized platform** for **monitoring, controlling, and optimizing** **multi-robot operations** in **warehouses and public spaces**."
       image:
-        url: "https://drive.google.com/file/d/1Qa0U5fJYZCd1GMgBqDqG3xEU6fKH47xq/preview"
+        url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=lv_0_20260210180728_hndmco"
         fallback: "/fleet-management.png"
         alt: "Fleet Management System"
       technologies:
@@ -305,9 +327,11 @@ projects:
 
 currentWork:
   projects:
+
+
     - title: "Automated Barista Solution"
-      description: "End-to-end robotics architecture for multi-machine coffee preparation."
-      longDescription: "Designed RS485+CAN communication to communicate between over 24 microcontrollers, Implemented ROS2 behavior trees to orchestrate beverage creation to achieve more that 60+ beverage types, Used Lifecycle nodes and actions to maintain system stability while handling failures and edge cases, Designed & Implemented Cloud-based facial recognition to have an interactive approach to the customer, Oversaw the development and contributed in handling a queuing system capable of forcasting stock levels and machines Idle time, Designed Inventory and stock management system, Integrated POS system, Achiving for a fully automated barista system Capable of delivering more than 600 beverages per day."
+      description: "End-to-end robotics architecture for **multi-machine coffee preparation**."
+      longDescription: "Designed **RS485+CAN communication** to communicate between over **24 microcontrollers**, Implemented **ROS2 behavior trees** to orchestrate beverage creation to achieve **60+ beverage types**, Used **Lifecycle nodes and actions** to maintain system stability while handling failures and edge cases, Designed & Implemented **Cloud-based facial recognition** to have an interactive approach to the customer, Oversaw the development and contributed in handling a **queuing system** capable of forecasting stock levels and machines idle time, Designed **Inventory and stock management system**, Integrated **POS system**, achieving a fully automated barista system capable of delivering **600+ beverages per day**."
       image:
         url: "https://lh3.googleusercontent.com/pw/AP1GczP8owC_BHkVJ19mDOyw_iKYBS5xc_c3t4_RGpyjf5QjeL88PIS3msuk1PDuJWXfyHQxgLDUObSviRKBPCkzx4B_e05YT9xKPast5ssZ73JXJB-BwFYUQy0TsNY3zJCvzPQ8ygkRd0pw_IA94hJaxclD-w=w902-h1353-s-no-gm?authuser=0"
         fallback: "/mb90a-robot.png"
@@ -324,14 +348,61 @@ currentWork:
         - "WebSockets"
       progress: 95
       color: "blue"
+    - title: "Kitchen Gantry System"
+      description: "Automated gantry for **food delivery**."
+      longDescription: "Used **MoveIt2, OMPL, CHOMP planners** and **Octomap** for **3D detection**, Working with **4 DOF system** in a tight space to deliver from display area to delivery area, Interacting with **stock database** to ensure the system is always ready to deliver while **fetching nearest item** and **tracking expiry dates**."
+      images:
+        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=VID_20250930004351_yotz3d"
+          alt: "AI-Enhanced Semi-Humanoid Robots"
+          aspectRatio: "16/9"
+        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=alcovePointCloud_skyen8"
+          alt: "AI-Enhanced Semi-Humanoid Robots"
+          aspectRatio: "16/9"
+        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=VID-20251004-WA0022_j71byd"
+          alt: "AI-Enhanced Semi-Humanoid Robots"
+          aspectRatio: "16/9"
+      technologies:
+        - "ROS2"
+        - "MoveIt2"
+        - "OMPL"
+        - "CHOMP"
+        - "Octomap"
+      progress: 80
+      color: "blue"
+      links:
+        github: ""
 
+    - title: "OpenArm: Haptic Teleoperation Over Network & Data Pipeline"
+      description: "Internet-scale **bilateral teleoperation** and **synchronized data collection** for AI training."
+      longDescription: "Architected a **distributed teleoperation framework** enabling **1:1 haptic coupling** over **VPN-secured networks**. Developed a **1000Hz bilateral control loop** using a **custom UDP transport layer**, implementing **startup synchronization** and **smoothing** to prevent torque spikes during remote handshakes. To facilitate **Imitation Learning**, engineered a **high-performance data pipeline** using **Shared Memory (SHM) ring buffers** and **GStreamer/NVENC**, achieving **sub-10ms synchronization** across **four HD camera streams** (including **OAK-D Depth**) with minimal CPU overhead. Established **automated quality gates**, validating **500Hz joint-state telemetry** against **30Hz visual observations** to ensure **nanosecond-precision alignment** for training **end-to-end policies** like **ACT and Diffusion Policy**."
+      images:
+        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=openarm_teleop_ew2eeb"
+          fallback: "/semi-humanoid-robots.png"
+          alt: "OpenArm Haptic System"          
+          aspectRatio: "9/16"
+        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=alcovePointCloud_skyen8"
+          fallback: "/semi-humanoid-robots.png"
+          alt: "OpenArm Haptic System Overview"
+          aspectRatio: "16/9"
+        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=Openarm_Teleop_testing_s4hk85"
+          fallback: "/semi-humanoid-robots.png"
+          aspectRatio: "9/16"
+      technologies: ["Real-time Control", "UDP Networking", "Shared Memory", "Imitation Learning", "GStreamer/WebRTC", "NVENC", "C++", "Python"]
+      progress: 90
+      color: "green"
     - title: "AI-Enhanced Semi-Humanoid Robots"
-      description: "Adding advanced AI interactivity to humanoid platforms."
-      longDescription: "Developed control, navigation, and perception for a semi-humanoid robot platform. Controlling a 10 DOF system and fingers, Using Stereo cameras for 3D perception and 3D pose estimation, Built a strong desing batter for asyncronously controlling the motors for easy integration with moveit"
-      image:
-        url: "https://drive.google.com/file/d/1JCOGtnFKpWHcRsSsJg_t2rB1unxZqEjA/preview"
-        fallback: "/semi-humanoid-robots.png"
-        alt: "AI-Enhanced Semi-Humanoid Robots"
+      description: "Adding **advanced AI interactivity** to humanoid platforms."
+      longDescription: "Developed **control, navigation, and perception** for a **semi-humanoid robot platform**. Controlling a **10 DOF system** and **fingers**, Using **Stereo cameras** for **3D perception and 3D pose estimation**, Built a **robust asynchronous architecture** for **motor control** enabling easy integration with **MoveIt**"
+      images:
+        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=tuya_hgkkxu"
+          fallback: "/semi-humanoid-robots.png"
+          alt: "AI-Enhanced Semi-Humanoid Robots"
+          aspectRatio: "9/16"
+        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=tuyaNav_vpl54r"
+          fallback: "/semi-humanoid-robots.png"
+          alt: "AI-Enhanced Semi-Humanoid Robots"
+          aspectRatio: "9/16"
+        
       technologies:
         - "ROS2"
         - "C++"
@@ -344,27 +415,10 @@ currentWork:
       links:
         github: ""
 
-    - title: "Kitchen Gantry System"
-      description: "Automated gantry for food delivery."
-      longDescription: "Used MoveIt2, OMPL, CHOMP planners, and Octomap for 3D detection, Working with 4 DOF system in a tight space to deliver from display area to delivery area, Interacting with a stock database to ensure the system is always ready to deliver while fetching nearest item and tracking expiry dates."
-      image:
-        url: "https://drive.google.com/file/d/1PL0iW_M5k5q9EpQWOPtAFqGTVz-UkLt5/preview"
-        fallback: "/semi-humanoid-robots.png"
-        alt: "AI-Enhanced Semi-Humanoid Robots"
-      technologies:
-        - "ROS2"
-        - "MoveIt2"
-        - "OMPL"
-        - "CHOMP"
-        - "Octomap"
-      progress: 80
-      color: "blue"
-      links:
-        github: ""
 
     - title: "Navigation Parameters Tuning Using Genetic Algorithm"
-      description: "Simulation-in-the-loop auto-tuning of local navigation parameters using a genetic algorithm."
-      longDescription: "Built a ROS/Gazebo pipeline that automatically tunes local navigation parameters (e.g., costmap inflation radius and cost scaling factor) via a genetic algorithm. The system launches navigation goals through Locomotor/DWB, live-updates parameters using dynamic_reconfigure, and evaluates each candidate with a multi-objective fitness: time-to-goal, collision penalties (Gazebo contact sensors), and front/side local-cost metrics sampled from the costmap. Runs iterative generations with elitism, crossover, and mutation, resetting the world and robot pose between trials. Includes goal progress monitoring via actionlib feedback, AMCL/odometry hooks, and automatic cancellation/recovery on timeouts or failure states. Results are serialized for offline analysis."
+      description: "**Simulation-in-the-loop** auto-tuning of **local navigation parameters** using a **genetic algorithm**."
+      longDescription: "Built a **ROS/Gazebo pipeline** that automatically tunes **local navigation parameters** (e.g., **costmap inflation radius** and **cost scaling factor**) via a **genetic algorithm**. The system launches **navigation goals** through **Locomotor/DWB**, **live-updates parameters** using **dynamic_reconfigure**, and evaluates each candidate with **multi-objective fitness**: **time-to-goal**, **collision penalties** (Gazebo contact sensors), and **front/side local-cost metrics** sampled from the **costmap**. Runs **iterative generations** with **elitism, crossover, and mutation**, resetting the **world and robot pose** between trials. Includes **goal progress monitoring** via **actionlib feedback**, **AMCL/odometry hooks**, and **automatic cancellation/recovery** on timeouts or failure states. Results are **serialized for offline analysis**."
       image:
         url: "https://www.mdpi.com/sustainability/sustainability-15-04656/article_deploy/html/images/sustainability-15-04656-g024-550.jpg"
         fallback: "/navigation-algorithms.png"
@@ -386,9 +440,24 @@ currentWork:
 
 research:
   areas:
+    - title: "Unified Vision-Language-Action (VLA) Models"
+      # description: "Advancing general-purpose robotics by mapping multimodal perception directly to motor actions via internet-scale foundation models."
+      description: "Researching **end-to-end architectures** that unify **vision-language encoders** with **LLM backbones** (e.g., **Llama-2**) to enable robots to 'speak' the language of **motor commands**. This paradigm utilizes **internet-scale pre-training** through **encoders like SigLIP and DINOv2** to grant robots **semantic reasoning** and **zero-shot generalization** to novel tasks. The system leverages the **Open X-Embodiment dataset**—comprising **1M+ trajectories across 22 robot types**—to achieve **cross-embodiment capabilities**. My research explores the **trade-offs between discrete autoregressive tokenization** (**RT-2, OpenVLA**) and **continuous generative policies** like **Diffusion (Octo)** or **Flow Matching (pi-zero)**, alongside **optimization strategies** like **FAST tokenization** for **real-time edge deployment** on mobile platforms."
+      image:
+        url: "https://learnopencv.com/wp-content/uploads/2025/04/grootn1_system1_system2_model-architecture-1024x534.jpg"
+        fallback: "/vla-architecture.png"
+        alt: "OpenVLA Architecture"
+      technologies:
+        - "OpenVLA (Llama-2, SigLIP, DINOv2)"
+        - "Robotic Transformer (RT-2)"
+        - "Diffusion Policies (Octo)"
+        - "Flow Matching (pi-zero)"
+        - "Open X-Embodiment (OpenX)"
+        - "FAST Action Tokenization"
+      color: "blue"
     - title: "3D Perception in Autonomous Systems"
-      description: "Combining 3D clustering, object pose estimation, and YOLO detection for enriched local perception."
-      longDescription: "Developing a multi-sensor 3D perception pipeline that fuses depth/LiDAR point clouds with RGB camera data. Point clouds are processed in Open3D for voxel filtering, clustering (e.g., DBSCAN), and object pose estimation using RANSAC/ICP. YOLO-based object detection runs on synchronized RGB frames, with detected classes associated to 3D clusters to add semantic labels. Final results are projected into a local perception map and published to the navigation stack, enabling both geometric and semantic reasoning for obstacle avoidance, path planning, and behavior selection. The system integrates SLAM-based localization with TF2 to ensure consistent transforms across all data sources."
+      description: "Combining **3D clustering**, **object pose estimation**, and **YOLO detection** for enriched local perception."
+      longDescription: "Developing a **multi-sensor 3D perception pipeline** that **fuses depth/LiDAR point clouds** with **RGB camera data**. Point clouds are processed in **Open3D** for **voxel filtering**, **clustering (e.g., DBSCAN)**, and **object pose estimation** using **RANSAC/ICP**. **YOLO-based object detection** runs on **synchronized RGB frames**, with detected classes **associated to 3D clusters** to add **semantic labels**. Final results are **projected into a local perception map** and **published to the navigation stack**, enabling both **geometric and semantic reasoning** for **obstacle avoidance, path planning, and behavior selection**. The system integrates **SLAM-based localization** with **TF2** to ensure **consistent transforms** across all data sources."
       image:
         url: "https://www.open3d.org/docs/latest/_images/tutorial_Basic_pointcloud_2_1.png"
         fallback: "/3d-perception.png"
@@ -402,10 +471,8 @@ research:
         - "RGB Cameras"
       color: "green"
     
-
-    
     - title: "Sensor Fusion Optimization"
-      description: "Enhancing perception accuracy through fusion of LiDAR, IMU, and 3D camera data."
+      description: "Enhancing **perception accuracy** through **fusion of LiDAR, IMU, and 3D camera data**."
       image:
         url: "https://www.analog.com/en/_/media/images/analog-dialogue/en/volume-58/number-3/articles/enhancing-robotic-localization/638499-fig-09.svg?rev=db93a6971dac40d6a87fe749cebc7da9&sc_lang=en"
         fallback: "/sensor-fusion.png"
@@ -419,8 +486,8 @@ research:
       color: "purple"
     
     - title: "Autonomous Vehicle Simulation"
-      description: "Personal R&D in autonomous driving."
-      longDescription: "Tested Autoware with HD maps and implemented MPC navigation control."
+      description: "Personal **R&D** in **autonomous driving**."
+      longDescription: "Tested **Autoware** with **HD maps** and implemented **MPC navigation control**."
       image:
         url: "https://i.ytimg.com/vi/OWwtr_71cqI/maxresdefault.jpg"
         fallback: "/sensor-fusion.png"
@@ -433,7 +500,7 @@ research:
       color: "green"
 
     - title: "(Personal Research) Simulation and Reinforcement Learning for Robotics"
-      description: "Using NVIDIA Isaac and Isaac Sim for high-fidelity simulation, robot testing, and reinforcement learning policy training in virtual environments before deployment."
+      description: "Using **NVIDIA Isaac** and **Isaac Sim** for **high-fidelity simulation**, **robot testing**, and **reinforcement learning policy training** in **virtual environments** before deployment."
       image:
         url: "https://storage.googleapis.com/zenn-user-upload/036df16c0010-20220402.png"
         fallback: "/nvidia-isaac-sim.png"
@@ -447,8 +514,8 @@ research:
         - "C++"
       color: "yellow"
 
-    - title: "(Personal Research) 3D Indoors navigation for drones using PX4 Simulation"
-      description: "Using PX4 autopilot to integrate with 3D obstacle avoidance and trajectory planning based on BSpline"
+    - title: "(Personal Research) 3D Indoor Navigation for drones using PX4 Simulation"
+      description: "Using **PX4 autopilot** to integrate with **3D obstacle avoidance** and **trajectory planning** based on **BSpline**"
       image:
         url: "https://drive.google.com/file/d/1WObcFWFxRXIBrCmWSTyZlbRphmPJTxaP/preview"
         fallback: "/nvidia-isaac-sim.png"
@@ -461,7 +528,6 @@ research:
         - "Python"
         - "C++"
       color: "yellow"
-
 
 
 
@@ -508,27 +574,29 @@ research:
 eventsWork:
   featured:
       - title: "Children Talents AI Assistant - Gitex 2024"
-        description: "AI-powered interactive agent for identifying and nurturing children's talents, developed in collaboration with the Digital Government of the United Arab Emirates."
-        longDescription: "Integrated into the Duet service robot, this AI-driven interactive agent engages with children to assess their hobbies and talents through conversational interaction and guided activities. Features include talent demonstration recording, interactive storytelling, a digital painting interface, and automated report generation for parents. Designed to create an engaging, educational experience while providing actionable insights for talent development."
+        description: "**AI-powered interactive agent** for **identifying and nurturing children's talents**, developed in collaboration with the **Digital Government of the United Arab Emirates**."
+        longDescription: "Integrated into the **Duet service robot**, this **AI-driven interactive agent** engages with children to assess their hobbies and talents through **conversational interaction** and **guided activities**. Features include **talent demonstration recording**, **interactive storytelling**, **digital painting interface**, and **automated report generation** for parents. Designed to create an **engaging, educational experience** while providing **actionable insights** for **talent development**."
         image:
-          url: "https://media.licdn.com/dms/image/v2/D4D22AQGLIWrJYuDPyw/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1729197777361?e=1757548800&v=beta&t=8-dlsPmBQI6nB8OalFw-YNHDGfCwW_BZAUYrBkkkguk"
-          fallback: "/fleet-management.png"
+          url: "https://res.cloudinary.com/dhfctvvwf/video/upload/v1770736689/Screencast_from_10-04-2024_06_37_05_PM_jpcahn.webm"
           alt: "Fleet Management System"
         technologies:
           - "Python"
           - "Sockets"
-          - "VirtualDJ Software"
+          - "LLaMA3"
+          - "GRPC"
+          - "RAG"
         color: "purple"
         links:
           github: ""
 
       - title: "Pocket Tank Shooter - Gitex 2023"
-        description: "Omni-wheel combat robots featuring both autonomous and VR-controlled gameplay modes."
-        longDescription: "Engineered control, perception, and targeting systems for two omni-wheel drive robots showcased in an interactive VR shooting game at Gitex 2023. One robot operated autonomously, using fused odometry from wheel encoders, IMU, and camera-based ArUco marker pose estimation for navigation and aiming. It autonomously detected and engaged targets by calibrating its pitch and yaw mechanisms and dynamically controlling the motorized shooting angle. The second robot was manually operated by a human opponent via a VR headset and joystick, receiving a real-time video feed through WebRTC streaming. The combination of precise omni-wheel kinematics, multi-sensor fusion, and integrated targeting systems created an immersive competitive experience between human and autonomous players."
+        description: "**Omni-wheel combat robots** featuring **autonomous** and **VR-controlled gameplay modes**."
+        longDescription: "Engineered **control, perception, and targeting systems** for **two omni-wheel drive robots** showcased in an **interactive VR shooting game** at Gitex 2023. One robot operated **autonomously**, using **fused odometry** from **wheel encoders, IMU**, and **camera-based ArUco marker pose estimation** for **navigation and aiming**. It **autonomously detected and engaged targets** by **calibrating pitch and yaw mechanisms** and **dynamically controlling the motorized shooting angle**. The second robot was **manually operated** by a **human opponent** via **VR headset and joystick**, receiving **real-time video feed** through **WebRTC streaming**. The combination of **precise omni-wheel kinematics**, **multi-sensor fusion**, and **integrated targeting systems** created an **immersive competitive experience** between **human and autonomous players**."
         image:
-          url: "https://drive.google.com/file/d/1xBgy57WerQhsVEMCKGv2hFn5_w8VjML7/preview"
+          url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=pocketTank_jvkyte"
           fallback: "/fleet-management.png"
           alt: "Pocket Tank Shooter"
+          aspectRatio: "16/9"
         technologies:
           - "ROS"
           - "Omni-Wheel Drive Kinematics"
@@ -546,8 +614,8 @@ eventsWork:
           github: ""
 
       - title: "Air Hockey - Gitex 2022"
-        description: "Event industry robotic activation for interactive gameplay using real-time trajectory estimation and robotic control."
-        longDescription: "Developed a real-time interactive installation where a UR10 Universal Robot engages in a hockey-style game by detecting and reacting to a moving puck. Implemented trajectory estimation using ArUco markers, camera calibration, and high-speed vision processing to calculate puck speed, position, and future path. Designed decision-making logic to classify actions as defensive or offensive, and generated precise 2D plane position commands for the UR10 to execute responsive movements. The system was optimized for accuracy, speed, and audience engagement in a live event environment."
+        description: "**Event industry robotic activation** for **interactive gameplay** using **real-time trajectory estimation** and **robotic control**."
+        longDescription: "Developed a **real-time interactive installation** where a **UR10 Universal Robot** engages in a **hockey-style game** by **detecting and reacting** to a **moving puck**. Implemented **trajectory estimation** using **ArUco markers**, **camera calibration**, and **high-speed vision processing** to calculate **puck speed, position, and future path**. Designed **decision-making logic** to **classify actions** as **defensive or offensive**, and generated **precise 2D plane position commands** for the **UR10** to execute **responsive movements**. The system was optimized for **accuracy, speed, and audience engagement** in a **live event environment**."
         image:
           url: "https://lh3.googleusercontent.com/pw/AP1GczN58ST0A0Dp7hatnZHiFAu637laBEWhYFcke39f2Jy0ylv4D9PXTokGUoXtgUTDbeYnCaeyAHC3RUT2mxz_3DvgqnEtKgtG9T2tDCzpLbOIQwObUr_mS6BHWbZTvelO-aS2zpBPzhpsgRXAK2rS373BbQ=w1080-h1080-s-no-gm?authuser=0"
           fallback: "/AIRHOCKEY.jpg"
@@ -569,8 +637,8 @@ eventsWork:
 
 
       - title: "DJ Yummi - Gitex 2020"
-        description: "Event industry robotic activation integrating music synchronization with robotic motion."
-        longDescription: "Developed and integrated a control system for a Yumi ABB collaborative robot to synchronize its movements with live music beats in real time. The robot was programmed to operate a DJ mixer, perform smooth transitions. Creating an engaging and visually synchronized experience for event audiences."
+        description: "**Event industry robotic activation** integrating **music synchronization** with **robotic motion**."
+        longDescription: "Developed and integrated a **control system** for a **Yumi ABB collaborative robot** to **synchronize its movements** with **live music beats** in **real time**. The robot was programmed to **operate a DJ mixer**, perform **smooth transitions**, creating an **engaging and visually synchronized experience** for **event audiences**."
         image:
           url: "https://lh3.googleusercontent.com/pw/AP1GczMnlNkNfpxTT_FmJoxQSpm89IOaLlrN6yTO1DekbdDzh1K6Inf6o2jyYEHIn1F0UHAlN-FnieXWCN7nkgLioHWlNBmtGX3WQ-9kWO0i5kkufDarKPHLwlBTveeJgh0ewkxZGcIjsuXmHcZNt8lErV2aKg=w315-h315-s-no-gm?authuser=0"
           fallback: "/YUMMI.jpg"
@@ -597,11 +665,11 @@ videos:
           description: "Custom multi-robot management software"
           duration: ""
           thumbnail:
-            url: "https://drive.google.com/file/d/1Qa0U5fJYZCd1GMgBqDqG3xEU6fKH47xq/preview"
+            url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=lv_0_20260210180728_hndmco"
             fallback: "/fleet-management.png"
             alt: "Fleet Management System"
           video:
-            url: "https://drive.google.com/file/d/1Qa0U5fJYZCd1GMgBqDqG3xEU6fKH47xq/preview"
+            url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=lv_0_20260210180728_hndmco"
             fallback: "/fleet-management.png"
             alt: "Fleet Management System Demo"
             type: "iframe"
@@ -617,11 +685,13 @@ videos:
             url: "https://www.youtube.com/embed/0FTgiZ7sgVs"
             fallback: "/fleet-management.png"
             alt: "Disinfection Robot"
+            aspectRatio: "16/9"
           video:
             url: "https://www.youtube.com/embed/0FTgiZ7sgVs"
             fallback: "/fleet-management.png"
             alt: "Disinfection Robot Demo"
             type: "iframe"
+            aspectRatio: "16/9"
           technologies:
             - ""
           date: ""
@@ -631,23 +701,23 @@ videos:
             url: "https://www.youtube.com/embed/TqDUiLxACKw"
             fallback: "/fleet-management.png"
             alt: "Disinfection Robot"
+            aspectRatio: "16/9"
           video:
             url: "https://www.youtube.com/embed/TqDUiLxACKw"
             fallback: "/fleet-management.png"
             alt: "Disinfection Robot Demo"
             type: "iframe"
+            aspectRatio: "16/9"
           technologies:
             - ""
           date: ""
         - title: "MDRA"
           duration: ""
           thumbnail:
-            url: "https://drive.google.com/file/d/15oZfdDNWfqoCETdmOd08PDGLFi9WLJmq/preview"
-            fallback: "/fleet-management.png"
+            url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=mdra_i9vaiw"
             alt: "Disinfection Robot"
           video:
-            url: "https://drive.google.com/file/d/15oZfdDNWfqoCETdmOd08PDGLFi9WLJmq/preview"
-            fallback: "/fleet-management.png"
+            url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=mdra_i9vaiw"
             alt: "Disinfection Robot Demo"
             type: "iframe"
           technologies:
@@ -659,24 +729,28 @@ videos:
             url: "https://www.youtube.com/embed/Kj-Qx2KMocE"
             fallback: "/fleet-management.png"
             alt: "Disinfection Robot"
+            aspectRatio: "16/9"
           video:
             url: "https://www.youtube.com/embed/Kj-Qx2KMocE"
             fallback: "/fleet-management.png"
             alt: "Disinfection Robot Demo"
             type: "iframe"
+            aspectRatio: "16/9"
           technologies:
             - ""
           date: ""
         - title: "MB90A"
           duration: "Obstacle Avoidance"
           thumbnail:
-            url: "https://drive.google.com/file/d/1yzBOFeOZb4ERv1iLqUk4tzQVJeKKcM79/preview"
+            url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=mb90a-obstacle_hkelvb"
             fallback: "/fleet-management.png"
             alt: "Disinfection Robot"
+            aspectRatio: "16/9"
           video:
-            url: "https://drive.google.com/file/d/1yzBOFeOZb4ERv1iLqUk4tzQVJeKKcM79/preview"
+            url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=mb90a-obstacle_hkelvb"
             fallback: "/fleet-management.png"
             alt: "Disinfection Robot Demo"
+            aspectRatio: "16/9"
             type: "iframe"
           technologies:
             - ""
@@ -684,11 +758,11 @@ videos:
         - title: "MB90A Payload"
           duration: "Payload"
           thumbnail:
-            url: "https://drive.google.com/file/d/1Nph184Eu5CMui2gBM06OBKyGWuXyI8qi/preview"
+            url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=mb90a-paletts_jqvbia"
             fallback: "/fleet-management.png"
             alt: "Disinfection Robot"
           video:
-            url: "https://drive.google.com/file/d/1Nph184Eu5CMui2gBM06OBKyGWuXyI8qi/preview"
+            url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=mb90a-paletts_jqvbia"
             fallback: "/fleet-management.png"
             alt: "Disinfection Robot Demo"
             type: "iframe"
@@ -698,11 +772,11 @@ videos:
         - title: "Mozo Demo"
           duration: ""
           thumbnail:
-            url: "https://drive.google.com/file/d/13bx9MjfHvKdFEgVIVW3YaS44m5u49l1W/preview"
+            url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=mozo_nxqtgf"
             fallback: "/fleet-management.png"
             alt: "Disinfection Robot"
           video:
-            url: "https://drive.google.com/file/d/13bx9MjfHvKdFEgVIVW3YaS44m5u49l1W/preview"
+            url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=mozo_nxqtgf"
             fallback: "/fleet-management.png"
             alt: "Disinfection Robot Demo"
             type: "iframe"
@@ -713,14 +787,16 @@ videos:
           description: "Automated gantry for food delivery."
           duration: ""
           thumbnail:
-            url: "https://drive.google.com/file/d/1PL0iW_M5k5q9EpQWOPtAFqGTVz-UkLt5/preview"
+            url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=VID_20250930004351_yotz3d"
             fallback: "/semi-humanoid-robots.png"
             alt: "AI-Enhanced Semi-Humanoid Robots"
+            aspectRatio: "16/9"
           video:
-            url: "https://drive.google.com/file/d/1PL0iW_M5k5q9EpQWOPtAFqGTVz-UkLt5/preview"
+            url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=VID_20250930004351_yotz3d"
             fallback: "/semi-humanoid-robots.png"
             alt: "Kitchen Gantry System Demo"
             type: "iframe"
+            aspectRatio: "16/9"
           technologies:
             - "ROS2"
             - "MoveIt2"
@@ -731,11 +807,11 @@ videos:
         - title: "Fails "
           duration: ""
           thumbnail:
-            url: "   https://drive.google.com/file/d/1layUwca9kdMYDzkhR0jXC4akGDCW4NNM/preview"
+            url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=yummi_bsr29d"
             fallback: "/fleet-management.png"
             alt: "Disinfection Robot"
           video:
-            url: "   https://drive.google.com/file/d/1layUwca9kdMYDzkhR0jXC4akGDCW4NNM/preview"
+            url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=yummi_bsr29d"
             fallback: "/fleet-management.png"
             alt: "Disinfection Robot Demo"
             type: "iframe"
@@ -750,16 +826,19 @@ videos:
           description: "Interactive VR combat robots with autonomous and manual control modes"
           duration: "4:20"
           thumbnail:
-            url: "https://drive.google.com/file/d/1xBgy57WerQhsVEMCKGv2hFn5_w8VjML7/preview"
+            url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=pocketTank_jvkyte"
             fallback: "/pocket-tank.png"
             alt: "Pocket Tank Shooter"
+            aspectRatio: "16/9"
           video:
-            url: "https://drive.google.com/file/d/1xBgy57WerQhsVEMCKGv2hFn5_w8VjML7/preview"
+            url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=pocketTank_jvkyte"
             fallback: "/pocket-tank.png"
             alt: "Pocket Tank Shooter Demo"
             type: "iframe"
+            aspectRatio: "16/9"
           technologies:
             - "VR Integration"
+            - "Unreal Engine"
             - "Omni-Wheel Drive"
             - "Computer Vision"
             - "Real-time Control"
@@ -779,11 +858,13 @@ videos:
             url: "https://drive.google.com/file/d/1WObcFWFxRXIBrCmWSTyZlbRphmPJTxaP/preview"
             fallback: "/nvidia-isaac-sim.png"
             alt: "NVIDIA Isaac Sim Research"
+            aspectRatio: "16/9"
           video:
             url: "https://drive.google.com/file/d/1WObcFWFxRXIBrCmWSTyZlbRphmPJTxaP/preview"
             fallback: "/nvidia-isaac-sim.png"
             alt: "3D Indoors navigation for drones using PX4 Simulation Demo"
             type: "iframe"
+            aspectRatio: "16/9"
           technologies:
             - "NVIDIA Isaac"
             - "NVIDIA Isaac Sim"
@@ -795,11 +876,11 @@ videos:
         - title: "AI-Enhanced Semi-Humanoid Robot"
           duration: ""
           thumbnail:
-            url: "https://drive.google.com/file/d/1JCOGtnFKpWHcRsSsJg_t2rB1unxZqEjA/preview"
+            url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=tuya_hgkkxu"
             fallback: "/semi-humanoid-robots.png"
             alt: "AI-Enhanced Semi-Humanoid Robots"
           video:
-            url: "https://drive.google.com/file/d/1JCOGtnFKpWHcRsSsJg_t2rB1unxZqEjA/preview"
+            url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=tuya_hgkkxu"
             fallback: "/semi-humanoid-robots.png"
             alt: "AI-Enhanced Semi-Humanoid Robots Demo"
             type: "iframe"
@@ -814,11 +895,11 @@ videos:
         - title: "MB90A Universal Integration UR10"
           duration: "Payload"
           thumbnail:
-            url: "https://drive.google.com/file/d/1uck-UBMWeCSkjEXHXPkAy6QG1X_pHFJb/preview"
+            url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=mb90a-ur10_y9acnf"
             fallback: "/fleet-management.png"
             alt: "Disinfection Robot"
           video:
-            url: "https://drive.google.com/file/d/1uck-UBMWeCSkjEXHXPkAy6QG1X_pHFJb/preview"
+            url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=mb90a-ur10_y9acnf"
             fallback: "/fleet-management.png"
             alt: "Disinfection Robot Demo"
             type: "iframe"

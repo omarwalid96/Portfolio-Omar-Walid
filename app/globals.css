@@ -9,6 +9,62 @@
 body {
   @apply bg-background text-foreground transition-colors duration-200;
 }
+
+/* Dark Mode Text Overrides for Better Visibility */
+
+/* Force brighter muted text in dark mode */
+.dark .text-muted-foreground,
+.dark p.text-muted-foreground,
+.dark span.text-muted-foreground {
+  color: hsl(215 20% 70%) !important;
+}
+
+/* Ensure list items are visible */
+.dark ul,
+.dark ol,
+.dark li {
+  color: hsl(210 40% 90%);
+}
+
+/* Card descriptions and secondary text */
+.dark .text-sm.text-muted-foreground {
+  color: hsl(215 20% 72%) !important;
+}
+
+/* Improve contrast for all foreground text */
+.dark .text-foreground\/80 {
+  color: hsl(210 40% 88%);
+}
+
+.dark .text-foreground\/70 {
+  color: hsl(210 40% 82%);
+}
+
+/* Enhance colored elements visibility in dark mode */
+.dark .bg-muted {
+  background-color: hsl(217.2 32.6% 12%);
+}
+
+.dark .bg-secondary {
+  background-color: hsl(217.2 32.6% 16%);
+}
+
+/* Ensure progress bars are visible on mobile */
+.dark .bg-secondary\/50 {
+  background-color: hsl(217.2 32.6% 20%);
+}
+
+/* Ensure progress bar width is respected */
+.dark [class*="bg-blue"][class*="dark:bg-blue"],
+.dark [class*="bg-purple"][class*="dark:bg-purple"],
+.dark [class*="bg-teal"][class*="dark:bg-teal"],
+.dark [class*="bg-green"][class*="dark:bg-green"],
+.dark [class*="bg-yellow"][class*="dark:bg-yellow"],
+.dark [class*="bg-red"][class*="dark:bg-red"],
+.dark [class*="bg-orange"][class*="dark:bg-orange"] {
+  max-width: 100%;
+  box-sizing: border-box;
+}
 }
 
 :root {
@@ -45,42 +101,44 @@ body {
 }
 
 .dark {
---background: 222.2 80.4% 15.2%;
+/* Deep navy background (not pure black) - modern 2026 trend */
+--background: 222.2 84% 4.5%;
 --foreground: 210 40% 98%;
 
---muted: 217.2 32.6% 17.5%;
---muted-foreground: 215 20.2% 65.1%;
+/* Elevated surfaces with subtle lift */
+--muted: 217.2 32.6% 10%;
+--muted-foreground: 215 20% 65%;
 
---popover: 222.2 47.4% 11.2%;
+--popover: 222.2 84% 5.5%;
 --popover-foreground: 210 40% 98%;
 
---card: 222.2 47.4% 11.2%;
+--card: 222.2 84% 6%;
 --card-foreground: 210 40% 98%;
 
---border: 217.2 32.6% 17.5%;
---input: 217.2 32.6% 17.5%;
+/* Visible borders - increased contrast */
+--border: 217.2 32.6% 18%;
+--input: 217.2 32.6% 18%;
 
---primary: 210 40% 98%;
+/* Vibrant primary colors */
+--primary: 217.2 91.2% 59.8%;
 --primary-foreground: 222.2 47.4% 11.2%;
 
---secondary: 217.2 32.6% 17.5%;
+/* Secondary with better contrast */
+--secondary: 217.2 32.6% 16%;
 --secondary-foreground: 210 40% 98%;
 
---accent: 217.2 32.6% 17.5%;
+/* Accent colors pop */
+--accent: 217.2 32.6% 17%;
 --accent-foreground: 210 40% 98%;
 
---destructive: 0 62.8% 30.6%;
+/* Vibrant destructive for better visibility */
+--destructive: 0 84.2% 60.2%;
 --destructive-foreground: 210 40% 98%;
 
---ring: 217.2 32.6% 17.5%;
+/* Focus ring visibility */
+--ring: 217.2 91.2% 59.8%;
 }
 
-:root {
-color-scheme: light;
-}
-.dark {
-color-scheme: dark;
-}
 
 /* Iframe loading states */
 iframe {
@@ -118,4 +176,15 @@ animation: loading 1.5s infinite;
 100% {
   background-position: -200% 0;
 }
+}
+
+/* Hide scrollbar but maintain scroll functionality */
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, Opera */
+  }
 }
