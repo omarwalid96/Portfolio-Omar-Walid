@@ -380,7 +380,7 @@ currentWork:
           fallback: "/semi-humanoid-robots.png"
           alt: "OpenArm Haptic System"          
           aspectRatio: "9/16"
-        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=alcovePointCloud_skyen8"
+        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=dataCollection_svydxo"
           fallback: "/semi-humanoid-robots.png"
           alt: "OpenArm Haptic System Overview"
           aspectRatio: "16/9"
