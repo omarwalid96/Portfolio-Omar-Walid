@@ -64,9 +64,11 @@ export function CurrentWork({ config }: CurrentWorkProps) {
                                 ) : project.image ? (
                                     <MediaDisplay media={project.image} className="rounded-lg" aspectRatio="16/9" objectFit="contain" />
                                 ) : null}
-                                <p className="text-muted-foreground">
-                                    <FormattedText text={project.longDescription} />
-                                </p>
+                                <FormattedText
+                                    text={project.longDescription}
+                                    variant="markdown"
+                                    className="text-muted-foreground"
+                                />
                                 <div className="flex flex-wrap gap-2">
                                     {project.technologies.map((tech: string, techIndex: number) => (
                                         <Badge key={techIndex}>{tech}</Badge>

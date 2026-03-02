@@ -58,9 +58,11 @@ export function FeaturedProjects({ config }: FeaturedProjectsProps) {
                                         </Badge>
                                     ))}
                                 </div>
-                                <p className="text-sm text-muted-foreground">
-                                    <FormattedText text={project.longDescription} />
-                                </p>
+                                <FormattedText
+                                    text={project.longDescription}
+                                    variant="markdown"
+                                    className="text-sm text-muted-foreground"
+                                />
                                 {project.links.github && (
                                     <div className="mt-4">
                                         <Link

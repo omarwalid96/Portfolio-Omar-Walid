@@ -43,9 +43,11 @@ export function Research({ config }: ResearchProps) {
                                     ))}
                                 </div>
                                 {area.longDescription && (
-                                    <p className="text-sm text-muted-foreground">
-                                        <FormattedText text={area.longDescription} />
-                                    </p>
+                                    <FormattedText
+                                        text={area.longDescription}
+                                        variant="markdown"
+                                        className="text-sm text-muted-foreground"
+                                    />
                                 )}
                             </CardContent>
                         </Card>
