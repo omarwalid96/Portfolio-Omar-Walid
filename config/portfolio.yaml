@@ -136,10 +136,26 @@ about:
 
 experience:
   jobs:
+    - title: "Robotics Software Senior Developer"
+      company: "Nodogoro"
+      location: "California, USA (Remote)"
+      startDate: "2024"
+      endDate: "Present"
+      current: true
+      color: "blue"
+      responsibilities:
+        - "Designed and developed **complete software architecture** for a **robotic kitchen automation system**."
+        - "Integrated **microcontroller solutions (ARM Cortex-M, STM32)** with **CAN & RS485 protocols**."
+        - "Simulating solution on **Gazebo** before mechanical integration"
+        - "Led **ROS2-based communication** and **orchestration design**."
+        - "Developed **motion planning pipelines** using **MoveIt2, OMPL, and CHOMP planners**."
+        - "Implemented **3D Octomap-based perception** for **object detection and avoidance**."
+        - "Architected **OpenArm haptic teleoperation system** enabling **bilateral control** over networks with **1000Hz feedback loops**, **synchronized data pipelines** for **imitation learning** using **GStreamer/NVENC**, and **automated quality validation** for **AI training datasets**."
+
     - title: "Robotics Software Lead"
       company: "MARSES Robotics"
       location: "Dubai, UAE"
-      startDate: "2020"
+      startDate: "2024"
       endDate: "Present"
       current: true
       color: "purple"
@@ -159,22 +175,7 @@ experience:
         - "Managed **Git-based version control** and **branching strategies** for multi-team collaboration."
         
 
-    - title: "Robotics Software Senior Developer (Part-time)"
-      company: "Nodogoro"
-      location: "California, USA (Remote)"
-      startDate: "2024"
-      endDate: "Present"
-      current: true
-      color: "blue"
-      responsibilities:
-        - "Designed and developed **complete software architecture** for a **robotic kitchen automation system**."
-        - "Integrated **microcontroller solutions (ARM Cortex-M, STM32)** with **CAN & RS485 protocols**."
-        - "Simulating solution on **Gazebo** before mechanical integration"
-        - "Led **ROS2-based communication** and **orchestration design**."
-        - "Developed **motion planning pipelines** using **MoveIt2, OMPL, and CHOMP planners**."
-        - "Implemented **3D Octomap-based perception** for **object detection and avoidance**."
-        - "Architected **OpenArm haptic teleoperation system** enabling **bilateral control** over networks with **1000Hz feedback loops**, **synchronized data pipelines** for **imitation learning** using **GStreamer/NVENC**, and **automated quality validation** for **AI training datasets**."
-
+    
     - title: "Robotics System Specialist"
       company: "MARSES Robotics"
       location: "Cairo, Egypt"
