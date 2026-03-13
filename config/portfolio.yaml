@@ -383,18 +383,18 @@ currentWork:
         - Designed **RS485+CAN communication** to communicate between over **24 microcontrollers**,
 
         - Implemented **ROS2 behavior trees** to orchestrate beverage creation to achieve **60+
-          beverage types**,
+          beverage types**.
 
         - Used **Lifecycle nodes and actions** to maintain system stability while handling failures
-          and edge cases,
+          and edge cases.
 
         - Designed & Implemented **Cloud-based facial recognition** to have an interactive approach
-          to the customer,
+          to the customer.
 
         - Oversaw the development and contributed in handling a **queuing system** capable of
           forecasting stock levels and machines idle time,
 
-        - Designed **Inventory and stock management system**,
+        - Designed **Inventory and stock management system**.
 
         - Integrated **POS system**, achieving a fully automated barista system capable of
           delivering **600+ beverages per day**.
@@ -478,8 +478,8 @@ currentWork:
       technologies: ["Real-time Control", "UDP Networking", "Shared Memory", "Imitation Learning", "GStreamer/WebRTC", "NVENC", "C++", "Python"]
       progress: 90
       color: "green"
-    - title: "AI-Enhanced Semi-Humanoid Robots"
-      description: "Adding **advanced AI interactivity** to humanoid platforms."
+    - title: "Semi-Humanoid Robot - Tuya"
+      description: "Developing a Semi humanoid platforms."
       longDescription: |
         - Developed **control, navigation, and perception** for a **semi-humanoid robot platform**.
 
