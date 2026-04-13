@@ -34,6 +34,9 @@ about:
     - title: "Barista Project Lead Architect"
       description: "Designed and implemented the full system architecture for a multi-machine automated barista solution, integrating ROS2 behavior trees, RS485+CAN communication, and cloud-based facial recognition."
       color: "blue"
+    - title: "Cursor Hackathon Heilbronn"
+      description: "30 hours Hackarthon to develop AI based solutions, Mainly Focused on building RoboScribe Natural Language Policy Validation & Data Collection for Humanoid Robots"
+      color: "red"
     - title: "Television Public Speaker & Robotics Industry Expert"
       description: "Featured as a robotics expert on television, discussing humanoid robotics, AI integration, and the future of intelligent machines in healthcare and daily life."
       color: "indigo"
@@ -588,6 +591,25 @@ currentWork:
 
 research:
   areas:
+    - title: "RoboScribe, Cursor Hackathon Heilbronn"
+      description: "30 hours Hackarthon to develop AI based solutions, Mainly Focused on building RoboScribe Natural Language Policy Validation & Data Collection for Humanoid Robots"
+      longDescription: |
+        - A **natural language robotics interface** that converts spoken or typed commands into executable **humanoid robot motions** inside **NVIDIA Isaac Sim**, enabling hands-free control and dataset generation. :contentReference[oaicite:0]{index=0}
+        - Integrates **LLMs (DeepSeek via Featherless API)** for command parsing and **vision-language models (Qwen3-VL-2B)** for object-aware navigation using robot camera input. :contentReference[oaicite:1]{index=1}
+        - Built as a **full-stack system** with a **FastAPI backend**, **Next.js dashboard**, and **Isaac Sim extension**, communicating via WebSockets for real-time control. :contentReference[oaicite:2]{index=2}
+        - Supports **voice interaction (ElevenLabs STT/TTS)**, trajectory recording at **200Hz**, and exporting robot motion data for learning or validation tasks. :contentReference[oaicite:3]{index=3}
+        - Designed to **validate and analyze robot policies** by comparing natural-language-driven actions with simulated execution in a humanoid robot environment. :contentReference[oaicite:4]{index=4}
+      image:
+        url: "https://res.cloudinary.com/dhfctvvwf/image/upload/v1776038827/Screenshot_from_2026-04-13_02-06-57_gfosxj.png"
+        fallback: "/vla-architecture.png"
+        alt: "OpenVLA Architecture"
+      technologies:
+        - "FastAPI, Next.js, WebSockets"
+        - "NVIDIA Isaac Sim, Unitree H1"
+        - "DeepSeek LLM (Featherless API), Qwen3-VL"
+        - "ElevenLabs STT/TTS, LangGraph"
+        - "Convex, n8n"
+      color: "blue"
     - title: "Unified Vision-Language-Action (VLA) Models"
       # description: "Advancing general-purpose robotics by mapping multimodal perception directly to motor actions via internet-scale foundation models."
       description: "Researching **end-to-end architectures** that unify **vision-language encoders** with **LLM backbones** (e.g., **Llama-2**) to enable robots to 'speak' the language of **motor commands**."
