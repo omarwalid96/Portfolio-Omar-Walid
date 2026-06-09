@@ -461,6 +461,10 @@ currentWork:
         - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=VID_20260520_135012_tlprsz"
           alt: "Robista Videos"
           aspectRatio: "16/9"
+        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=VID_20251209_233618_2_jiysdy"
+          alt: "Robista Videos"
+          aspectRatio: "9/16"
+          
         - url: "https://res.cloudinary.com/dhfctvvwf/image/upload/v1780991003/IMG_20260609_104238_oxmdil.jpg"
           alt: "Robista Videos"
           aspectRatio: "9/16"
@@ -662,6 +666,7 @@ research:
         url: "https://res.cloudinary.com/dhfctvvwf/image/upload/v1776038827/Screenshot_from_2026-04-13_02-06-57_gfosxj.png"
         fallback: "/vla-architecture.png"
         alt: "OpenVLA Architecture"
+        aspectRatio: "9/16"
       technologies:
         - "FastAPI, Next.js, WebSockets"
         - "NVIDIA Isaac Sim, Unitree H1"
@@ -678,7 +683,7 @@ research:
         - The system leverages the **Open X-Embodiment dataset**—comprising **1M+ trajectories across 22 robot types**—to achieve **cross-embodiment capabilities**.
         - My research explores the **trade-offs between discrete autoregressive tokenization** (**RT-2, OpenVLA**) and **continuous generative policies** like **Diffusion (Octo)** or **Flow Matching (pi-zero)**, alongside **optimization strategies** like **FAST tokenization** for **real-time edge deployment** on mobile platforms.
       image:
-        url: "https://learnopencv.com/wp-content/uploads/2025/04/grootn1_system1_system2_model-architecture-1024x534.jpg"
+        url: "https://www.mdpi.com/sensors/sensors-26-00165/article_deploy/html/images/sensors-26-00165-g001-550.jpg"
         fallback: "/vla-architecture.png"
         alt: "OpenVLA Architecture"
       technologies:
@@ -978,6 +983,24 @@ videos:
       description: "Projects"
       color: "blue"
       videos:
+        - title: "RoboScribe, Cursor Hackathon Heilbronn"
+          description: "RoboScribe natural language robotics interface that translates commands into humanoid robot motion inside NVIDIA Isaac Sim. You speak or type to the system parses it, reads it back to you for voice confirmation, executes the motion on a Unitree H1 humanoid, and captures the full joint trajectory at 200Hz for dataset export. Commands can be issued via *ElevenLabs STT* (speech-to-text) directly from the browser, making the entire interaction hands-free: speak a command, hear the confirmation, say yes, watch the robot move. It also supports visual navigation: say `go to the desk` and an onboard VLM (Qwen3-VL-2B) locates the object from the robot's camera and steers toward it."
+          duration: ""
+          thumbnail:
+            url: "https://www.youtube.com/embed/UHPUW4HKm2U?si=nBIfgGzAnoi1XN5B"
+            fallback: "/fleet-management.png"
+            alt: "Fleet Management System"
+          video:
+            url: "https://www.youtube.com/embed/UHPUW4HKm2U?si=nBIfgGzAnoi1XN5B"
+            fallback: "/fleet-management.png"
+            alt: "Fleet Management System Demo"
+            type: "iframe"
+          technologies:
+            - "C++"
+            - "ROS"
+            - "Azure"
+            - "BMS"
+          date: ""
         - title: "Fleet Management System for Robots"
           description: "Custom multi-robot management software"
           duration: ""
@@ -985,11 +1008,13 @@ videos:
             url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=lv_0_20260210180728_hndmco"
             fallback: "/fleet-management.png"
             alt: "Fleet Management System"
+            aspectRatio: "16/9"
           video:
             url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=lv_0_20260210180728_hndmco"
             fallback: "/fleet-management.png"
             alt: "Fleet Management System Demo"
             type: "iframe"
+            aspectRatio: "16/9"
           technologies:
             - "C++"
             - "ROS"
