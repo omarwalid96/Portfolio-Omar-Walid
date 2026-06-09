@@ -379,7 +379,60 @@ projects:
 currentWork:
   projects:
 
+    - title: "Starpilot"
+      description: "From handheld gripper to training dataset — a full **imitation learning data collection pipeline**."
+      longDescription: |
 
+        - Engineered a **teleoperation and data collection system** using **handheld grippers** to generate **high-quality episode datasets** for **imitation learning** (ACT, VLA policies).
+
+        - Built **real-time sensor orchestration over ROS2** with a **custom sync benchmark** achieving **sub-millisecond inter-camera timestamp alignment** across wrist and scene cameras.
+
+        - Implemented **high-throughput zero-copy inter-process communication** using **Eclipse iceoryx (iox-roudi)** with **Shared Memory (SHM) ring buffers**, minimizing latency and CPU overhead across the sensor pipeline.
+
+        - Captured **6-DoF end-effector pose** via **Vive Trackers** with **SteamVR-to-ROS2 bridge** for accurate trajectory recording.
+
+        - Streamed **gripper finger position via encoder feedback** and **hand dynamics via IMU** from **custom STM32 gripper boards** over serial communication.
+
+        - Managed **episode lifecycle, dataset formatting, and validation** using **LeRobot**, ensuring compatibility with downstream policy training pipelines.
+
+        - Implemented **direct push to HuggingFace Datasets** for seamless integration with **ACT and VLA policy training** workflows.
+      images:
+        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=hpakJEb8yn_ldlqtl"
+          alt: "Starpilot Teleoperation Demo"
+          aspectRatio: "16/9"
+        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=VID_20260418_214246_edbeqj"
+          alt: "Starpilot Teleoperation Demo"
+          aspectRatio: "9/16"
+          
+        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=CamerasDepth_qvlod3"
+          alt: "Starpilot Point Cloud Visualization"
+          aspectRatio: "16/9"
+        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=smolVLA_oneCam_og4aqa"
+          alt: "Starpilot Data Collection"
+          aspectRatio: "16/9"
+        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=OpenArm_Isaacsim_RMPFlow_fywj8p"
+          alt: "Open Arm RMP FLOW Starpilot Data Collection"
+          aspectRatio: "16/9"
+          
+
+      technologies:
+        - "ROS2"
+        - "iox-roudi"
+        - "Shared Memory / Ring Buffers"
+        - "STM32"
+        - "Vive Trackers / SteamVR"
+        - "LeRobot"
+        - "HuggingFace Datasets"
+        - "ACT / VLA Policies"
+        - "C++"
+        - "Python"
+        - "IMU & Encoder Feedback"
+        - "Camera Synchronization"
+        - "Nvidia Isaac Sim"
+      progress: 100
+      color: "blue"
+      links:
+        github: ""
     - title: "Automated Barista Solution"
       description: "End-to-end robotics architecture for **multi-machine coffee preparation**."
       longDescription: |
@@ -401,10 +454,16 @@ currentWork:
 
         - Integrated **POS system**, achieving a fully automated barista system capable of
           delivering **600+ beverages per day**.
-      image:
-        url: "https://lh3.googleusercontent.com/pw/AP1GczP8owC_BHkVJ19mDOyw_iKYBS5xc_c3t4_RGpyjf5QjeL88PIS3msuk1PDuJWXfyHQxgLDUObSviRKBPCkzx4B_e05YT9xKPast5ssZ73JXJB-BwFYUQy0TsNY3zJCvzPQ8ygkRd0pw_IA94hJaxclD-w=w902-h1353-s-no-gm?authuser=0"
-        fallback: "/mb90a-robot.png"
-        alt: "MB90a Logistics Robot"
+      images:
+        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=VID_20260520_043032_642_mmpotd"
+          alt: "Robista Videos"
+          aspectRatio: "9/16"
+        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=VID_20260520_135012_tlprsz"
+          alt: "Robista Videos"
+          aspectRatio: "16/9"
+        - url: "https://res.cloudinary.com/dhfctvvwf/image/upload/v1780991003/IMG_20260609_104238_oxmdil.jpg"
+          alt: "Robista Videos"
+          aspectRatio: "9/16"
       technologies:
         - "ROS2"
         - "Behavior Trees"
@@ -415,7 +474,7 @@ currentWork:
         - "Python"
         - "Android"
         - "WebSockets"
-      progress: 95
+      progress: 100
       color: "blue"
     - title: "Kitchen Gantry System"
       description: "Automated gantry for **food delivery**."
@@ -443,7 +502,7 @@ currentWork:
         - "OMPL"
         - "CHOMP"
         - "Octomap"
-      progress: 80
+      progress: 100
       color: "blue"
       links:
         github: ""
