@@ -154,6 +154,7 @@ experience:
         - "Developed **motion planning pipelines** using **MoveIt2, OMPL, and CHOMP planners**."
         - "Implemented **3D Octomap-based perception** for **object detection and avoidance**."
         - "Architected **OpenArm haptic teleoperation system** enabling **bilateral control** over networks with **1000Hz feedback loops**, **synchronized data pipelines** for **imitation learning** using **GStreamer/NVENC**, and **automated quality validation** for **AI training datasets**."
+        - "Contributed to **Starpilot**, a full **imitation learning data collection pipeline** using **handheld grippers**, **Vive Trackers**, **STM32 gripper boards**, and **Eclipse iceoryx (iox-roudi) SHM ring buffers** for zero-copy IPC — with episodes formatted via **LeRobot** and pushed directly to **HuggingFace Datasets** for **ACT/VLA policy training**."
 
     - title: "Robotics Software Lead"
       company: "MARSES Robotics"
