@@ -77,6 +77,7 @@ export interface CurrentProject extends Project {
   image?: MediaItem  // Single image (backward compatible)
   images?: MediaItem[]  // Multiple images/videos
   progress?: number
+  status?: string  // e.g. "Paused", shown beside the progress label
   color: string
   stats?: {
     stars: string
@@ -199,13 +200,20 @@ export function isVideo(media: { url: string; fallback: string; type?: string })
 }
 
 // Helper function to get media source (URL or fallback)
+// Local paths ("/x.png") need the GitHub Pages base path, which actions/configure-pages injects
+// into next.config at deploy time; next/image does not add it to string srcs on its own.
+// ponytail: __NEXT_ROUTER_BASEPATH is Next's internal build constant; swap for an explicit env var if it ever disappears
+export function withBasePath(src: string): string {
+  return src.startsWith('/') && !src.startsWith('//') ? (process.env.__NEXT_ROUTER_BASEPATH || '') + src : src
+}
+
 export function getMediaSrc(media: { url: string; fallback: string }): string {
-  return media.url && media.url.trim() !== '' ? media.url : media.fallback
+  return withBasePath(media.url && media.url.trim() !== '' ? media.url : media.fallback)
 }
 
 // Keep the old getImageSrc function for backward compatibility
 export function getImageSrc(image: { url: string; fallback: string }): string {
-  return image.url && image.url.trim() !== '' ? image.url : image.fallback
+  return getMediaSrc(image)
 }
 
 // Helper function to convert Google Drive share links to embed links

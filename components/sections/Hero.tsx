@@ -52,6 +52,13 @@ export function Hero({ config }: HeroProps) {
                                 <Mail className="h-6 w-6" />
                             </Link>
                         </div>
+
+                        <a
+                            href="#index"
+                            className="inline-flex items-center gap-2 text-lg font-medium text-foreground underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-sm"
+                        >
+                            Browse all projects <span aria-hidden="true">↓</span>
+                        </a>
                     </div>
 
                     <div className="relative">

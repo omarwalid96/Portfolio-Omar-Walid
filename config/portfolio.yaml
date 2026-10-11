@@ -140,7 +140,7 @@ about:
 experience:
   jobs:
     - title: "Robotics Software Senior Developer"
-      company: "Nodogoro"
+      company: "Starpilot"
       location: "California, USA (Remote)"
       startDate: "2024"
       endDate: "Present"
@@ -154,13 +154,14 @@ experience:
         - "Developed **motion planning pipelines** using **MoveIt2, OMPL, and CHOMP planners**."
         - "Implemented **3D Octomap-based perception** for **object detection and avoidance**."
         - "Architected **OpenArm haptic teleoperation system** enabling **bilateral control** over networks with **1000Hz feedback loops**, **synchronized data pipelines** for **imitation learning** using **GStreamer/NVENC**, and **automated quality validation** for **AI training datasets**."
-        - "Contributed to **Starpilot**, a full **imitation learning data collection pipeline** using **handheld grippers**, **Vive Trackers**, **STM32 gripper boards**, and **Eclipse iceoryx (iox-roudi) SHM ring buffers** for zero-copy IPC — with episodes formatted via **LeRobot** and pushed directly to **HuggingFace Datasets** for **ACT/VLA policy training**."
+        - "Built the company's full **imitation learning data collection pipeline** using **handheld grippers**, **Vive Trackers**, **STM32 gripper boards**, and **Eclipse iceoryx (iox-roudi) SHM ring buffers** for zero-copy IPC — with episodes formatted via **LeRobot** and pushed directly to **HuggingFace Datasets** for **ACT/VLA policy training**."
+        - "Developed **WISTO**, an in-house **GPU stereo-inertial SLAM** (C++/CUDA) that beats **ORB-SLAM3** on accuracy, powering a **bimanual handheld data-collection rig** that exports **LeRobot** datasets."
 
     - title: "Robotics Software Lead"
       company: "MARSES Robotics"
       location: "Dubai, UAE"
       startDate: "2020"
-      endDate: "2024"
+      endDate: "Present"
       current: true
       color: "purple"
       responsibilities:
@@ -177,6 +178,8 @@ experience:
         - "Delivered **over 30 robotics projects** and **8 unique product lines**."
         - "Used **Docker** for **containerized deployments** and implemented **CI/CD pipelines** for automated testing and delivery."
         - "Managed **Git-based version control** and **branching strategies** for multi-team collaboration."
+        - "Building the full software stack of a **semi-humanoid hospitality robot** (two 4-DOF arms, 2-DOF head, wheeled base): six **C++ CAN/RS485 drivers** as **ros2_control** plugins, a **Pinocchio whole-body controller** with **MoveIt2**, **Nav2 (MPPI)** autonomy running on the real base, and **BehaviorTree.CPP** missions dispatched from the cloud over **MQTT**."
+        - "Built a **Jetson Orin NX perception co-processor** feeding **Nav2** costmaps: a native **TensorRT YOLO11** detector at 18 Hz, persistent **3D object tracking** in the map frame, a **CUDA** depth filter (driver CPU 61% to 16%) and **iceoryx shared-memory** transport (depth latency 0.48 s to 0.07 s)."
         
 
     
@@ -197,6 +200,125 @@ experience:
         - "Modeled **motion control** in **MATLAB and Simulink**."
 projects:
   featured:
+    - title: "Starpilot"
+      description: "From handheld gripper to training dataset — a full **imitation learning data collection pipeline**."
+      longDescription: |
+
+        - Engineered a **teleoperation and data collection system** using **handheld grippers** to generate **high-quality episode datasets** for **imitation learning** (ACT, VLA policies).
+
+        - Built **real-time sensor orchestration over ROS2** with a **custom sync benchmark** achieving **sub-millisecond inter-camera timestamp alignment** across wrist and scene cameras.
+
+        - Implemented **high-throughput zero-copy inter-process communication** using **Eclipse iceoryx (iox-roudi)** with **Shared Memory (SHM) ring buffers**, minimizing latency and CPU overhead across the sensor pipeline.
+
+        - Captured **6-DoF end-effector pose** via **Vive Trackers** with **SteamVR-to-ROS2 bridge** for accurate trajectory recording.
+
+        - Streamed **gripper finger position via encoder feedback** and **hand dynamics via IMU** from **custom STM32 gripper boards** over serial communication.
+
+        - Managed **episode lifecycle, dataset formatting, and validation** using **LeRobot**, ensuring compatibility with downstream policy training pipelines.
+
+        - Implemented **direct push to HuggingFace Datasets** for seamless integration with **ACT and VLA policy training** workflows.
+      images:
+        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=hpakJEb8yn_ldlqtl"
+          alt: "Starpilot Teleoperation Demo"
+          aspectRatio: "16/9"
+        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=VID_20260418_214246_edbeqj"
+          alt: "Starpilot Teleoperation Demo"
+          aspectRatio: "9/16"
+          
+        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=CamerasDepth_qvlod3"
+          alt: "Starpilot Point Cloud Visualization"
+          aspectRatio: "16/9"
+        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=smolVLA_oneCam_og4aqa"
+          alt: "Starpilot Data Collection"
+          aspectRatio: "16/9"
+        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=OpenArm_Isaacsim_RMPFlow_fywj8p"
+          alt: "Open Arm RMP FLOW Starpilot Data Collection"
+          aspectRatio: "16/9"
+          
+
+      technologies:
+        - "ROS2"
+        - "iox-roudi"
+        - "Shared Memory / Ring Buffers"
+        - "STM32"
+        - "Vive Trackers / SteamVR"
+        - "LeRobot"
+        - "HuggingFace Datasets"
+        - "ACT / VLA Policies"
+        - "C++"
+        - "Python"
+        - "IMU & Encoder Feedback"
+        - "Camera Synchronization"
+        - "Nvidia Isaac Sim"
+      color: "blue"
+      links:
+        github: ""
+
+    - title: "Kitchen Gantry System"
+      description: "Automated gantry for **food delivery**."
+      longDescription: |
+        - Used **MoveIt2, OMPL, CHOMP planners** and **Octomap** for **3D detection**,
+
+        - Working with **4 DOF system** in a tight space to deliver from display area to delivery
+          area,
+
+        - Interacting with **stock database** to ensure the system is always ready to deliver while
+          **fetching nearest item** and **tracking expiry dates**.
+      images:
+        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=VID_20250930004351_yotz3d"
+          alt: "Kitchen Gantry System"
+          aspectRatio: "16/9"
+        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=alcovePointCloud_skyen8"
+          alt: "Kitchen Gantry System"
+          aspectRatio: "16/9"
+        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=VID-20251004-WA0022_j71byd"
+          alt: "Kitchen Gantry System"
+          aspectRatio: "16/9"
+      technologies:
+        - "ROS2"
+        - "MoveIt2"
+        - "OMPL"
+        - "CHOMP"
+        - "Octomap"
+      color: "blue"
+      links:
+        github: ""
+
+    - title: "OpenArm: Haptic Teleoperation Over Network & Data Pipeline"
+      description: "Internet-scale **bilateral teleoperation** and **synchronized data collection** for AI training."
+      longDescription: |
+        - Architected a **distributed teleoperation framework** enabling **1:1 haptic coupling**
+          over **VPN-secured networks**.
+
+        - Developed a **1000Hz bilateral control loop** using a **custom UDP transport layer**,
+          implementing **startup synchronization** and **smoothing** to prevent torque spikes during
+          remote handshakes.
+
+        - To facilitate **Imitation Learning**, engineered a **high-performance data pipeline**
+          using **Shared Memory (SHM) ring buffers** and **GStreamer/NVENC**, achieving **sub-10ms
+          synchronization** across **four HD camera streams** (including **OAK-D Depth**) with
+          minimal CPU overhead.
+
+        - Established **automated quality gates**, validating **500Hz joint-state telemetry**
+          against **30Hz visual observations** to ensure **nanosecond-precision alignment** for
+          training **end-to-end policies** like **ACT and Diffusion Policy**.
+      images:
+        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=openarm_teleop_ew2eeb"
+          fallback: "/semi-humanoid-robots.png"
+          alt: "OpenArm Haptic System"          
+          aspectRatio: "9/16"
+        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=dataCollection_svydxo"
+          fallback: "/semi-humanoid-robots.png"
+          alt: "OpenArm Haptic System Overview"
+          aspectRatio: "16/9"
+        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=Openarm_Teleop_testing_s4hk85"
+          fallback: "/semi-humanoid-robots.png"
+          aspectRatio: "9/16"
+      technologies: ["Real-time Control", "UDP Networking", "Shared Memory", "Imitation Learning", "GStreamer/WebRTC", "NVENC", "C++", "Python"]
+      color: "green"
+      links:
+        github: ""
+
     - title: "Bank SMART Customer Support Agent (Duet Robot)"
       description: "**AI-driven banking assistant** on a **mobile service robot**."
       longDescription: |
@@ -260,6 +382,7 @@ projects:
       links:
         github: ""
         live: ""
+
     - title: "Duet Interactive Robot"
       description: "**Interactive Robot**"
       longDescription: |
@@ -359,6 +482,7 @@ projects:
       links:
         github: ""
         live: ""
+
     - title: "Fleet Management System for Robots"
       description: "**Custom multi-robot management software**"
       longDescription: |
@@ -376,64 +500,249 @@ projects:
       links:
         github: ""
 
+    - title: "Semi-Humanoid Robot - Tuya (Paused)"
+      description: "Developing a Semi humanoid platforms."
+      longDescription: |
+        - Developed **control, navigation, and perception** for a **semi-humanoid robot platform**.
+
+        - Controlling a **10 DOF system** and **fingers**, Using **Stereo cameras** for **3D
+          perception and 3D pose estimation**, Built a **robust asynchronous architecture** for
+          **motor control** enabling easy integration with **MoveIt**
+      images:
+        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=tuya_hgkkxu"
+          fallback: "/semi-humanoid-robots.png"
+          alt: "AI-Enhanced Semi-Humanoid Robots"
+          aspectRatio: "9/16"
+        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=tuyaNav_vpl54r"
+          fallback: "/semi-humanoid-robots.png"
+          alt: "AI-Enhanced Semi-Humanoid Robots"
+          aspectRatio: "9/16"
+        
+      technologies:
+        - "ROS2"
+        - "C++"
+        - "Python"
+        - "Perception"
+        - "CAN"
+        - "Brushless Motors Control (Velocity,Position,Effort)"
+      color: "blue"
+      links:
+        github: ""
+
+    - title: "Navigation Parameters Tuning Using Genetic Algorithm"
+      description: "**Simulation-in-the-loop** auto-tuning of **local navigation parameters** using a **genetic algorithm**."
+      longDescription: |
+        - Built a **ROS/Gazebo pipeline** that automatically tunes **local navigation parameters**
+          (e.g., **costmap inflation radius** and **cost scaling factor**) via a **genetic
+          algorithm**.
+
+        - The system launches **navigation goals** through **Locomotor/DWB**, **live-updates
+          parameters** using **dynamic_reconfigure**, and evaluates each candidate with
+          **multi-objective fitness**: **time-to-goal**, **collision penalties** (Gazebo contact
+          sensors), and **front/side local-cost metrics** sampled from the **costmap**.
+
+        - Runs **iterative generations** with **elitism, crossover, and mutation**, resetting the
+          **world and robot pose** between trials.
+
+        - Includes **goal progress monitoring** via **actionlib feedback**, **AMCL/odometry hooks**,
+          and **automatic cancellation/recovery** on timeouts or failure states.
+
+        - Results are **serialized for offline analysis**.
+      image:
+        url: "https://www.mdpi.com/sustainability/sustainability-15-04656/article_deploy/html/images/sustainability-15-04656-g024-550.jpg"
+        fallback: "/navigation-algorithms.png"
+        alt: "Navigation Algorithms Research"
+      technologies:
+        - "DWB Local Planner"
+        - "OccupancyGrid & Costmap"
+        - "AMCL / Odometry"
+        - "Genetic Algorithms (selection, crossover, mutation, elitism)"
+        - "Python"
+        - "C++"
+        - "Cartographer"
+      color: "blue"
+      links:
+        github: ""
+
+    - title: "Universal Manipulation Interface: Zero-Shot Robot Skill Transfer from Human Demonstrations"
+      description: "Upgraded UMI framework to 177° FOV optics with full SLAM adaptation and sim-ready training infrastructure."
+      longDescription: |
+        Migrated Stanford's **Universal Manipulation Interface** to **GoPro 13 + Maxlens v2.0**
+        (177° FOV), requiring complete sensor recalibration and SLAM pipeline adaptation.
+
+        - Performed **Kannala-Brandt fisheye calibration** with sub-pixel reprojection accuracy
+        - Characterized **IMU noise parameters** via Allan deviation for Visual-Inertial Odometry
+        - Built **Foxglove Studio visualization pipeline** for validating SLAM trajectories and
+          sensor alignment via MCAP format
+        - Fixed critical timestamp synchronization in multi-camera capture infrastructure
+        - Validated end-to-end data flow from raw video to Zarr training datasets
+
+        Succeeded by **WISTO**, my GPU stereo-inertial SLAM for a bimanual data rig (see Current Work).
+      images:
+        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=umiData_vxkvgt"
+          fallback: "/semi-humanoid-robots.png"
+          alt: "UMI Training Data"
+          aspectRatio: "16/9"
+        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=Demo2UmiRecording_y3v8mn"
+          fallback: "/semi-humanoid-robots.png"
+          alt: "UMI Demonstration Recording"
+          aspectRatio: "16/9"
+      technologies:
+        - "ORB-SLAM3"
+        - "Kannala-Brandt Fisheye Calibration"
+        - "Visual-Inertial Odometry"
+        - "Allan Deviation"
+        - "Foxglove / MCAP"
+        - "Zarr"
+        - "Python"
+        - "C++"
+      color: "blue"
+      links:
+        github: ""
+
 
 currentWork:
   projects:
 
-    - title: "Starpilot"
-      description: "From handheld gripper to training dataset — a full **imitation learning data collection pipeline**."
+    - title: "Semi-Humanoid Hospitality Robot"
+      description: "A wheeled robot with **two 4-DOF arms** and a **2-DOF head** that greets, guides and follows people, built on **ROS 2** from the motor drivers up."
       longDescription: |
+        A robot that works among guests has to drive safely through a crowd, move its arms
+        and head in a way that is safe to touch, and run its missions without anyone watching.
+        I built the software stack layer by layer, from raw CAN frames to scheduled missions.
 
-        - Engineered a **teleoperation and data collection system** using **handheld grippers** to generate **high-quality episode datasets** for **imitation learning** (ACT, VLA policies).
+        - **From vendor manual to motion.** Wrote six **C++17 SocketCAN / RS485 driver
+          libraries** (CANopen **CiA-402** arm joints, impedance-controlled head, hub motors,
+          battery, IMU), each wrapped as a **ros2_control** plugin. Its 12 joints run at
+          **500 Hz** for the arms, 30 Hz for the head and 50 Hz for the base.
 
-        - Built **real-time sensor orchestration over ROS2** with a **custom sync benchmark** achieving **sub-millisecond inter-camera timestamp alignment** across wrist and scene cameras.
+        - **A head you can push by hand.** The head blends precise position moves with a
+          compliant **impedance hold**, so a guest can nudge it without fighting the motors.
 
-        - Implemented **high-throughput zero-copy inter-process communication** using **Eclipse iceoryx (iox-roudi)** with **Shared Memory (SHM) ring buffers**, minimizing latency and CPU overhead across the sensor pipeline.
+        - **Upper-body control.** A **Pinocchio** task-priority **whole-body controller**,
+          **MoveIt2** with 5 planning groups, closed-form head look-at and gravity compensation.
 
-        - Captured **6-DoF end-effector pose** via **Vive Trackers** with **SteamVR-to-ROS2 bridge** for accurate trajectory recording.
+        - **Autonomy on the real base.** **Nav2 (MPPI)**, **SLAM Toolbox / AMCL**, an **EKF**
+          fusing wheel odometry with the IMU, LiDAR, keep-out zones, a health watchdog and a
+          readiness gate. It boots and comes up on its own.
 
-        - Streamed **gripper finger position via encoder feedback** and **hand dynamics via IMU** from **custom STM32 gripper boards** over serial communication.
+        - **Missions as data.** Missions are YAML files run by **BehaviorTree.CPP v4**, started
+          by a scheduler or from the cloud over **MQTT/TLS**.
 
-        - Managed **episode lifecycle, dataset formatting, and validation** using **LeRobot**, ensuring compatibility with downstream policy training pipelines.
+        - **Listening and following.** A voice front end (wake word, speech-to-text, direction
+          of arrival) and **person tracking with re-identification** for follow and guide modes.
 
-        - Implemented **direct push to HuggingFace Datasets** for seamless integration with **ACT and VLA policy training** workflows.
-      images:
-        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=hpakJEb8yn_ldlqtl"
-          alt: "Starpilot Teleoperation Demo"
-          aspectRatio: "16/9"
-        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=VID_20260418_214246_edbeqj"
-          alt: "Starpilot Teleoperation Demo"
-          aspectRatio: "9/16"
-          
-        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=CamerasDepth_qvlod3"
-          alt: "Starpilot Point Cloud Visualization"
-          aspectRatio: "16/9"
-        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=smolVLA_oneCam_og4aqa"
-          alt: "Starpilot Data Collection"
-          aspectRatio: "16/9"
-        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=OpenArm_Isaacsim_RMPFlow_fywj8p"
-          alt: "Open Arm RMP FLOW Starpilot Data Collection"
-          aspectRatio: "16/9"
-          
-
+        The base drives autonomously on the real robot today. The arms and head are proven on
+        the bench and in **Gazebo**, and full integration starts when the arm hardware arrives.
       technologies:
-        - "ROS2"
-        - "iox-roudi"
-        - "Shared Memory / Ring Buffers"
-        - "STM32"
-        - "Vive Trackers / SteamVR"
-        - "LeRobot"
-        - "HuggingFace Datasets"
-        - "ACT / VLA Policies"
-        - "C++"
+        - "ROS 2 Humble"
+        - "ros2_control"
+        - "Nav2 (MPPI)"
+        - "SLAM Toolbox"
+        - "robot_localization"
+        - "MoveIt2"
+        - "Pinocchio"
+        - "BehaviorTree.CPP"
+        - "CANopen / CiA-402"
+        - "SocketCAN"
+        - "Modbus-RTU / RS485"
+        - "MQTT"
+        - "Gazebo"
+        - "C++17"
         - "Python"
-        - "IMU & Encoder Feedback"
-        - "Camera Synchronization"
-        - "Nvidia Isaac Sim"
-      progress: 100
-      color: "blue"
+      progress: 55
+      color: "teal"
       links:
         github: ""
+
+    - title: "Edge Perception on Jetson Orin NX"
+      description: "Real-time **GPU detection**, **3D object tracking** and **depth mapping** that tell a mobile robot what is around it."
+      longDescription: |
+        Navigation is only as good as what the robot sees. I turned a Jetson Orin NX into a
+        perception co-processor that feeds the robot's **Nav2** costmaps, and spent most of the
+        effort making it fast enough to trust.
+
+        - **Detection in C++.** A native **TensorRT** detector runs **YOLO11m in FP16** at about
+          18 Hz (16 ms per frame), replacing a Python version with byte-identical output.
+
+        - **From boxes to a 3D world.** Detections plus depth become persistent **3D boxes in
+          the map frame**. An obstacle is cleared only when the robot looks again and sees empty
+          space, never just because time passed. People live in a separate, fast-expiring layer.
+
+        - **Moving work to the GPU.** A bit-exact **CUDA** port of the RealSense spatial filter
+          cut driver CPU from **61% to 16%** at a steady 30 Hz. Porting the 3D lift to C++ took
+          it from 44% of a core to almost nothing.
+
+        - **Zero-copy transport.** Moving local nodes to **iceoryx shared memory** cut depth
+          latency from **0.48 s to 0.07 s**, raised depth from 22 to **30 Hz**, doubled the
+          **nvblox** costmap rate (8.8 to 17.6 Hz) and dropped board load from about 8 to 3.5.
+
+        - **Measured, not guessed.** A record, replay and score harness grades each depth layer
+          against ground truth, so every change is benchmarked before it ships.
+
+        Everything runs as **Dockerized Isaac ROS** services that start at boot.
+      technologies:
+        - "Jetson Orin NX"
+        - "TensorRT"
+        - "CUDA"
+        - "YOLO11 / YOLOv8"
+        - "Isaac ROS (nvblox, cuVSLAM)"
+        - "Intel RealSense D435i"
+        - "ROS 2 Humble"
+        - "CycloneDDS + iceoryx"
+        - "Docker"
+        - "C++17"
+        - "Python"
+        - "OpenCV"
+      progress: 65
+      color: "green"
+      links:
+        github: ""
+
+    - title: "WISTO: GPU Stereo-Inertial SLAM for Bimanual Manipulation Data"
+      description: "Our own **offline stereo-inertial SLAM**, built as the GPU successor to **ORB-SLAM3**, powering a next-generation UMI-style data rig."
+      longDescription: |
+        - Designed and built **WISTO** (Whole-take Inertial Stereo Tracking & Optimization), an
+          **offline stereo-inertial SLAM** in **C++20/CUDA**, targeting **5 mm gripper pose accuracy**
+          with **no external tracking infrastructure**.
+
+        - **GPU front end**: image pyramids, **Shi-Tomasi** corners, **pyramidal KLT** tracking and
+          **fisheye stereo matching** on **Kannala-Brandt** images that are never rectified.
+
+        - **Whole-take GPU bundle adjustment**: **Levenberg-Marquardt** with a **Schur complement**,
+          **conjugate gradient** with a Cholesky preconditioner (cuBLAS/cuSOLVER), and **Forster IMU
+          preintegration**; it matches **Ceres** to 3.6e-6 mm and gives the same answer every run.
+
+        - **Beats ORB-SLAM3 on every metric** of the robot-arm benchmark takes: **ATE 8.5-8.9 mm vs
+          18.3-23.2 mm**, scale within **0.5%** vs 6.6-8.9% short, in **22-33 s per take**. On
+          **EuRoC** it wins 8, ties 2 and loses 1 of 11 sequences (median **22.5 vs 37.2 mm**).
+
+        - Built the **end-to-end pipeline**: **hardware-synced** head stereo + gripper cameras
+          recorded on an embedded board (live **H.265** via VPU/NVENC, IMU strip), WISTO head pose,
+          **ArUco cube** gripper tracking, and export to **LeRobot v3.0** datasets.
+      images:
+        - url: "/wisto-pipelines-vs-orb.png"
+          alt: "WISTO pipeline vs ORB-SLAM3"
+          aspectRatio: "16/9"
+        - url: "/wisto-13-stages.png"
+          alt: "WISTO's 13 stages"
+          aspectRatio: "4/5"
+      technologies:
+        - "C++20"
+        - "CUDA"
+        - "Visual-Inertial SLAM"
+        - "Bundle Adjustment"
+        - "IMU Preintegration"
+        - "ORB-SLAM3"
+        - "Ceres"
+        - "OpenCV / ArUco"
+        - "LeRobot"
+        - "Python"
+      progress: 75
+      color: "purple"
+      links:
+        github: ""
+
     - title: "Automated Barista Solution"
       description: "End-to-end robotics architecture for **multi-machine coffee preparation**."
       longDescription: |
@@ -481,176 +790,6 @@ currentWork:
         - "WebSockets"
       progress: 100
       color: "blue"
-    - title: "Kitchen Gantry System"
-      description: "Automated gantry for **food delivery**."
-      longDescription: |
-        - Used **MoveIt2, OMPL, CHOMP planners** and **Octomap** for **3D detection**,
-
-        - Working with **4 DOF system** in a tight space to deliver from display area to delivery
-          area,
-
-        - Interacting with **stock database** to ensure the system is always ready to deliver while
-          **fetching nearest item** and **tracking expiry dates**.
-      images:
-        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=VID_20250930004351_yotz3d"
-          alt: "AI-Enhanced Semi-Humanoid Robots"
-          aspectRatio: "16/9"
-        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=alcovePointCloud_skyen8"
-          alt: "AI-Enhanced Semi-Humanoid Robots"
-          aspectRatio: "16/9"
-        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=VID-20251004-WA0022_j71byd"
-          alt: "AI-Enhanced Semi-Humanoid Robots"
-          aspectRatio: "16/9"
-      technologies:
-        - "ROS2"
-        - "MoveIt2"
-        - "OMPL"
-        - "CHOMP"
-        - "Octomap"
-      progress: 100
-      color: "blue"
-      links:
-        github: ""
-
-    - title: "OpenArm: Haptic Teleoperation Over Network & Data Pipeline"
-      description: "Internet-scale **bilateral teleoperation** and **synchronized data collection** for AI training."
-      longDescription: |
-        - Architected a **distributed teleoperation framework** enabling **1:1 haptic coupling**
-          over **VPN-secured networks**.
-
-        - Developed a **1000Hz bilateral control loop** using a **custom UDP transport layer**,
-          implementing **startup synchronization** and **smoothing** to prevent torque spikes during
-          remote handshakes.
-
-        - To facilitate **Imitation Learning**, engineered a **high-performance data pipeline**
-          using **Shared Memory (SHM) ring buffers** and **GStreamer/NVENC**, achieving **sub-10ms
-          synchronization** across **four HD camera streams** (including **OAK-D Depth**) with
-          minimal CPU overhead.
-
-        - Established **automated quality gates**, validating **500Hz joint-state telemetry**
-          against **30Hz visual observations** to ensure **nanosecond-precision alignment** for
-          training **end-to-end policies** like **ACT and Diffusion Policy**.
-      images:
-        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=openarm_teleop_ew2eeb"
-          fallback: "/semi-humanoid-robots.png"
-          alt: "OpenArm Haptic System"          
-          aspectRatio: "9/16"
-        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=dataCollection_svydxo"
-          fallback: "/semi-humanoid-robots.png"
-          alt: "OpenArm Haptic System Overview"
-          aspectRatio: "16/9"
-        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=Openarm_Teleop_testing_s4hk85"
-          fallback: "/semi-humanoid-robots.png"
-          aspectRatio: "9/16"
-      technologies: ["Real-time Control", "UDP Networking", "Shared Memory", "Imitation Learning", "GStreamer/WebRTC", "NVENC", "C++", "Python"]
-      progress: 90
-      color: "green"
-    - title: "Semi-Humanoid Robot - Tuya"
-      description: "Developing a Semi humanoid platforms."
-      longDescription: |
-        - Developed **control, navigation, and perception** for a **semi-humanoid robot platform**.
-
-        - Controlling a **10 DOF system** and **fingers**, Using **Stereo cameras** for **3D
-          perception and 3D pose estimation**, Built a **robust asynchronous architecture** for
-          **motor control** enabling easy integration with **MoveIt**
-      images:
-        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=tuya_hgkkxu"
-          fallback: "/semi-humanoid-robots.png"
-          alt: "AI-Enhanced Semi-Humanoid Robots"
-          aspectRatio: "9/16"
-        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=tuyaNav_vpl54r"
-          fallback: "/semi-humanoid-robots.png"
-          alt: "AI-Enhanced Semi-Humanoid Robots"
-          aspectRatio: "9/16"
-        
-      technologies:
-        - "ROS2"
-        - "C++"
-        - "Python"
-        - "Perception"
-        - "CAN"
-        - "Brushless Motors Control (Velocity,Position,Effort)"
-      progress: 60
-      color: "blue"
-      links:
-        github: ""
-
-
-    - title: "Universal Manipulation Interface: Zero-Shot Robot Skill Transfer from Human Demonstrations"
-      description: "Upgraded UMI framework to 177° FOV optics with full SLAM adaptation and sim-ready training infrastructure."
-      longDescription: |
-        Migrated Stanford's **Universal Manipulation Interface** to **GoPro 13 + Maxlens v2.0**
-        (177° FOV), requiring complete sensor recalibration and SLAM pipeline adaptation.
-
-        **Completed Work:**
-        - Performed **Kannala-Brandt fisheye calibration** with sub-pixel reprojection accuracy
-        - Characterized **IMU noise parameters** via Allan deviation for Visual-Inertial Odometry
-        - Built **Foxglove Studio visualization pipeline** for validating SLAM trajectories and
-          sensor alignment via MCAP format
-        - Fixed critical timestamp synchronization in multi-camera capture infrastructure
-        - Validated end-to-end data flow from raw video to Zarr training datasets
-
-        **Next Steps:**
-        - **Isaac Sim Integration**: Converting training pipeline to robomimic-compatible HDF5 format
-          for simulation-based policy training and domain randomization
-        - **Sim-to-Real Validation**: Validating trained policies in simulation before
-          real-world deployment on UR5/Franka hardware
-      images:
-        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=umiData_vxkvgt"
-          fallback: "/semi-humanoid-robots.png"
-          alt: "OpenArm Haptic System"          
-          aspectRatio: "16/9"
-        - url: "https://player.cloudinary.com/embed/?cloud_name=dhfctvvwf&public_id=Demo2UmiRecording_y3v8mn"
-          fallback: "/semi-humanoid-robots.png"
-          alt: "OpenArm Haptic System Overview"
-          aspectRatio: "16/9"
-      technologies:
-        - "DWB Local Planner"
-        - "OccupancyGrid & Costmap"
-        - "AMCL / Odometry"
-        - "Genetic Algorithms (selection, crossover, mutation, elitism)"
-        - "Python"
-        - "C++"
-        - "Cartographer"
-      color: "blue"
-      progress: 50
-
-    - title: "Navigation Parameters Tuning Using Genetic Algorithm"
-      description: "**Simulation-in-the-loop** auto-tuning of **local navigation parameters** using a **genetic algorithm**."
-      longDescription: |
-        - Built a **ROS/Gazebo pipeline** that automatically tunes **local navigation parameters**
-          (e.g., **costmap inflation radius** and **cost scaling factor**) via a **genetic
-          algorithm**.
-
-        - The system launches **navigation goals** through **Locomotor/DWB**, **live-updates
-          parameters** using **dynamic_reconfigure**, and evaluates each candidate with
-          **multi-objective fitness**: **time-to-goal**, **collision penalties** (Gazebo contact
-          sensors), and **front/side local-cost metrics** sampled from the **costmap**.
-
-        - Runs **iterative generations** with **elitism, crossover, and mutation**, resetting the
-          **world and robot pose** between trials.
-
-        - Includes **goal progress monitoring** via **actionlib feedback**, **AMCL/odometry hooks**,
-          and **automatic cancellation/recovery** on timeouts or failure states.
-
-        - Results are **serialized for offline analysis**.
-      image:
-        url: "https://www.mdpi.com/sustainability/sustainability-15-04656/article_deploy/html/images/sustainability-15-04656-g024-550.jpg"
-        fallback: "/navigation-algorithms.png"
-        alt: "Navigation Algorithms Research"
-      technologies:
-        - "DWB Local Planner"
-        - "OccupancyGrid & Costmap"
-        - "AMCL / Odometry"
-        - "Genetic Algorithms (selection, crossover, mutation, elitism)"
-        - "Python"
-        - "C++"
-        - "Cartographer"
-      color: "blue"
-      progress: 50
-
-    
-
 
 
 research:

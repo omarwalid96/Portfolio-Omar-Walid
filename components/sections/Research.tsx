@@ -4,6 +4,7 @@ import { Lightbulb } from "lucide-react"
 import { MediaDisplay } from "@/components/ui/media-display"
 import { FormattedText } from "@/components/ui/formatted-text"
 import { cn } from "@/lib/utils"
+import { projectAnchor } from "@/lib/project-index"
 import { getIconColorClasses } from "@/lib/colors"
 
 interface ResearchProps {
@@ -23,7 +24,7 @@ export function Research({ config }: ResearchProps) {
 
                 <div className="grid md:grid-cols-2 gap-8">
                     {config.research.areas.map((area: any, index: number) => (
-                        <Card key={index}>
+                        <Card key={index} id={projectAnchor(area.title)} className="scroll-mt-24">
                             <CardHeader>
                                 <CardTitle className="flex items-center gap-2">
                                     <Lightbulb className={cn("h-5 w-5", getIconColorClasses(area.color))} />

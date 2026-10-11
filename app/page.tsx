@@ -1,6 +1,7 @@
 import { loadPortfolioConfig } from "@/lib/config-server"
 import { Navbar } from "@/components/sections/Navbar"
 import { Hero } from "@/components/sections/Hero"
+import { ProjectIndex } from "@/components/sections/ProjectIndex"
 import { About } from "@/components/sections/About"
 import { Experience } from "@/components/sections/Experience"
 import { FeaturedProjects } from "@/components/sections/FeaturedProjects"
@@ -18,6 +19,7 @@ export default function Portfolio() {
     <div className="min-h-screen bg-background">
       <Navbar config={config} />
       <Hero config={config} />
+      <ProjectIndex config={config} />
       <About config={config} />
       <Experience config={config} />
       <FeaturedProjects config={config} />

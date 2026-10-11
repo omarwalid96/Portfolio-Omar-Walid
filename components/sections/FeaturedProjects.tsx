@@ -5,6 +5,7 @@ import Link from "next/link"
 import { MediaDisplay } from "@/components/ui/media-display"
 import { MediaGallery } from "@/components/ui/media-gallery"
 import { FormattedText } from "@/components/ui/formatted-text"
+import { projectAnchor } from "@/lib/project-index"
 
 interface FeaturedProjectsProps {
     config: any
@@ -21,7 +22,7 @@ export function FeaturedProjects({ config }: FeaturedProjectsProps) {
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {config.projects.featured.map((project: any, index: number) => (
-                        <Card key={index} className="group hover:shadow-xl transition-all duration-300">
+                        <Card key={index} id={projectAnchor(project.title)} className="group scroll-mt-24 hover:shadow-xl transition-all duration-300">
                             {project.images && project.images.length > 0 ? (
                                 <MediaGallery
                                     media={project.images}

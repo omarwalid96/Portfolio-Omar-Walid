@@ -5,6 +5,7 @@ import { MediaDisplay } from "@/components/ui/media-display"
 import { MediaGallery } from "@/components/ui/media-gallery"
 import { FormattedText } from "@/components/ui/formatted-text"
 import { cn } from "@/lib/utils"
+import { projectAnchor } from "@/lib/project-index"
 import { getCardBorderClasses, getIconColorClasses } from "@/lib/colors"
 
 interface CurrentWorkProps {
@@ -43,7 +44,7 @@ export function CurrentWork({ config }: CurrentWorkProps) {
 
                 <div className="grid lg:grid-cols-2 gap-8">
                     {config.currentWork.projects.map((project: any, index: number) => (
-                        <Card key={index} className={cn("border-2", getCardBorderClasses(project.color))}>
+                        <Card key={index} id={projectAnchor(project.title)} className={cn("border-2 scroll-mt-24", getCardBorderClasses(project.color))}>
                             <CardHeader>
                                 <CardTitle className="flex items-center gap-2">
                                     <Code className={cn("h-5 w-5", getIconColorClasses(project.color))} />
@@ -77,7 +78,7 @@ export function CurrentWork({ config }: CurrentWorkProps) {
                                 {project.progress && (
                                     <div className="bg-muted/50 dark:bg-muted rounded-lg p-3 border border-border">
                                         <div className="flex justify-between items-center mb-2">
-                                            <p className="text-sm font-medium text-foreground">Progress</p>
+                                            <p className="text-sm font-medium text-foreground">Progress{project.status && <span className="text-muted-foreground"> · {project.status}</span>}</p>
                                             <p className="text-sm font-bold text-foreground">{project.progress}%</p>
                                         </div>
                                         <div className="w-full bg-secondary/50 dark:bg-secondary border border-border/50 rounded-full h-3 relative overflow-hidden">
