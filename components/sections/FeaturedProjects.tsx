@@ -1,3 +1,8 @@
+import { SectionHeader } from "@/components/ui/section-header"
+import { cn } from "@/lib/utils"
+import { getTopRuleClasses } from "@/lib/colors"
+import { DetailsToggle } from "@/components/ui/details-toggle"
+import { TechBadges } from "@/components/ui/tech-badges"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ExternalLink } from "lucide-react"
@@ -15,14 +20,11 @@ export function FeaturedProjects({ config }: FeaturedProjectsProps) {
     return (
         <section id="projects" className="py-20 px-4 bg-background">
             <div className="container mx-auto">
-                <div className="text-center mb-16">
-                    <h2 className="text-4xl font-bold mb-4 text-foreground">Featured Projects</h2>
-                    <p className="text-xl text-muted-foreground">A showcase of my recent work and personal projects</p>
-                </div>
+                <SectionHeader index="03" label="Projects" title="Featured Projects" subtitle="A showcase of my recent work and personal projects" />
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {config.projects.featured.map((project: any, index: number) => (
-                        <Card key={index} id={projectAnchor(project.title)} className="group scroll-mt-24 hover:shadow-xl transition-all duration-300">
+                        <Card key={index} data-reveal style={{ "--i": index % 3 } as React.CSSProperties} id={projectAnchor(project.title)} className={cn("group scroll-mt-24 transition-shadow duration-200 hover:shadow-[0_12px_32px_-12px_rgba(147,51,234,0.18)]", project.color && getTopRuleClasses(project.color))}>
                             {project.images && project.images.length > 0 ? (
                                 <MediaGallery
                                     media={project.images}
@@ -52,18 +54,16 @@ export function FeaturedProjects({ config }: FeaturedProjectsProps) {
                                 </CardDescription>
                             </CardHeader>
                             <CardContent>
-                                <div className="flex flex-wrap gap-2 mb-4">
-                                    {project.technologies.map((tech: string, techIndex: number) => (
-                                        <Badge key={techIndex} variant="outline">
-                                            {tech}
-                                        </Badge>
-                                    ))}
+                                <div className="mb-4">
+                                    <TechBadges technologies={project.technologies} variant="outline" />
                                 </div>
-                                <FormattedText
-                                    text={project.longDescription}
-                                    variant="markdown"
-                                    className="text-sm text-muted-foreground"
-                                />
+                                <DetailsToggle>
+                                    <FormattedText
+                                        text={project.longDescription}
+                                        variant="markdown"
+                                        className="text-sm text-muted-foreground"
+                                    />
+                                </DetailsToggle>
                                 {project.links.github && (
                                     <div className="mt-4">
                                         <Link

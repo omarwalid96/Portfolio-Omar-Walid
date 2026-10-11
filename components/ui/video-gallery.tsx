@@ -52,7 +52,7 @@ export function VideoGallery({ categories }: VideoGalleryProps) {
       </div>
 
       {/* Video Grid */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div key={activeCategory} className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 motion-safe:animate-in motion-safe:fade-in-0 motion-safe:slide-in-from-bottom-2 motion-safe:duration-300">
         {categories[activeCategory].videos.map((video, index) => {
           const isPlaying = playingVideoIndex === index
 

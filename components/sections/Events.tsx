@@ -1,3 +1,4 @@
+import { SectionHeader } from "@/components/ui/section-header"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ExternalLink } from "lucide-react"
@@ -13,10 +14,7 @@ export function Events({ config }: EventsProps) {
     return (
         <section id="events" className="py-20 px-4 bg-background">
             <div className="container mx-auto">
-                <div className="text-center mb-16">
-                    <h2 className="text-4xl font-bold mb-4 text-foreground">Events</h2>
-                    <p className="text-xl text-muted-foreground">A showcase of Events I contributed in</p>
-                </div>
+                <SectionHeader index="06" label="Events" title="Events" subtitle="A showcase of Events I contributed in" />
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {config.eventsWork.featured.map((project: any, index: number) => (

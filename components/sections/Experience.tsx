@@ -1,8 +1,9 @@
+import { SectionHeader } from "@/components/ui/section-header"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Calendar, MapPin } from "lucide-react"
 import { FormattedText } from "@/components/ui/formatted-text"
 import { cn } from "@/lib/utils"
-import { getBorderColorClasses } from "@/lib/colors"
+import { getTopRuleClasses } from "@/lib/colors"
 
 interface ExperienceProps {
     config: any
@@ -12,16 +13,11 @@ export function Experience({ config }: ExperienceProps) {
     return (
         <section id="experience" className="py-20 px-4">
             <div className="container mx-auto">
-                <div className="text-center mb-16">
-                    <h2 className="text-4xl font-bold mb-4 text-foreground">Job Roles & Responsibilities</h2>
-                    <p className="text-xl text-muted-foreground">
-                        Detailed overview of my professional experience and key responsibilities
-                    </p>
-                </div>
+                <SectionHeader index="02" label="Experience" title="Job Roles & Responsibilities" subtitle="Detailed overview of my professional experience and key responsibilities" />
 
                 <div className="space-y-8">
                     {config.experience.jobs.map((job: any, index: number) => (
-                        <Card key={index} className={cn("border-l-4", getBorderColorClasses(job.color))}>
+                        <Card key={index} data-reveal className={getTopRuleClasses(job.color)}>
                             <CardHeader>
                                 <div className="flex justify-between items-start">
                                     <div>

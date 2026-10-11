@@ -33,36 +33,36 @@ about:
   achievements:
     - title: "Barista Project Lead Architect"
       description: "Designed and implemented the full system architecture for a multi-machine automated barista solution, integrating ROS2 behavior trees, RS485+CAN communication, and cloud-based facial recognition."
-      color: "blue"
+      color: "teal"
     - title: "Cursor Hackathon Heilbronn"
-      description: "30 hours Hackarthon to develop AI based solutions, Mainly Focused on building RoboScribe Natural Language Policy Validation & Data Collection for Humanoid Robots"
-      color: "red"
+      description: "30 hours Hackathon to develop AI based solutions, Mainly Focused on building RoboScribe Natural Language Policy Validation & Data Collection for Humanoid Robots"
+      color: "purple"
     - title: "Television Public Speaker & Robotics Industry Expert"
       description: "Featured as a robotics expert on television, discussing humanoid robotics, AI integration, and the future of intelligent machines in healthcare and daily life."
-      color: "indigo"
+      color: "purple"
     - title: "AI-Powered Robotics Integration (SMART Customer Support Bank Agent)"
       description: "Developed an AI-driven assistant deployed on Duet service robot with advanced navigation, perception, and multi-modal interaction."
-      color: "yellow"
+      color: "purple"
     - title: "Warehouse Automation Success"
       description: "Architected and implemented the MB90a logistics robot software from scratch using ROS2, CAN protocols, and holonomic motion control."
-      color: "teal"
+      color: "blue"
     - title: "Advanced Navigation Solutions"
       description: "Implemented hybrid 2D/3D mapping and navigation combining Cartographer, MPC, and Open3D for dynamic obstacle handling."
-      color: "red"
+      color: "blue"
     - title: "System Architecture and Design"
       description: "Designed and implemented complex robotics systems for various projects with complex algorithms, multi-sensor fusion, behavior trees, and real-time communication protocols."
-      color: "purple"
+      color: "teal"
     - title: "Leadership in Robotics Innovation"
       description: "Built and led multi-disciplinary teams delivering 30+ robotics projects and 8 distinct robot models across industries."
-      color: "green"
+      color: "blue"
     - title: "Pioneer in Commercial Robotics in MENA Region"
       description: "Created one of the first restaurant delivery robot product in the region during early career at MARSES Robotics."
-      color: "orange"
+      color: "blue"
 
 
   skills:
     programming:
-      color: "blue"
+      color: "teal"
       items:
         - "C++"
         - "Python"
@@ -71,7 +71,7 @@ about:
         - "Matlab"
         - "NodeJS"
     robotics:
-      color: "purple"
+      color: "teal"
       items:
         - "ROS1"
         - "ROS2"
@@ -87,7 +87,7 @@ about:
         - "Nvidia Isaac"
         - "Autosar"
     devops:
-      color: "teal"
+      color: "blue"
       items:
         - "Linux"
         - "Docker"
@@ -97,7 +97,7 @@ about:
         - "AWS"
         - "Azure"
     perception_navigation:
-      color: "red"
+      color: "blue"
       items:
         - "Sensor Fusion"
         - "3D Perception"
@@ -108,7 +108,7 @@ about:
         - "Octomap"
         - "EKF (LiDAR, IMU, Camera, Depth)"
     ai_ml:
-      color: "yellow"
+      color: "purple"
       items:
         - "Machine Learning"
         - "LLMs"
@@ -119,7 +119,7 @@ about:
         - "AI Model Fine-Tuning"
         - "RAG Optimization"
     databases:
-      color: "green"
+      color: "purple"
       items:
         - "MySQL"
         - "MongoDB"
@@ -145,7 +145,7 @@ experience:
       startDate: "2024"
       endDate: "Present"
       current: true
-      color: "blue"
+      color: "purple"
       responsibilities:
         - "Designed and developed **complete software architecture** for a **robotic kitchen automation system**."
         - "Integrated **microcontroller solutions (ARM Cortex-M, STM32)** with **CAN & RS485 protocols**."
@@ -154,7 +154,7 @@ experience:
         - "Developed **motion planning pipelines** using **MoveIt2, OMPL, and CHOMP planners**."
         - "Implemented **3D Octomap-based perception** for **object detection and avoidance**."
         - "Architected **OpenArm haptic teleoperation system** enabling **bilateral control** over networks with **1000Hz feedback loops**, **synchronized data pipelines** for **imitation learning** using **GStreamer/NVENC**, and **automated quality validation** for **AI training datasets**."
-        - "Built the company's full **imitation learning data collection pipeline** using **handheld grippers**, **Vive Trackers**, **STM32 gripper boards**, and **Eclipse iceoryx (iox-roudi) SHM ring buffers** for zero-copy IPC — with episodes formatted via **LeRobot** and pushed directly to **HuggingFace Datasets** for **ACT/VLA policy training**."
+        - "Built the company's full **imitation learning data collection pipeline** using **handheld grippers**, **Vive Trackers**, **STM32 gripper boards**, and **Eclipse iceoryx (iox-roudi) SHM ring buffers** for zero-copy IPC, with episodes formatted via **LeRobot** and pushed directly to **HuggingFace Datasets** for **ACT/VLA policy training**."
         - "Developed **WISTO**, an in-house **GPU stereo-inertial SLAM** (C++/CUDA) that beats **ORB-SLAM3** on accuracy, powering a **bimanual handheld data-collection rig** that exports **LeRobot** datasets."
 
     - title: "Robotics Software Lead"
@@ -163,7 +163,7 @@ experience:
       startDate: "2020"
       endDate: "Present"
       current: true
-      color: "purple"
+      color: "blue"
       responsibilities:
         - "Led a **cross-functional team** of robotics engineers, developers, and installation specialists."
         - "Designed **AI-powered customer support agents** using **LLMs (LLaMA3, ChatGPT4, Qwen3)** with **STT/TTS** and **data synthesis** for improved interactivity."
@@ -201,7 +201,7 @@ experience:
 projects:
   featured:
     - title: "Starpilot"
-      description: "From handheld gripper to training dataset — a full **imitation learning data collection pipeline**."
+      description: "From handheld gripper to training dataset: a full **imitation learning data collection pipeline**."
       longDescription: |
 
         - Engineered a **teleoperation and data collection system** using **handheld grippers** to generate **high-quality episode datasets** for **imitation learning** (ACT, VLA policies).
@@ -250,7 +250,7 @@ projects:
         - "IMU & Encoder Feedback"
         - "Camera Synchronization"
         - "Nvidia Isaac Sim"
-      color: "blue"
+      color: "purple"
       links:
         github: ""
 
@@ -280,7 +280,7 @@ projects:
         - "OMPL"
         - "CHOMP"
         - "Octomap"
-      color: "blue"
+      color: "teal"
       links:
         github: ""
 
@@ -315,7 +315,7 @@ projects:
           fallback: "/semi-humanoid-robots.png"
           aspectRatio: "9/16"
       technologies: ["Real-time Control", "UDP Networking", "Shared Memory", "Imitation Learning", "GStreamer/WebRTC", "NVENC", "C++", "Python"]
-      color: "green"
+      color: "purple"
       links:
         github: ""
 
@@ -371,7 +371,7 @@ projects:
         motion control**.
       image:
         url: "https://lh3.googleusercontent.com/pw/AP1GczPjLs6APPMvlofePFB-j63UDLZm6Ivn3y86dWhb-dfR9vCl1SD0-AgjPpQPlLfQLXrpsfChRcKamhAA8qOsesgmyX73R3_7hUtvQ7M11bZVUhu40HAraZNzP44HtXUWTf3FFHUfKFfZe43lj9BSlrkLGg=w1224-h1353-s-no-gm?authuser=0"
-        fallback: "/mb90a-robot.png"
+        fallback: "/placeholder.jpg"
         alt: "MB90a Logistics Robot"
       technologies:
         - "C++"
@@ -392,7 +392,7 @@ projects:
         **changeable facial expressions**.
       image:
         url: "https://www.marses-robotics.com/wp-content/uploads/2022/09/all-robotics-01.png"
-        fallback: "/mb90a-robot.png"
+        fallback: "/placeholder.jpg"
         alt: "MB90a Logistics Robot"
       technologies:
         - "ROS"
@@ -420,7 +420,7 @@ projects:
           optimizing both **coverage and operating time**.
       image:
         url: "https://www.marses-robotics.com/wp-content/uploads/2022/09/all-robotics-04.png"
-        fallback: "/mb90a-robot.png"
+        fallback: "/placeholder.jpg"
         alt: "MB90a Logistics Robot"
       technologies:
         - "ROS"
@@ -452,7 +452,7 @@ projects:
           orchestration** to ensure **reliability, safety, and scalability**.
       image:
         url: "https://www.marses-robotics.com/wp-content/uploads/2022/09/all-robotics-03.png"
-        fallback: "/mb90a-robot.png"
+        fallback: "/placeholder.jpg"
         alt: "MB90a Logistics Robot"
       technologies:
         - "ROS"
@@ -473,7 +473,7 @@ projects:
         survey**, **menu ordering and delivery**
       image:
         url: "https://www.marses-robotics.com/wp-content/uploads/2022/09/all-robotics-02.png"
-        fallback: "/mb90a-robot.png"
+        fallback: "/placeholder.jpg"
         alt: "MB90a Logistics Robot"
       technologies:
         - "ROS"
@@ -496,7 +496,7 @@ projects:
         - "C++"
         - "ROS2"
         - "Docker"
-      color: "purple"
+      color: "blue"
       links:
         github: ""
 
@@ -525,7 +525,7 @@ projects:
         - "Perception"
         - "CAN"
         - "Brushless Motors Control (Velocity,Position,Effort)"
-      color: "blue"
+      color: "teal"
       links:
         github: ""
 
@@ -596,7 +596,7 @@ projects:
         - "Zarr"
         - "Python"
         - "C++"
-      color: "blue"
+      color: "purple"
       links:
         github: ""
 
@@ -695,7 +695,7 @@ currentWork:
         - "Python"
         - "OpenCV"
       progress: 65
-      color: "green"
+      color: "blue"
       links:
         github: ""
 
@@ -739,7 +739,7 @@ currentWork:
         - "LeRobot"
         - "Python"
       progress: 75
-      color: "purple"
+      color: "blue"
       links:
         github: ""
 
@@ -789,19 +789,19 @@ currentWork:
         - "Android"
         - "WebSockets"
       progress: 100
-      color: "blue"
+      color: "teal"
 
 
 research:
   areas:
     - title: "RoboScribe, Cursor Hackathon Heilbronn"
-      description: "30 hours Hackarthon to develop AI based solutions, Mainly Focused on building RoboScribe Natural Language Policy Validation & Data Collection for Humanoid Robots"
+      description: "30 hours Hackathon to develop AI based solutions, Mainly Focused on building RoboScribe Natural Language Policy Validation & Data Collection for Humanoid Robots"
       longDescription: |
-        - A **natural language robotics interface** that converts spoken or typed commands into executable **humanoid robot motions** inside **NVIDIA Isaac Sim**, enabling hands-free control and dataset generation. :contentReference[oaicite:0]{index=0}
-        - Integrates **LLMs (DeepSeek via Featherless API)** for command parsing and **vision-language models (Qwen3-VL-2B)** for object-aware navigation using robot camera input. :contentReference[oaicite:1]{index=1}
-        - Built as a **full-stack system** with a **FastAPI backend**, **Next.js dashboard**, and **Isaac Sim extension**, communicating via WebSockets for real-time control. :contentReference[oaicite:2]{index=2}
-        - Supports **voice interaction (ElevenLabs STT/TTS)**, trajectory recording at **200Hz**, and exporting robot motion data for learning or validation tasks. :contentReference[oaicite:3]{index=3}
-        - Designed to **validate and analyze robot policies** by comparing natural-language-driven actions with simulated execution in a humanoid robot environment. :contentReference[oaicite:4]{index=4}
+        - A **natural language robotics interface** that converts spoken or typed commands into executable **humanoid robot motions** inside **NVIDIA Isaac Sim**, enabling hands-free control and dataset generation.
+        - Integrates **LLMs (DeepSeek via Featherless API)** for command parsing and **vision-language models (Qwen3-VL-2B)** for object-aware navigation using robot camera input.
+        - Built as a **full-stack system** with a **FastAPI backend**, **Next.js dashboard**, and **Isaac Sim extension**, communicating via WebSockets for real-time control.
+        - Supports **voice interaction (ElevenLabs STT/TTS)**, trajectory recording at **200Hz**, and exporting robot motion data for learning or validation tasks.
+        - Designed to **validate and analyze robot policies** by comparing natural-language-driven actions with simulated execution in a humanoid robot environment.
       image:
         url: "https://res.cloudinary.com/dhfctvvwf/image/upload/v1776038827/Screenshot_from_2026-04-13_02-06-57_gfosxj.png"
         fallback: "/vla-architecture.png"
@@ -813,7 +813,7 @@ research:
         - "DeepSeek LLM (Featherless API), Qwen3-VL"
         - "ElevenLabs STT/TTS, LangGraph"
         - "Convex, n8n"
-      color: "blue"
+      color: "purple"
     - title: "Unified Vision-Language-Action (VLA) Models"
       # description: "Advancing general-purpose robotics by mapping multimodal perception directly to motor actions via internet-scale foundation models."
       description: "Researching **end-to-end architectures** that unify **vision-language encoders** with **LLM backbones** (e.g., **Llama-2**) to enable robots to 'speak' the language of **motor commands**."
@@ -833,7 +833,7 @@ research:
         - "Flow Matching (pi-zero)"
         - "Open X-Embodiment (OpenX)"
         - "FAST Action Tokenization"
-      color: "blue"
+      color: "purple"
     - title: "3D Perception in Autonomous Systems"
       description: "Combining **3D clustering**, **object pose estimation**, and **YOLO detection** for enriched local perception."
       longDescription: |
@@ -863,7 +863,7 @@ research:
         - "Point Cloud Processing"
         - "Depth Sensors"
         - "RGB Cameras"
-      color: "green"
+      color: "blue"
     
     - title: "Sensor Fusion Optimization"
       description: "Enhancing **perception accuracy** through **fusion of LiDAR, IMU, and 3D camera data**."
@@ -877,7 +877,7 @@ research:
         - "3D Depth Cameras"
         - "Stereo Cameras"
         - "Open3D"
-      color: "purple"
+      color: "blue"
     
     - title: "Autonomous Vehicle Simulation"
       description: "Personal **R&D** in **autonomous driving**."
@@ -892,7 +892,7 @@ research:
         - "ROS2"
         - "MPC"
         - "HD Maps"
-      color: "green"
+      color: "blue"
 
     - title: "(Personal Research) Simulation and Reinforcement Learning for Robotics"
       description: "Using **NVIDIA Isaac** and **Isaac Sim** for **high-fidelity simulation**, **robot testing**, and **reinforcement learning policy training** in **virtual environments** before deployment."
@@ -907,7 +907,7 @@ research:
         - "Reinforcement Learning"
         - "Python"
         - "C++"
-      color: "yellow"
+      color: "purple"
 
     - title: "(Personal Research) 3D Indoor Navigation for drones using PX4 Simulation"
       description: "Using **PX4 autopilot** to integrate with **3D obstacle avoidance** and **trajectory planning** based on **BSpline**"
@@ -922,7 +922,7 @@ research:
         - "Reinforcement Learning"
         - "Python"
         - "C++"
-      color: "yellow"
+      color: "blue"
 
 
 
@@ -1331,7 +1331,7 @@ videos:
 
     - name: "Research & Development"
       description: "Cutting-edge research projects and experimental systems"
-      color: "green"
+      color: "teal"
       videos:
         - title: "3D Indoors navigation for drones using PX4 Simulation"
           description: "Using PX4 autopilot to integrate with 3D obstacle avoidance and trajectory planning based on BSpline"

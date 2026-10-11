@@ -7,9 +7,9 @@ export function Navbar({ config }: NavbarProps) {
         <nav className="fixed top-0 w-full bg-[hsl(var(--background)/0.8)] backdrop-blur-md z-50 border-b">
             <div className="container mx-auto px-4 py-4">
                 <div className="flex justify-between items-center">
-                    <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                    <a href="#home" className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                         {config.personal.name}
-                    </h1>
+                    </a>
                     <div className="hidden md:flex space-x-8">
                         <a href="#home" className="text-foreground/70 hover:text-foreground transition-colors">
                             Home
@@ -57,7 +57,7 @@ export function Navbar({ config }: NavbarProps) {
                             </svg>
                         </summary>
 
-                        <div className="absolute right-0 mt-2 w-56 rounded-lg border border-border bg-[hsl(var(--background)/0.95)] shadow-lg backdrop-blur p-2">
+                        <div className="nav-panel absolute right-0 mt-2 w-56 rounded-lg border border-border bg-[hsl(var(--background)/0.95)] shadow-lg backdrop-blur p-2">
                             <a
                                 href="#home"
                                 className="block px-3 py-2 rounded-md text-foreground/80 hover:bg-muted hover:text-foreground transition-colors"
@@ -116,6 +116,7 @@ export function Navbar({ config }: NavbarProps) {
                     </details>
                 </div>
             </div>
+            <div aria-hidden="true" className="scroll-trace" />
         </nav>
     )
 }

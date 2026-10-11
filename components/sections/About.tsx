@@ -1,9 +1,10 @@
+import { SectionHeader } from "@/components/ui/section-header"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Award, Code2 } from "lucide-react"
 import { FormattedText } from "@/components/ui/formatted-text"
 import { cn } from "@/lib/utils"
-import { formatCategoryName, getColorClasses, getBadgeHoverClasses, getIndicatorColorClasses, getBorderColorClasses } from "@/lib/colors"
+import { formatCategoryName, getColorClasses, getIndicatorColorClasses, getBorderColorClasses } from "@/lib/colors"
 
 interface AboutProps {
     config: any
@@ -13,14 +14,11 @@ export function About({ config }: AboutProps) {
     return (
         <section id="about" className="py-20 px-4 bg-background">
             <div className="container mx-auto">
-                <div className="text-center mb-16">
-                    <h2 className="text-4xl font-bold mb-4 text-foreground">About Me</h2>
-                    <p className="text-xl text-muted-foreground max-w-3xl mx-auto">{config.about.description}</p>
-                </div>
+                <SectionHeader index="01" label="About" title="About Me" subtitle={config.about.description} />
 
                 <div className="grid lg:grid-cols-2 gap-12 items-start">
                     {/* Left Column - Achievements */}
-                    <Card className="h-fit">
+                    <Card data-reveal className="h-fit">
                         <CardHeader>
                             <CardTitle className="flex items-center gap-2">
                                 <Award className="h-5 w-5 text-blue-600 dark:text-blue-400" />
@@ -31,7 +29,7 @@ export function About({ config }: AboutProps) {
                             {config.about.achievements.map((achievement: any, index: number) => (
                                 <div
                                     key={index}
-                                    className={cn("flex items-start gap-3 p-3 rounded-lg transition-all duration-300 hover:bg-secondary/50 hover:translate-x-1 border-l-4", getBorderColorClasses(achievement.color))}
+                                    className={cn("flex items-start gap-3 p-3 rounded-lg transition-[background-color,translate] duration-200 ease-[var(--ease-out)] hover:bg-secondary/50 [@media(hover:hover)]:hover:translate-x-1 border-l-4", getBorderColorClasses(achievement.color))}
                                 >
                                     <div>
                                         <h4 className="font-semibold text-foreground">{achievement.title}</h4>
@@ -43,7 +41,7 @@ export function About({ config }: AboutProps) {
                     </Card>
 
                     {/* Right Column - Skills */}
-                    <Card className="h-fit">
+                    <Card data-reveal style={{ "--i": 1 } as React.CSSProperties} className="h-fit">
                         <CardHeader>
                             <CardTitle className="flex items-center gap-2">
                                 <Code2 className="h-5 w-5 text-blue-600 dark:text-blue-400" />
@@ -57,7 +55,7 @@ export function About({ config }: AboutProps) {
                                         <Badge
                                             key={index}
                                             variant="secondary"
-                                            className="transition-all duration-300 hover:scale-110 hover:shadow-md cursor-default"
+                                            className="cursor-default"
                                         >
                                             {skill}
                                         </Badge>
@@ -76,11 +74,7 @@ export function About({ config }: AboutProps) {
                                                     <Badge
                                                         key={skillIndex}
                                                         variant="secondary"
-                                                        className={cn(
-                                                            "text-xs px-2.5 py-1 transition-all duration-300 cursor-default",
-                                                            "hover:scale-110 hover:shadow-lg",
-                                                            getBadgeHoverClasses(data.color)
-                                                        )}
+                                                        className="text-xs px-2.5 py-1 cursor-default"
                                                     >
                                                         {skill}
                                                     </Badge>

@@ -1,11 +1,12 @@
 import { buildProjectIndex } from "@/lib/project-index"
+import { AutoScrollStrip } from "@/components/ui/auto-scroll-strip"
 
 interface ProjectIndexProps {
     config: any
 }
 
 // One tile per project; each links to its full card further down the page.
-// Pure CSS scroll-snap: swipe on touch, trackpad or shift+wheel on desktop, no carousel JS.
+// Drifts on its own (AutoScrollStrip); swipe, trackpad or shift+wheel still scroll it by hand.
 export function ProjectIndex({ config }: ProjectIndexProps) {
     const items = buildProjectIndex(config)
 
@@ -22,17 +23,17 @@ export function ProjectIndex({ config }: ProjectIndexProps) {
                         </p>
                     </div>
                     <span className="hidden sm:block text-sm text-muted-foreground" aria-hidden="true">
-                        Scroll sideways →
+                        Hover to pause · scroll sideways →
                     </span>
                 </div>
 
-                <ul
-                    className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 -mx-4 px-4 scroll-px-4 [mask-image:linear-gradient(to_right,black_92%,transparent)]"
-                >
-                    {items.map((item) => (
-                        <li key={item.anchor} className="snap-start shrink-0 w-56 sm:w-64">
+                {/* Live carousel: the list is rendered twice so the drift can loop; the copy is hidden from AT and keyboard. */}
+                <AutoScrollStrip className="flex gap-4 overflow-x-auto scrollbar-hide pb-4 -mx-4 px-4 [mask-image:linear-gradient(to_right,transparent,black_4%,black_92%,transparent)]">
+                    {[false, true].map((copy) => items.map((item, index) => (
+                        <li key={(copy ? "copy-" : "") + item.anchor} aria-hidden={copy || undefined} inert={copy || undefined} data-reveal-item style={{ "--i": Math.min(index, 6) } as React.CSSProperties} className="snap-start shrink-0 w-56 sm:w-64">
                             <a
                                 href={`#${item.anchor}`}
+                                tabIndex={copy ? -1 : undefined}
                                 className="group block rounded-xl outline-none transition-transform duration-150 ease-out active:scale-[0.98] focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                             >
                                 {/* Title sits under the image: a dead thumbnail (alt="") renders nothing and the title shows through. */}
@@ -65,8 +66,9 @@ export function ProjectIndex({ config }: ProjectIndexProps) {
                                 </p>
                             </a>
                         </li>
-                    ))}
-                </ul>
+                    
+                    )))}
+                </AutoScrollStrip>
             </div>
         </section>
     )

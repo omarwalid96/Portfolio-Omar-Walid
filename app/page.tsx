@@ -11,13 +11,17 @@ import { Events } from "@/components/sections/Events"
 import { VideosSection } from "@/components/sections/VideosSection"
 import { AcademyAndStudio } from "@/components/sections/AcademyAndStudio"
 import { Footer } from "@/components/sections/Footer"
+import { JsonLd } from "@/components/json-ld"
+import { MotionObserver } from "@/components/motion-observer"
 
 export default function Portfolio() {
   const config = loadPortfolioConfig()
 
   return (
     <div className="min-h-screen bg-background">
+      <JsonLd />
       <Navbar config={config} />
+      <main>
       <Hero config={config} />
       <ProjectIndex config={config} />
       <About config={config} />
@@ -28,6 +32,8 @@ export default function Portfolio() {
       <Events config={config} />
       <VideosSection config={config} />
       <AcademyAndStudio config={config} />
+      </main>
+      <MotionObserver />
       <Footer config={config} />
     </div>
   )
